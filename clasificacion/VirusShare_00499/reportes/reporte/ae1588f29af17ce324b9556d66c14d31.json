@@ -1,0 +1,409 @@
+{
+    "filetype": "ELF 32-bit LSB executable, Renesas SH, version 1 (SYSV), statically linked, stripped",
+    "sha512": "f76a27307814328a3c54db96439a19cc203347a199905a56e9ba6d806558fe42fea8b9662c5686e9717f7784da790ca8d6cb8d58a20537a74e3ec065b58d7b99",
+    "sha256": "6db70b0aeb29ba9cbf062b6d19f6956853a5ae992268ca64ac09e96e00fcb641",
+    "mimetype": "application/x-executable",
+    "md5": "ae1588f29af17ce324b9556d66c14d31",
+    "size": 54704,
+    "trid": {
+        "0": "ELF Executable and Linkable format (Linux) (50.1%)",
+        "1": "ELF Executable and Linkable format (generic) (49.8%)"
+    },
+    "ssdeep": "768:zzaB/HTfpYtWja5FLMawtAXe0bhqRDoO7lwXgCmlryeN74uBChcoCD0CgLcE:zzaB/rpY6OXwtAdGoswQDNywBe40Cg",
+    "extension": "o",
+    "virustotal": {
+        "total": 61,
+        "scan_date": "2021-10-14 22:03:52",
+        "permalink": "https://www.virustotal.com/gui/file/6db70b0aeb29ba9cbf062b6d19f6956853a5ae992268ca64ac09e96e00fcb641/detection/f-6db70b0aeb29ba9cbf062b6d19f6956853a5ae992268ca64ac09e96e00fcb641-1634249032",
+        "positives": 39,
+        "scans": {
+            "AVG": {
+                "result": "ELF:Mirai-A [Trj]",
+                "version": "21.1.5827.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "Lionic": {
+                "result": null,
+                "version": 4.2,
+                "detected": false,
+                "update": 20211014
+            },
+            "Tencent": {
+                "result": "Backdoor.Linux.Mirai.wbc",
+                "version": "1.0.0.1",
+                "detected": true,
+                "update": 20211014
+            },
+            "ClamAV": {
+                "result": "Unix.Trojan.Mirai-7100807-0",
+                "version": "0.104.0.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "Zoner": {
+                "result": null,
+                "version": "0.0.0.0",
+                "detected": false,
+                "update": 20211013
+            },
+            "Microsoft": {
+                "result": "Backdoor:Linux/Mirai.B",
+                "version": "1.1.18600.4",
+                "detected": true,
+                "update": 20211014
+            },
+            "McAfee": {
+                "result": "Linux/Mirai",
+                "version": "6.0.6.653",
+                "detected": true,
+                "update": 20211014
+            },
+            "Zillya": {
+                "result": null,
+                "version": "2.0.0.4473",
+                "detected": false,
+                "update": 20211013
+            },
+            "Fortinet": {
+                "result": "ELF/Mirai.AEO!tr",
+                "version": "6.2.142.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "Yandex": {
+                "result": null,
+                "version": "5.5.2.24",
+                "detected": false,
+                "update": 20211014
+            },
+            "Rising": {
+                "result": "Backdoor.Mirai/Linux!1.AB17 (CLASSIC)",
+                "version": "25.0.0.26",
+                "detected": true,
+                "update": 20211014
+            },
+            "DrWeb": {
+                "result": "Linux.Mirai.4350",
+                "version": "7.0.52.8270",
+                "detected": true,
+                "update": 20211014
+            },
+            "K7GW": {
+                "result": null,
+                "version": "11.221.38793",
+                "detected": false,
+                "update": 20211014
+            },
+            "Emsisoft": {
+                "result": "Trojan.Linux.Mirai.1 (B)",
+                "version": "2021.5.0.7597",
+                "detected": true,
+                "update": 20211014
+            },
+            "BitDefender": {
+                "result": "Trojan.Linux.Mirai.1",
+                "version": 7.2,
+                "detected": true,
+                "update": 20211014
+            },
+            "Symantec": {
+                "result": "Linux.Mirai",
+                "version": "1.15.0.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "Ikarus": {
+                "result": "Trojan.Linux.Mirai",
+                "version": "0.1.5.2",
+                "detected": true,
+                "update": 20211014
+            },
+            "SUPERAntiSpyware": {
+                "result": null,
+                "version": "5.6.0.1032",
+                "detected": false,
+                "update": 20211009
+            },
+            "Avast": {
+                "result": "ELF:Mirai-A [Trj]",
+                "version": "21.1.5827.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "NANO-Antivirus": {
+                "result": null,
+                "version": "1.0.146.25370",
+                "detected": false,
+                "update": 20211014
+            },
+            "Bkav": {
+                "result": null,
+                "version": "1.3.0.9899",
+                "detected": false,
+                "update": 20211014
+            },
+            "MaxSecure": {
+                "result": "Trojan.Malware.121218.susgen",
+                "version": "1.0.0.1",
+                "detected": true,
+                "update": 20211014
+            },
+            "Panda": {
+                "result": null,
+                "version": "4.6.4.2",
+                "detected": false,
+                "update": 20211014
+            },
+            "ZoneAlarm": {
+                "result": "HEUR:Backdoor.Linux.Mirai.n",
+                "version": 1,
+                "detected": true,
+                "update": 20211014
+            },
+            "Jiangmin": {
+                "result": "Backdoor.Linux.qin",
+                "version": "16.0.100",
+                "detected": true,
+                "update": 20211013
+            },
+            "Comodo": {
+                "result": null,
+                "version": 33985,
+                "detected": false,
+                "update": 20211013
+            },
+            "Antiy-AVL": {
+                "result": "Trojan/Generic.ASELF.689F",
+                "version": "3.0.0.1",
+                "detected": true,
+                "update": 20211014
+            },
+            "CMC": {
+                "result": null,
+                "version": "2.10.2019.1",
+                "detected": false,
+                "update": 20211008
+            },
+            "McAfee-GW-Edition": {
+                "result": "Linux/Mirai",
+                "version": "v2019.1.2+3728",
+                "detected": true,
+                "update": 20211014
+            },
+            "Ad-Aware": {
+                "result": "Trojan.Linux.Mirai.1",
+                "version": "3.0.21.193",
+                "detected": true,
+                "update": 20211014
+            },
+            "Kingsoft": {
+                "result": null,
+                "version": "2017.9.26.565",
+                "detected": false,
+                "update": 20211014
+            },
+            "ViRobot": {
+                "result": null,
+                "version": "2014.3.20.0",
+                "detected": false,
+                "update": 20211014
+            },
+            "Malwarebytes": {
+                "result": null,
+                "version": "4.2.2.27",
+                "detected": false,
+                "update": 20211014
+            },
+            "F-Secure": {
+                "result": null,
+                "version": "12.0.86.52",
+                "detected": false,
+                "update": 20211014
+            },
+            "BitDefenderTheta": {
+                "result": "Gen:NN.Mirai.34218",
+                "version": "7.2.37796.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "VBA32": {
+                "result": null,
+                "version": "5.0.0",
+                "detected": false,
+                "update": 20211014
+            },
+            "Avast-Mobile": {
+                "result": "ELF:Mirai-DN [Trj]",
+                "version": "211014-00",
+                "detected": true,
+                "update": 20211014
+            },
+            "Acronis": {
+                "result": null,
+                "version": "1.1.1.82",
+                "detected": false,
+                "update": 20210512
+            },
+            "ESET-NOD32": {
+                "result": "a variant of Linux/Mirai.A",
+                "version": 24126,
+                "detected": true,
+                "update": 20211014
+            },
+            "FireEye": {
+                "result": "Trojan.Linux.Mirai.1",
+                "version": "32.44.1.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "TACHYON": {
+                "result": null,
+                "version": "2021-10-14.02",
+                "detected": false,
+                "update": 20211014
+            },
+            "MAX": {
+                "result": "malware (ai score=85)",
+                "version": "2019.9.16.1",
+                "detected": true,
+                "update": 20211014
+            },
+            "Kaspersky": {
+                "result": "HEUR:Backdoor.Linux.Mirai.n",
+                "version": "21.0.1.45",
+                "detected": true,
+                "update": 20211014
+            },
+            "MicroWorld-eScan": {
+                "result": "Trojan.Linux.Mirai.1",
+                "version": "14.0.409.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "Gridinsoft": {
+                "result": "Suspicious.XOR_Encoded.bot!yf",
+                "version": "1.0.57.151",
+                "detected": true,
+                "update": 20211014
+            },
+            "Sangfor": {
+                "result": "Malware.ELF-Script.Save.3be8a403",
+                "version": "2.9.0.0",
+                "detected": true,
+                "update": 20210930
+            },
+            "Baidu": {
+                "result": null,
+                "version": "1.0.0.2",
+                "detected": false,
+                "update": 20190318
+            },
+            "Elastic": {
+                "result": "Linux.Trojan.Mirai",
+                "version": "4.0.29",
+                "detected": true,
+                "update": 20211005
+            },
+            "Cyren": {
+                "result": "E32/Mirai.Y.gen!Camelot",
+                "version": "6.3.0.2",
+                "detected": true,
+                "update": 20211014
+            },
+            "AhnLab-V3": {
+                "result": "Linux/Mirai.Gen",
+                "version": "3.21.1.10219",
+                "detected": true,
+                "update": 20211014
+            },
+            "TrendMicro-HouseCall": {
+                "result": "ELF_MIRAI.SM1",
+                "version": "10.0.0.1040",
+                "detected": true,
+                "update": 20211014
+            },
+            "GData": {
+                "result": "Linux.Trojan.Mirai.B",
+                "version": "A:25.31049B:27.24816",
+                "detected": true,
+                "update": 20211014
+            },
+            "ALYac": {
+                "result": "Trojan.Linux.Mirai.1",
+                "version": "1.1.3.1",
+                "detected": true,
+                "update": 20211014
+            },
+            "K7AntiVirus": {
+                "result": null,
+                "version": "11.220.38780",
+                "detected": false,
+                "update": 20211013
+            },
+            "CAT-QuickHeal": {
+                "result": null,
+                "version": 14,
+                "detected": false,
+                "update": 20211014
+            },
+            "Arcabit": {
+                "result": "Trojan.Linux.Mirai.1",
+                "version": "1.0.0.886",
+                "detected": true,
+                "update": 20211014
+            },
+            "VIPRE": {
+                "result": null,
+                "version": 96214,
+                "detected": false,
+                "update": 20211014
+            },
+            "Cynet": {
+                "result": "Malicious (score: 99)",
+                "version": "4.0.0.27",
+                "detected": true,
+                "update": 20211014
+            },
+            "Sophos": {
+                "result": "Linux/DDoS-CI",
+                "version": "1.3.0.0",
+                "detected": true,
+                "update": 20211014
+            },
+            "Avira": {
+                "result": "LINUX/Mirai.bonb",
+                "version": "8.3.3.12",
+                "detected": true,
+                "update": 20211014
+            },
+            "TrendMicro": {
+                "result": "ELF_MIRAI.SM1",
+                "version": "11.0.0.1006",
+                "detected": true,
+                "update": 20211014
+            }
+        }
+    },
+    "exif": {
+        "CPUArchitecture": "32 bit",
+        "CPUByteOrder": "Little endian",
+        "CPUType": "SuperH",
+        "FileSize": "53 kB",
+        "FileType": "ELF executable",
+        "FileTypeExtension": "",
+        "MIMEType": "application/octet-stream",
+        "ObjectFileType": "Executable file"
+    },
+    "added_timestamp": "2021-11-17T07:00:43+00:00",
+    "sha1": "5d61c649e78ebc14e13b2134020e0123e429cebe",
+    "sha224": "8fcf544ae6da6f40f8afa59d2b9393003346af24d6f0042560c05210",
+    "sha384": "f71cf085587593cd190213ab7892ba93b207ef926d3211f727bb172174cc3db0bf90fd41575293993e4e5f6e09359134",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "ae1588f29af17ce324b9556d66c14d31",
+        "mode": "file"
+    }
+}
