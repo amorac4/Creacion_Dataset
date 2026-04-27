@@ -1,0 +1,480 @@
+{
+    "trid": {
+        "0": "Win32 Executable MS Visual C++ (generic) (48.8%)",
+        "1": "Win64 Executable (generic) (16.4%)",
+        "2": "Win32 Dynamic Link Library (generic) (10.2%)",
+        "3": "Win16 NE executable (generic) (7.8%)",
+        "4": "Win32 Executable (generic) (7.0%)"
+    },
+    "virustotal": {
+        "scan_date": "2021-11-14 21:37:43",
+        "permalink": "https://www.virustotal.com/gui/file/1d6c7df47b02208c7d3a4dbe16e4c9e9697708e066dc3178e0f5de2f08124451/detection/f-1d6c7df47b02208c7d3a4dbe16e4c9e9697708e066dc3178e0f5de2f08124451-1636925863",
+        "positives": 55,
+        "total": 68,
+        "scans": {
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211113,
+                "result": "Trojan.Malware.300983.susgen"
+            },
+            "Arcabit": {
+                "detected": false,
+                "version": "1.0.0.888",
+                "update": 20211114,
+                "result": null
+            },
+            "Alibaba": {
+                "detected": true,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": "AdWare:Win32/StartSurf.973f0647"
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211115,
+                "result": "Trojan.Kryptik!1.B51F (CLASSIC)"
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-11-14.02",
+                "update": 20211114,
+                "result": null
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211114,
+                "result": "Malware.Win32.Gencirc.10b42233"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211114,
+                "result": "Malicious (score: 100)"
+            },
+            "Paloalto": {
+                "detected": true,
+                "version": 1,
+                "update": 20211114,
+                "result": "generic.ml"
+            },
+            "Bkav": {
+                "detected": false,
+                "version": "1.3.0.9899",
+                "update": 20211115,
+                "result": null
+            },
+            "VIPRE": {
+                "detected": false,
+                "version": 96954,
+                "update": 20211114,
+                "result": null
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211114,
+                "result": "TrojanSpy.Win32.URSNIF.SMY.hp"
+            },
+            "Comodo": {
+                "detected": true,
+                "version": 34044,
+                "update": 20211102,
+                "result": "Application.Win32.AdLoad.BF@808b6c"
+            },
+            "Baidu": {
+                "detected": false,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": null
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.2a7393"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.227.39298",
+                "update": 20211114,
+                "result": "Trojan ( 005464371 )"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "version": "3.0.0.1",
+                "update": 20211114,
+                "result": "Trojan/Generic.ASMalwS.29D9650"
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_60% (W)"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211115,
+                "result": "Gen:Variant.Symmi.86253 (B)"
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24291,
+                "update": 20211114,
+                "result": "a variant of Win32/Kryptik.GNDZ"
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211115,
+                "result": "Win32:StartSurf-I [Adw]"
+            },
+            "Yandex": {
+                "detected": true,
+                "version": "5.5.2.24",
+                "update": 20211114,
+                "result": "PUA.StartSurf!cfdYmsa8+eA"
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211114,
+                "result": "W32/Kryptik.GNDZ!tr"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211114,
+                "result": "Gen:Variant.Symmi.86253"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211115,
+                "result": "BehavesLike.Win32.Packed.tz"
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211114,
+                "result": "Gen:Variant.Symmi.86253"
+            },
+            "Panda": {
+                "detected": true,
+                "version": "4.6.4.2",
+                "update": 20211114,
+                "result": "Trj/GdSda.A"
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211114,
+                "result": "malware (ai score=100)"
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.229,
+                "update": 20211113,
+                "result": "Malicious"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211114,
+                "result": "Gen:Variant.Symmi.86253"
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211104,
+                "result": "Gen:NN.ZexaF.34266.@B0@aCwdwrpO"
+            },
+            "Cyren": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211115,
+                "result": "W32/S-ff0797fc!Eldorado"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.227.39295",
+                "update": 20211114,
+                "result": "Trojan ( 005464371 )"
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211115,
+                "result": "Trojan.Vittalia.17937"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "2.2.2.0",
+                "update": 20211113,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "version": "4.2.2.27",
+                "update": 20211114,
+                "result": "Adware.IStartSurf.Generic"
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211115,
+                "result": "Win32:StartSurf-I [Adw]"
+            },
+            "Lionic": {
+                "detected": true,
+                "version": 4.2,
+                "update": 20211114,
+                "result": "Trojan.Win32.Symmi.4!c"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "version": "5.6.0.1032",
+                "update": 20211113,
+                "result": null
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31345B:27.25151",
+                "update": 20211114,
+                "result": "Gen:Variant.Symmi.86253"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211114,
+                "result": "ML.Attribute.HighConfidence"
+            },
+            "ClamAV": {
+                "detected": false,
+                "version": "0.104.1.0",
+                "update": 20211114,
+                "result": null
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211114,
+                "result": "TrojanSpy.Win32.URSNIF.SMY.hp"
+            },
+            "Acronis": {
+                "detected": true,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": "suspicious"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211115,
+                "result": "not-a-virus:HEUR:AdWare.Win32.StartSurf.gen"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211114,
+                "result": "Gen:Variant.Symmi.86253"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25409",
+                "update": 20211114,
+                "result": "Riskware.Win32.StartSurf.fkzqdb"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211114,
+                "result": "HEUR/AGEN.1101341"
+            },
+            "Jiangmin": {
+                "detected": true,
+                "version": "16.0.100",
+                "update": 20211113,
+                "result": "AdWare.StartSurf.tkt"
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211115,
+                "result": "Packed-FOY!882FCD82A739"
+            },
+            "VBA32": {
+                "detected": true,
+                "version": "5.0.0",
+                "update": 20211112,
+                "result": "Adware.StartSurf"
+            },
+            "Sangfor": {
+                "detected": true,
+                "version": "2.9.0.0",
+                "update": 20211103,
+                "result": "Trojan.Win32.Save.a"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211114,
+                "result": "IStartSurfInstaller (PUA)"
+            },
+            "Gridinsoft": {
+                "detected": true,
+                "version": "1.0.62.161",
+                "update": 20211114,
+                "result": "Ransom.Win32.Wacatac.oa!s1"
+            },
+            "Zillya": {
+                "detected": true,
+                "version": "2.0.0.4495",
+                "update": 20211112,
+                "result": "Adware.StartSurf.Win32.89243"
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211114,
+                "result": "Trojan:Win32/Wacatac.A!ml"
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211114,
+                "result": "PUP/Win32.StartSurf.R248324"
+            },
+            "eGambit": {
+                "detected": true,
+                "version": null,
+                "update": 20211114,
+                "result": "Unsafe.AI_Score_99%"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211114,
+                "result": null
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211114,
+                "result": null
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211114,
+                "result": "PUA.Downloader"
+            },
+            "ViRobot": {
+                "detected": false,
+                "version": "2014.3.20.0",
+                "update": 20211114,
+                "result": null
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211114,
+                "result": null
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211114,
+                "result": "Generic.mg.882fcd82a7393620"
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "version": 14,
+                "update": 20211114,
+                "result": "Swbndlr.Dlhelper.V4"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211114,
+                "result": "Unsafe"
+            }
+        }
+    },
+    "extension": "exe",
+    "sha384": "2eedccfd298795dc9b2ff33307bfc84e5e78becb6d8ed8172c05b75d81610e5d01045f5c3a94bd405df8e19e3223d329",
+    "md5": "882fcd82a7393620af1acad1c37e23ff",
+    "added_timestamp": "2021-11-17T10:34:51+00:00",
+    "imphash": "53a5ba403a9a679cefadeaf73c4e5c88",
+    "sha512": "2a3c798bbdd659ff512375faea13cf47e4f77ec5f6c9cbe668f01d8d4c7efc9c822a6268591cdc50975d7ddc3014e90c1309b1698f89bec4dfec9038bd367017",
+    "size": 5828608,
+    "sha224": "ac7248b56a70df2dc7f5e6eee58c01471aab81b22b2e24cde8a0630f",
+    "sha256": "1d6c7df47b02208c7d3a4dbe16e4c9e9697708e066dc3178e0f5de2f08124451",
+    "asha256": "33587678d8de7ba5dbf6537f7f5131e29f6ddf2ac7464289652bc1492ec54236",
+    "sha1": "60ee954e14dc5dc7b95d197d9bd65fe06ccd9e4b",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "exif": {
+        "CharacterSet": "Windows, Latin1",
+        "CodeSize": 177152,
+        "CompanyName": "©Rdigarome ahhiadp lemeyh ",
+        "EntryPoint": "0x90c9",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Windows NT 32-bit",
+        "FileSize": "5.6 MB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": "2.4.0.1",
+        "FileVersionNumber": "2.4.0.1",
+        "ImageVersion": 0,
+        "InitializedDataSize": 5650432,
+        "InternalName": "GOSESALI.EXE",
+        "LanguageCode": "English (U.S.)",
+        "LegalCopyright": "©Rdigarome ahhiadp lemeyh ",
+        "LinkerVersion": 12,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 5.1,
+        "ObjectFileType": "Unknown",
+        "OriginalFileName": "gosesali.exe",
+        "PEType": "PE32",
+        "ProductName": "GOSESALI",
+        "ProductVersion": "2.4.0.1",
+        "ProductVersionNumber": "2.4.0.1",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 5,
+        "TimeStamp": "2016:08:01 12:20:54-04:00",
+        "UninitializedDataSize": 0
+    },
+    "ssdeep": "24576:++9xECFKiovxHYK5QwIm1CWNEWKIOvdGgM3unM3k7vrTNv+VeOri7E6Avs0ZhM6:dKiQxbxE+wNv+8sizAvU6",
+    "mimetype": "application/x-dosexec",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "882fcd82a7393620af1acad1c37e23ff",
+        "mode": "file"
+    }
+}

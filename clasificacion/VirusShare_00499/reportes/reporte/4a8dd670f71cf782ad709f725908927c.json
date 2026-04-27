@@ -1,0 +1,484 @@
+{
+    "trid": {
+        "0": "Generic CIL Executable (.NET, Mono, etc.) (72.5%)",
+        "1": "Win64 Executable (generic) (10.4%)",
+        "2": "Win32 Dynamic Link Library (generic) (6.5%)",
+        "3": "Win32 Executable (generic) (4.4%)",
+        "4": "OS/2 Executable (generic) (2.0%)"
+    },
+    "virustotal": {
+        "scan_date": "2021-11-12 20:40:32",
+        "permalink": "https://www.virustotal.com/gui/file/2f91cdb9be27f28be09da03d533bdd46b228661432c64c8698ba219d9ca385c9/detection/f-2f91cdb9be27f28be09da03d533bdd46b228661432c64c8698ba219d9ca385c9-1636749632",
+        "positives": 52,
+        "total": 68,
+        "scans": {
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211111,
+                "result": "Win.MxResIcn.Heur.Gen"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "Alibaba": {
+                "detected": true,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": "TrojanPSW:MSIL/Dcstl.ca3707ee"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211112,
+                "result": "Gen:Variant.Bulz.168060 (B)"
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-11-12.02",
+                "update": 20211112,
+                "result": null
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211112,
+                "result": "Stealer.AnarchyGrabber!1.C254 (CLASSIC)"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211112,
+                "result": "Malicious (score: 100)"
+            },
+            "Paloalto": {
+                "detected": true,
+                "version": 1,
+                "update": 20211112,
+                "result": "generic.ml"
+            },
+            "Bkav": {
+                "detected": false,
+                "version": "1.3.0.9899",
+                "update": 20211112,
+                "result": null
+            },
+            "VIPRE": {
+                "detected": false,
+                "version": 96904,
+                "update": 20211112,
+                "result": null
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211112,
+                "result": "TrojanSpy.MSIL.ANARCHYGRAB.SMTH"
+            },
+            "Comodo": {
+                "detected": true,
+                "version": 34044,
+                "update": 20211102,
+                "result": "Malware@#2zrhubbxuhmvr"
+            },
+            "Baidu": {
+                "detected": false,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": null
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.0f71cf"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.227.39268",
+                "update": 20211112,
+                "result": "Password-Stealer ( 005569621 )"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "version": "3.0.0.1",
+                "update": 20211112,
+                "result": "Trojan/Generic.ASMalwS.349810A"
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211112,
+                "result": "MSIL/Agent.RFZ!tr"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211112,
+                "result": "Msil.Trojan-qqpass.Qqrob.Peqf"
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24282,
+                "update": 20211112,
+                "result": "a variant of MSIL/PSW.Agent.RFZ"
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211112,
+                "result": "Win32:PWSX-gen [Trj]"
+            },
+            "Yandex": {
+                "detected": true,
+                "version": "5.5.2.24",
+                "update": 20211112,
+                "result": "Trojan.PWS.Agent!58S6vnXiaOU"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211112,
+                "result": "Gen:Variant.Bulz.168060"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211112,
+                "result": "GenericRXKL-RS!4A8DD670F71C"
+            },
+            "Arcabit": {
+                "detected": true,
+                "version": "1.0.0.888",
+                "update": 20211112,
+                "result": "Trojan.Bulz.D2907C"
+            },
+            "SUPERAntiSpyware": {
+                "detected": true,
+                "version": "5.6.0.1032",
+                "update": 20211106,
+                "result": "Trojan.Agent/Gen-AnarchyGrabber"
+            },
+            "Panda": {
+                "detected": false,
+                "version": "4.6.4.2",
+                "update": 20211112,
+                "result": null
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211112,
+                "result": "malware (ai score=88)"
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.228,
+                "update": 20211110,
+                "result": "Malicious"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211112,
+                "result": "Gen:Variant.Bulz.168060"
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211104,
+                "result": "Gen:NN.ZemsilF.34266.am0@aqxuvVf"
+            },
+            "Cyren": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211112,
+                "result": "W32/Razy.EM.gen!Eldorado"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.227.39267",
+                "update": 20211112,
+                "result": "Trojan ( 0056cfce1 )"
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211112,
+                "result": "Trojan.PWS.DiscordNET.2"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "2.2.2.0",
+                "update": 20211111,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "version": "4.2.2.27",
+                "update": 20211112,
+                "result": "Spyware.AnarchyGrabber"
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211112,
+                "result": "Win32:PWSX-gen [Trj]"
+            },
+            "Lionic": {
+                "detected": false,
+                "version": 4.2,
+                "update": 20211112,
+                "result": null
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211112,
+                "result": null
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211112,
+                "result": "Gen:Variant.Bulz.168060"
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31327B:27.25127",
+                "update": 20211112,
+                "result": "Gen:Variant.Bulz.168060"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211112,
+                "result": "ML.Attribute.HighConfidence"
+            },
+            "ClamAV": {
+                "detected": true,
+                "version": "0.104.1.0",
+                "update": 20211112,
+                "result": "Win.Malware.Razy-9636401-0"
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211112,
+                "result": "TrojanSpy.MSIL.ANARCHYGRAB.SMTH"
+            },
+            "Acronis": {
+                "detected": false,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": null
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211112,
+                "result": "HEUR:Trojan-PSW.MSIL.Agent.gen"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211112,
+                "result": "Gen:Variant.Bulz.168060"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25409",
+                "update": 20211112,
+                "result": "Trojan.Win32.Bulz.jayrak"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211112,
+                "result": "HEUR/AGEN.1110045"
+            },
+            "Jiangmin": {
+                "detected": false,
+                "version": "16.0.100",
+                "update": 20211111,
+                "result": null
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211112,
+                "result": "GenericRXKL-RS!4A8DD670F71C"
+            },
+            "VBA32": {
+                "detected": false,
+                "version": "5.0.0",
+                "update": 20211112,
+                "result": null
+            },
+            "Sangfor": {
+                "detected": true,
+                "version": "2.9.0.0",
+                "update": 20211103,
+                "result": "Infostealer.MSIL.Dcstl.GG!MTB"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211112,
+                "result": "ML/PE-A + Troj/MSIL-NMA"
+            },
+            "Gridinsoft": {
+                "detected": true,
+                "version": "1.0.62.161",
+                "update": 20211112,
+                "result": "Trojan.Win32.Wacatac.dd!ni"
+            },
+            "ViRobot": {
+                "detected": false,
+                "version": "2014.3.20.0",
+                "update": 20211112,
+                "result": null
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211112,
+                "result": "PWS:MSIL/Dcstl.GG!MTB"
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211112,
+                "result": "Trojan/Win32.RL_Agent.C3461784"
+            },
+            "eGambit": {
+                "detected": false,
+                "version": null,
+                "update": 20211112,
+                "result": null
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211112,
+                "result": null
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "version": 14,
+                "update": 20211112,
+                "result": "Trojan.YakbeexMSIL.ZZ4"
+            },
+            "Zillya": {
+                "detected": true,
+                "version": "2.0.0.4495",
+                "update": 20211112,
+                "result": "Trojan.Agent.Win32.1299446"
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_100% (W)"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211112,
+                "result": null
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211112,
+                "result": "Generic.mg.4a8dd670f71cf782"
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211112,
+                "result": "Trojan-Spy.AnarchyGrabber"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211112,
+                "result": "Unsafe"
+            }
+        }
+    },
+    "extension": "exe",
+    "sha384": "3d1835a43992a3a15106a82d212434de32a7c314d611050f341bb4630810aae69861ffb46a5f04877b761a7e5966a43d",
+    "md5": "4a8dd670f71cf782ad709f725908927c",
+    "added_timestamp": "2021-11-17T11:23:48+00:00",
+    "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+    "sha512": "6fb9e2ed5f9bb6a901bf8bf53a2b50704fb2228f08d77a188373456b4caecc82704b12777cad1ca87f89e0596fcaf970c27edc845a02adfcd6d30121b15b7393",
+    "size": 9216,
+    "sha224": "161f06fed568d4a9fff2f5adc4c86613272de6e0e36ddc0cc30afeda",
+    "sha256": "2f91cdb9be27f28be09da03d533bdd46b228661432c64c8698ba219d9ca385c9",
+    "asha256": "206733a606bb7c9b9a3e5b0aba7fbfc32d1b33bdce4a21535cbe52ccb5502578",
+    "sha1": "69e1b64e8591b68547189c1804d6a3824c9afedf",
+    "filetype": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+    "exif": {
+        "AssemblyVersion": "0.0.2.0",
+        "CharacterSet": "Unicode",
+        "CodeSize": 6656,
+        "Comments": "",
+        "CompanyName": "",
+        "EntryPoint": "0x3972",
+        "FileDescription": "AnarchyGrabber",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Win32",
+        "FileSize": "9.0 kB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": "0.0.2.0",
+        "FileVersionNumber": "0.0.2.0",
+        "ImageVersion": 0,
+        "InitializedDataSize": 2048,
+        "InternalName": "AnarchyGrabber.exe",
+        "LanguageCode": "Neutral",
+        "LegalCopyright": "Copyright @2019",
+        "LegalTrademarks": "",
+        "LinkerVersion": 48,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "ObjectFileType": "Executable application",
+        "OriginalFileName": "AnarchyGrabber.exe",
+        "PEType": "PE32",
+        "ProductName": "",
+        "ProductVersion": "0.0.2.0",
+        "ProductVersionNumber": "0.0.2.0",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 6,
+        "TimeStamp": "2097:03:19 20:44:20-04:00",
+        "UninitializedDataSize": 0
+    },
+    "ssdeep": "192:tNnKfEtat4tDEzZfOMo4VGNaIgMyj0qT:tNKfEtEEDiMMo4V85pA0+",
+    "mimetype": "application/x-dosexec",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "4a8dd670f71cf782ad709f725908927c",
+        "mode": "file"
+    }
+}
