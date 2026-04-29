@@ -1,0 +1,478 @@
+{
+    "trid": {
+        "0": "Win32 Dynamic Link Library (generic) (38.4%)",
+        "1": "Win32 Executable (generic) (26.3%)",
+        "2": "OS/2 Executable (generic) (11.8%)",
+        "3": "Generic Win/DOS Executable (11.6%)",
+        "4": "DOS Executable Generic (11.6%)"
+    },
+    "virustotal": {
+        "scan_date": "2021-11-11 17:01:18",
+        "permalink": "https://www.virustotal.com/gui/file/c8ed3bb70e71ada8ee1f2d25a0b6e8abd5982fc15473ad9442248e68be106e74/detection/f-c8ed3bb70e71ada8ee1f2d25a0b6e8abd5982fc15473ad9442248e68be106e74-1636650078",
+        "positives": 57,
+        "total": 68,
+        "scans": {
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211111,
+                "result": "Trojan.Agent.vefb"
+            },
+            "Alibaba": {
+                "detected": false,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": null
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211111,
+                "result": "Trojan.GenericKDZ.71823 (B)"
+            },
+            "TACHYON": {
+                "detected": true,
+                "version": "2021-11-11.02",
+                "update": 20211111,
+                "result": "Trojan/W32.Agent.131072"
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211111,
+                "result": "Worm.Win32.Undef.ow (CLASSIC)"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211111,
+                "result": "Malicious (score: 100)"
+            },
+            "Paloalto": {
+                "detected": false,
+                "version": 1,
+                "update": 20211111,
+                "result": null
+            },
+            "Bkav": {
+                "detected": true,
+                "version": "1.3.0.9899",
+                "update": 20211111,
+                "result": "W32.AIDetect.malware1"
+            },
+            "VIPRE": {
+                "detected": true,
+                "version": 96880,
+                "update": 20211111,
+                "result": "Trojan.Win32.Vobfus.a (v)"
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211111,
+                "result": "WORM_VB.SMRX"
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24275,
+                "update": 20211111,
+                "result": "Win32/AutoRun.VB.RU"
+            },
+            "Baidu": {
+                "detected": true,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": "Win32.Trojan.VB.a"
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.a75776"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.227.39256",
+                "update": 20211111,
+                "result": "EmailWorm ( 00568eb91 )"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "version": "3.0.0.1",
+                "update": 20211111,
+                "result": "Trojan/Generic.ASBOL.5"
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_100% (D)"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211111,
+                "result": null
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211111,
+                "result": "Win32:Sality-GW [Trj]"
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211111,
+                "result": "W32/VBNA.D!tr"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211111,
+                "result": "Trojan.GenericKDZ.71823"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211111,
+                "result": "BehavesLike.Win32.VBObfus.cm"
+            },
+            "Arcabit": {
+                "detected": true,
+                "version": "1.0.0.888",
+                "update": 20211111,
+                "result": "Trojan.Generic.D1188F"
+            },
+            "Panda": {
+                "detected": true,
+                "version": "4.6.4.2",
+                "update": 20211111,
+                "result": "W32/VobfusLNK.A"
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211111,
+                "result": "malware (ai score=86)"
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.228,
+                "update": 20211110,
+                "result": "Malicious"
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211111,
+                "result": null
+            },
+            "Comodo": {
+                "detected": true,
+                "version": 34044,
+                "update": 20211102,
+                "result": "TrojWare.Win32.Downloader.VB.C@22k4yp"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211111,
+                "result": "Trojan.Win32.Vbcode.a"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.227.39256",
+                "update": 20211111,
+                "result": "EmailWorm ( 00568eb91 )"
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211111,
+                "result": "Trojan.Siggen5.23153"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "2.2.2.0",
+                "update": 20211110,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "version": "4.2.2.27",
+                "update": 20211111,
+                "result": "Trojan.Dropper"
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211111,
+                "result": "Win32:Sality-GW [Trj]"
+            },
+            "Lionic": {
+                "detected": false,
+                "version": 4.2,
+                "update": 20211111,
+                "result": null
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "SUPERAntiSpyware": {
+                "detected": true,
+                "version": "5.6.0.1032",
+                "update": 20211106,
+                "result": "Trojan.Agent/Gen-FakeAlert"
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31316B:27.25115",
+                "update": 20211111,
+                "result": "Win32.Trojan.PSE.1MHBYLH"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211111,
+                "result": "W32.Changeup.C"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211111,
+                "result": "Trojan.GenericKDZ.71823"
+            },
+            "ClamAV": {
+                "detected": true,
+                "version": "0.104.1.0",
+                "update": 20211111,
+                "result": "Win.Worm.VB-1129"
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211111,
+                "result": "WORM_VB.SMRX"
+            },
+            "VBA32": {
+                "detected": true,
+                "version": "5.0.0",
+                "update": 20211111,
+                "result": "Trojan.VBRA.09412"
+            },
+            "Acronis": {
+                "detected": true,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": "suspicious"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211111,
+                "result": "Trojan.Win32.Agent.vefb"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211111,
+                "result": "Trojan.GenericKDZ.71823"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25409",
+                "update": 20211111,
+                "result": "Trojan.Win32.Crypt.ddyvq"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211111,
+                "result": "TR/Poly.Agent.C"
+            },
+            "Jiangmin": {
+                "detected": true,
+                "version": "16.0.100",
+                "update": 20211110,
+                "result": "Trojan/Generic.atgeb"
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211111,
+                "result": "Downloader-CJX.gen.g"
+            },
+            "Cyren": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211111,
+                "result": "W32/Vobfus.E.gen!Eldorado"
+            },
+            "Sangfor": {
+                "detected": false,
+                "version": "2.9.0.0",
+                "update": 20211103,
+                "result": null
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211111,
+                "result": "ML/PE-A + Mal/SillyFDC-D"
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "version": "1.0.62.161",
+                "update": 20211111,
+                "result": null
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211111,
+                "result": "Trojan.GenericKDZ.71823"
+            },
+            "Zillya": {
+                "detected": true,
+                "version": "2.0.0.4494",
+                "update": 20211111,
+                "result": "Trojan.AgentGen.Win32.72"
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211111,
+                "result": "Worm:Win32/Vobfus.AC"
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211111,
+                "result": "Win32/Vbna4.worm.Gen"
+            },
+            "eGambit": {
+                "detected": true,
+                "version": null,
+                "update": 20211111,
+                "result": "Unsafe.AI_Score_99%"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211111,
+                "result": null
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211104,
+                "result": "AI:Packer.0295EA5D20"
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211111,
+                "result": "Worm.Win32.Vobfus"
+            },
+            "ViRobot": {
+                "detected": true,
+                "version": "2014.3.20.0",
+                "update": 20211111,
+                "result": "Worm.Win32.VB.131072.C"
+            },
+            "Yandex": {
+                "detected": false,
+                "version": "5.5.2.24",
+                "update": 20211111,
+                "result": null
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211111,
+                "result": "Generic.mg.3a1c836a757766c8"
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "version": 14,
+                "update": 20211111,
+                "result": "Worm.VBNA.gen"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211111,
+                "result": "Unsafe"
+            }
+        }
+    },
+    "extension": "exe",
+    "sha384": "99d8f197706a0e7ff2f3812f4e4fcc899099302553c71e9a701aac59e636b175fe82262f3653b4248d1e25e17191b09c",
+    "md5": "3a1c836a757766c8e9f2c88ca89896af",
+    "added_timestamp": "2021-11-17T12:58:53+00:00",
+    "imphash": "9dcb8336739169fc8a750beced8f5e63",
+    "sha512": "dcd09da55f11515ce752e1b99768ae267a4394212cbdf2b0b7185b543237be8ad506819e6e2cd1faaabdc3ff4cebebe199ed77e9900a1978e107fdcea4753c20",
+    "size": 131072,
+    "sha224": "cbaec24517d3be05fcd5aa0f0d2e40ef3f71cfabfb93f91be93b08b9",
+    "sha256": "c8ed3bb70e71ada8ee1f2d25a0b6e8abd5982fc15473ad9442248e68be106e74",
+    "asha256": "c89564b20765e53f8d210453ddcb3ded20e1a5c8535d62ed0264c8e07bfa9251",
+    "sha1": "3a83b5bde31225801cf73eacb6ca699266744986",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 127488,
+        "EntryPoint": "0x11f0",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x0000",
+        "FileOS": "Win32",
+        "FileSize": "128 kB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": 9.44,
+        "FileVersionNumber": "1.0.0.0",
+        "ImageVersion": 1,
+        "InitializedDataSize": 10752,
+        "InternalName": "XUHzpEIF",
+        "LanguageCode": "English (U.S.)",
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "ObjectFileType": "Executable application",
+        "OriginalFileName": "XUHzpEIF.exe",
+        "PEType": "PE32",
+        "ProductName": "XUHzpEIF",
+        "ProductVersion": 9.44,
+        "ProductVersionNumber": "1.0.0.0",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2010:07:28 02:05:31-04:00",
+        "UninitializedDataSize": 0
+    },
+    "ssdeep": "3072:O5jYwP3y4CpCfCGCCOCwC9CvCFCfCLCvCUCLC2FInROUSRSGSuSQSmSNS4SQSsSx:aL3yGFInRO",
+    "mimetype": "application/x-dosexec",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "3a1c836a757766c8e9f2c88ca89896af",
+        "mode": "file"
+    }
+}

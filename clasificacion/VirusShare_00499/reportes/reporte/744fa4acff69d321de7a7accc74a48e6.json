@@ -1,0 +1,436 @@
+{
+    "trid": {
+        "0": "Win64 Executable (generic) (38.0%)",
+        "1": "Win32 Dynamic Link Library (generic) (23.7%)",
+        "2": "Win32 Executable (generic) (16.2%)",
+        "3": "OS/2 Executable (generic) (7.3%)",
+        "4": "Generic Win/DOS Executable (7.2%)"
+    },
+    "virustotal": {
+        "scan_date": "2021-11-11 22:00:58",
+        "permalink": "https://www.virustotal.com/gui/file/d9391c11ef5e3ece4b15d41870fc7eaeefe70d9ffe9677d17b0bb8d5b8e14f51/detection/f-d9391c11ef5e3ece4b15d41870fc7eaeefe70d9ffe9677d17b0bb8d5b8e14f51-1636668058",
+        "positives": 48,
+        "total": 61,
+        "scans": {
+            "MaxSecure": {
+                "detected": false,
+                "version": "1.0.0.1",
+                "update": 20211111,
+                "result": null
+            },
+            "Alibaba": {
+                "detected": false,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": null
+            },
+            "Comodo": {
+                "detected": true,
+                "version": 34044,
+                "update": 20211102,
+                "result": "Worm.Win32.VB.AUA@4o7zkg"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211111,
+                "result": null
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211111,
+                "result": "Worm.VobfusEx!1.99DC (CLASSIC)"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211111,
+                "result": "Malicious (score: 100)"
+            },
+            "Paloalto": {
+                "detected": false,
+                "version": 1,
+                "update": 20211111,
+                "result": null
+            },
+            "Bkav": {
+                "detected": true,
+                "version": "1.3.0.9899",
+                "update": 20211111,
+                "result": "W32.AIDetect.malware1"
+            },
+            "VIPRE": {
+                "detected": true,
+                "version": 96882,
+                "update": 20211111,
+                "result": "Worm.Win32.Vobfus.gensa (v)"
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211111,
+                "result": "WORM_VOBFUS.SMJA"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211111,
+                "result": "ML/PE-A + W32/Vobfus-AH"
+            },
+            "Baidu": {
+                "detected": true,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": "Win32.Worm.VB.nn"
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.cff69d"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.227.39258",
+                "update": 20211111,
+                "result": "EmailWorm ( 0054d10f1 )"
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211111,
+                "result": "W32/VBObfus.AU!tr"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "version": "3.0.0.1",
+                "update": 20211111,
+                "result": "Trojan/Generic.ASBOL.5"
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24276,
+                "update": 20211111,
+                "result": "Win32/AutoRun.VB.AVO"
+            },
+            "Yandex": {
+                "detected": true,
+                "version": "5.5.2.24",
+                "update": 20211111,
+                "result": "Trojan.GenAsa!n9vpFGRhqIs"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211111,
+                "result": "Gen:Variant.Barys.2424"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211111,
+                "result": "BehavesLike.Win32.Autorun.cm"
+            },
+            "Arcabit": {
+                "detected": false,
+                "version": "1.0.0.888",
+                "update": 20211111,
+                "result": null
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_100% (D)"
+            },
+            "Panda": {
+                "detected": true,
+                "version": "4.6.4.2",
+                "update": 20211111,
+                "result": "W32/Vobfus.GEW.worm"
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211111,
+                "result": "malware (ai score=86)"
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.228,
+                "update": 20211110,
+                "result": "Malicious"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211111,
+                "result": "W32.Changeup"
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211104,
+                "result": "Gen:NN.ZevbaF.34266.gq0@aatrYTmi"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211111,
+                "result": "Worm.Win32.Vobfus.n"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.227.39258",
+                "update": 20211111,
+                "result": "EmailWorm ( 0054d10f1 )"
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211111,
+                "result": "Win32.HLLW.Autoruner1.14788"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "2.2.2.0",
+                "update": 20211110,
+                "result": null
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "TACHYON": {
+                "detected": true,
+                "version": "2021-11-11.02",
+                "update": 20211111,
+                "result": "Worm/W32.Vobfus.102400"
+            },
+            "Lionic": {
+                "detected": false,
+                "version": 4.2,
+                "update": 20211111,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "version": "4.2.2.27",
+                "update": 20211111,
+                "result": "Trojan.Crypt"
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31317B:27.25117",
+                "update": 20211111,
+                "result": "Gen:Variant.Barys.2424"
+            },
+            "SUPERAntiSpyware": {
+                "detected": true,
+                "version": "5.6.0.1032",
+                "update": 20211106,
+                "result": "Trojan.Agent/Gen-Symmi"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211111,
+                "result": "Gen:Variant.Barys.2424"
+            },
+            "ClamAV": {
+                "detected": true,
+                "version": "0.104.1.0",
+                "update": 20211111,
+                "result": "Win.Trojan.Changeup-6169544-0"
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "VBA32": {
+                "detected": true,
+                "version": "5.0.0",
+                "update": 20211111,
+                "result": "Trojan.Jorik"
+            },
+            "Acronis": {
+                "detected": true,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": "suspicious"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211111,
+                "result": "Trojan.Win32.Jorik.Vobfus.ahog"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211111,
+                "result": "Gen:Variant.Barys.2424"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25409",
+                "update": 20211111,
+                "result": "Trojan.Win32.Jorik.cihugs"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211111,
+                "result": "TR/Jorik.Vobfus.ahog"
+            },
+            "ViRobot": {
+                "detected": true,
+                "version": "2014.3.20.0",
+                "update": 20211111,
+                "result": "Worm.Win32.A.VBNA.102400.AZ"
+            },
+            "Jiangmin": {
+                "detected": false,
+                "version": "16.0.100",
+                "update": 20211110,
+                "result": null
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211111,
+                "result": "W32/Autorun.worm.ru"
+            },
+            "Cyren": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211111,
+                "result": "W32/S-ba809f61!Eldorado"
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "version": "1.0.62.161",
+                "update": 20211111,
+                "result": null
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211111,
+                "result": "Gen:Variant.Barys.2424"
+            },
+            "Zillya": {
+                "detected": false,
+                "version": "2.0.0.4494",
+                "update": 20211111,
+                "result": null
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211111,
+                "result": "Trojan/Win32.Vobfus.R150635"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211111,
+                "result": null
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211111,
+                "result": null
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211111,
+                "result": "WORM_VOBFUS.SMJA"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211111,
+                "result": "Gen:Variant.Barys.2424 (B)"
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211111,
+                "result": "Generic.mg.744fa4acff69d321"
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "version": 14,
+                "update": 20211111,
+                "result": "Trojan.Beebone.D"
+            }
+        }
+    },
+    "extension": "exe",
+    "sha384": "39f195c62eff1f327e6f271c41ccb5c75f1a10141bd59c4c9dc8d5b28633543635aa04c16dd17e495eadff5f397a0b4c",
+    "md5": "744fa4acff69d321de7a7accc74a48e6",
+    "added_timestamp": "2021-11-17T15:35:02+00:00",
+    "imphash": "9752f04492655f02ebf9e985dcb8b857",
+    "sha512": "74df993894fda5290bc7f7fc799545ae8da7589be461ac85966e36cc49cfebcb3a689d90cdfcbc12636c6a5ed6d9906f0125121faa0ad0f14b55547a1dae17dd",
+    "size": 102400,
+    "sha224": "74bdc6c57c696835f84bb5f6180746474c76602e017c1b8e44c537b2",
+    "sha256": "d9391c11ef5e3ece4b15d41870fc7eaeefe70d9ffe9677d17b0bb8d5b8e14f51",
+    "asha256": "56051ea7539cbde29be1748184dae2442edfbf8b2f69b439fdf80d49d6580c5a",
+    "sha1": "b92bf162b912c2beb222362f1236978ab49deddf",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 81920,
+        "EntryPoint": "0x1178",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x0000",
+        "FileOS": "Win32",
+        "FileSize": "100 kB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": 1,
+        "FileVersionNumber": "1.0.0.0",
+        "ImageVersion": 1,
+        "InitializedDataSize": 16384,
+        "InternalName": "pNWtZV",
+        "LanguageCode": "English (U.S.)",
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "ObjectFileType": "Executable application",
+        "OriginalFileName": "pNWtZV.exe",
+        "PEType": "PE32",
+        "ProductName": "xBMheg",
+        "ProductVersion": 1,
+        "ProductVersionNumber": "1.0.0.0",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "1999:04:16 07:29:07-04:00",
+        "UninitializedDataSize": 0
+    },
+    "ssdeep": "1536:Lnl0ccLBnTOB+dGrNjjmJ2NuKuFr1M5B4QbCcIBl:WLBTOB++jOWcl",
+    "mimetype": "application/x-dosexec",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "744fa4acff69d321de7a7accc74a48e6",
+        "mode": "file"
+    }
+}

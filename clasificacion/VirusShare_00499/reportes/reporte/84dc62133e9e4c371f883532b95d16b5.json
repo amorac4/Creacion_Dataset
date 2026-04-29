@@ -1,0 +1,440 @@
+{
+    "trid": {
+        "0": "UPX compressed Win32 Executable (38.2%)",
+        "1": "Win32 EXE Yoda's Crypter (37.5%)",
+        "2": "Win32 Dynamic Link Library (generic) (9.2%)",
+        "3": "Win32 Executable (generic) (6.3%)",
+        "4": "OS/2 Executable (generic) (2.8%)"
+    },
+    "virustotal": {
+        "scan_date": "2021-11-09 12:04:47",
+        "permalink": "https://www.virustotal.com/gui/file/c82fa64749a43573ff291c33e0b587331357af84bfda097d78411a7cb985d325/detection/f-c82fa64749a43573ff291c33e0b587331357af84bfda097d78411a7cb985d325-1636459487",
+        "positives": 54,
+        "total": 64,
+        "scans": {
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211108,
+                "result": "Trojan.Malware.300983.susgen"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "Alibaba": {
+                "detected": false,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": null
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211109,
+                "result": "Worm.Picsys!1.C132 (CLASSIC)"
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-11-09.01",
+                "update": 20211109,
+                "result": null
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211109,
+                "result": "Malicious (score: 100)"
+            },
+            "Paloalto": {
+                "detected": false,
+                "version": 1,
+                "update": 20211109,
+                "result": null
+            },
+            "Bkav": {
+                "detected": true,
+                "version": "1.3.0.9899",
+                "update": 20211109,
+                "result": "W32.AIDetect.malware1"
+            },
+            "VIPRE": {
+                "detected": true,
+                "version": 96824,
+                "update": 20211109,
+                "result": "Worm.Win32.Yoof.e (v)"
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211109,
+                "result": "WORM_SPYBOT.PA"
+            },
+            "Comodo": {
+                "detected": true,
+                "version": 34044,
+                "update": 20211102,
+                "result": "Worm.Win32.Picsys.B@1awl"
+            },
+            "Baidu": {
+                "detected": true,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": "Win32.Worm.Picsys.a"
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.33e9e4"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.226.39230",
+                "update": 20211109,
+                "result": "Trojan ( 00568e341 )"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211109,
+                "result": "Worm.Win32.Picsys.aab"
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_90% (D)"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "version": "3.0.0.1",
+                "update": 20211109,
+                "result": "Trojan/Generic.ASCommon.1A9"
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24262,
+                "update": 20211109,
+                "result": "Win32/Picsys.B"
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211109,
+                "result": "Win32:Picsys-B [Wrm]"
+            },
+            "Yandex": {
+                "detected": true,
+                "version": "5.5.2.24",
+                "update": 20211109,
+                "result": "Worm.Picsys!vNEZkf1mA50"
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211109,
+                "result": "W32/Generic.AC.2C8E!tr"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211109,
+                "result": "Trojan.GenericKD.47321570"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211109,
+                "result": "BehavesLike.Win32.Picsys.lc"
+            },
+            "Arcabit": {
+                "detected": false,
+                "version": "1.0.0.888",
+                "update": 20211109,
+                "result": null
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211109,
+                "result": "Worm:Win32/Yoof.E"
+            },
+            "Panda": {
+                "detected": false,
+                "version": "4.6.4.2",
+                "update": 20211109,
+                "result": null
+            },
+            "ZoneAlarm": {
+                "detected": true,
+                "version": 1,
+                "update": 20211102,
+                "result": "P2P-Worm.Win32.Picsys.b"
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.227,
+                "update": 20211107,
+                "result": "Malicious"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211109,
+                "result": "W32.HLLW.Yoof"
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211104,
+                "result": "AI:Packer.B927EAE619"
+            },
+            "Cyren": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211109,
+                "result": "W32/Picsys.FYLV-4646"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.226.39230",
+                "update": 20211109,
+                "result": "Trojan ( 00568e341 )"
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211109,
+                "result": "BackDoor.Siex.131"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "2.2.2.0",
+                "update": 20211108,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "version": "4.2.2.27",
+                "update": 20211109,
+                "result": "Worm.Small"
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211109,
+                "result": "Win32:Picsys-B [Wrm]"
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211109,
+                "result": null
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31296B:27.25089",
+                "update": 20211109,
+                "result": "Trojan.GenericKD.47321570"
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "version": "5.6.0.1032",
+                "update": 20211106,
+                "result": null
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211109,
+                "result": "Trojan.GenericKD.47321570"
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211109,
+                "result": "WORM_SPYBOT.PA"
+            },
+            "Acronis": {
+                "detected": true,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": "suspicious"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211109,
+                "result": "P2P-Worm.Win32.Picsys.b"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211109,
+                "result": "Trojan.GenericKD.47321570"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25409",
+                "update": 20211109,
+                "result": "Trojan.Win32.Picsys.deaxpd"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211109,
+                "result": "DR/Delphi.Gen"
+            },
+            "ViRobot": {
+                "detected": true,
+                "version": "2014.3.20.0",
+                "update": 20211109,
+                "result": "Worm.Win32.P2P-Picsys.65221"
+            },
+            "Jiangmin": {
+                "detected": true,
+                "version": "16.0.100",
+                "update": 20211108,
+                "result": "I-Worm/P2P.Picsys"
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211109,
+                "result": "W32/Picsys.worm.b"
+            },
+            "VBA32": {
+                "detected": true,
+                "version": "5.0.0",
+                "update": 20211109,
+                "result": "Worm.Picsys"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211109,
+                "result": "ML/PE-A + W32/PicSys-B"
+            },
+            "Gridinsoft": {
+                "detected": true,
+                "version": "1.0.61.160",
+                "update": 20211109,
+                "result": "Ransom.Win32.Wacatac.oa!s2"
+            },
+            "Zillya": {
+                "detected": true,
+                "version": "2.0.0.4491",
+                "update": 20211109,
+                "result": "Worm.Picsys.Win32.3"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211109,
+                "result": "Trojan.GenericKD.47321570 (B)"
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211109,
+                "result": "Worm/Win32.Picsys.C116429"
+            },
+            "Kingsoft": {
+                "detected": true,
+                "version": "2017.9.26.565",
+                "update": 20211109,
+                "result": "Heur.SSC.2683252.1216.(kcloud)"
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211109,
+                "result": "Trojan.GenericKD.47321570"
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211109,
+                "result": "malware (ai score=88)"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211109,
+                "result": null
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211109,
+                "result": "Generic.mg.84dc62133e9e4c37"
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "version": 14,
+                "update": 20211109,
+                "result": "Worm.Picsys.CC1"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211109,
+                "result": "Unsafe"
+            }
+        }
+    },
+    "extension": "exe",
+    "sha384": "2408ee4bd2e8ba5e8b8c3066bc313a300e6b8e94aa5f276327c4edaab9e29a3a6fa11922a6f2ba4a5137667e8d37f657",
+    "md5": "84dc62133e9e4c371f883532b95d16b5",
+    "added_timestamp": "2021-11-17T12:08:10+00:00",
+    "imphash": "359d89624a26d1e756c3e9d6782d6eb0",
+    "sha512": "4598b6b8d5f6f5b04391769e4a8415767ebf6690ee1268a0e3f168c779a2a286c61b0a79ea4844d02090468a04ee9c3920ef5fec1d5b2b2984e1e52ace33b658",
+    "size": 79306,
+    "sha224": "2aa22662a6c2e5ad8a33bb07199d837f83459faf224c7fa43e0909f7",
+    "sha256": "c82fa64749a43573ff291c33e0b587331357af84bfda097d78411a7cb985d325",
+    "asha256": "307b42865f5d515caf639ff996882497dd8c74e1ca5083a9165f51b3d6eb0955",
+    "sha1": "d9ef049db4e1a9f5f7915a0d4a6888cd9e29b714",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows, UPX compressed",
+    "exif": {
+        "CodeSize": 57344,
+        "EntryPoint": "0x61f20",
+        "FileSize": "77 kB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageVersion": 0,
+        "InitializedDataSize": 4096,
+        "LinkerVersion": 2.25,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "1992:06:19 18:22:17-04:00",
+        "UninitializedDataSize": 344064
+    },
+    "ssdeep": "1536:y4QQ6NSyM61l19piO+LV8YEoI/EU9RUe4mOseThn5iRsTwMX:y4X6NSyfnpijeYEoIcq4meF5R8m",
+    "mimetype": "application/x-dosexec",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "84dc62133e9e4c371f883532b95d16b5",
+        "mode": "file"
+    }
+}
