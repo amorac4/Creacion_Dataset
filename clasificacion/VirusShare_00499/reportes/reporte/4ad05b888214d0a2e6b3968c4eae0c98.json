@@ -1,0 +1,464 @@
+{
+    "sha224": "97ee2b14376c6c29b33b7b2061c4598af594a10e813d99a1106d7018",
+    "sha384": "b56c3ad4573cd7a938c8ec6fe91bd0ba82b3ae1649dc371c73cf4e29b310c33e155260edd32a40a9d419308de8187504",
+    "virustotal": {
+        "positives": 39,
+        "permalink": "https://www.virustotal.com/gui/file/47a135ce3d6f0eadbed1555d93932ea63a3c960e8f669306d4ea8b2d06e36fbc/detection/f-47a135ce3d6f0eadbed1555d93932ea63a3c960e8f669306d4ea8b2d06e36fbc-1636880248",
+        "scan_date": "2021-11-14 08:57:28",
+        "total": 68,
+        "scans": {
+            "Kaspersky": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "21.0.1.45"
+            },
+            "F-Secure": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "12.0.86.52"
+            },
+            "TACHYON": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "2021-11-14.02"
+            },
+            "VBA32": {
+                "detected": false,
+                "update": 20211112,
+                "result": null,
+                "version": "5.0.0"
+            },
+            "Acronis": {
+                "detected": true,
+                "update": 20210512,
+                "result": "suspicious",
+                "version": "1.1.1.82"
+            },
+            "K7GW": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "11.227.39282"
+            },
+            "Kingsoft": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Heur.SSC.340059.1216.(kcloud)",
+                "version": "2017.9.26.565"
+            },
+            "Cyren": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "6.3.0.2"
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Malware.AI.2524578630",
+                "version": "4.2.2.27"
+            },
+            "Sangfor": {
+                "detected": false,
+                "update": 20211103,
+                "result": null,
+                "version": "2.9.0.0"
+            },
+            "eGambit": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Unsafe.AI_Score_57%",
+                "version": null
+            },
+            "AVG": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32:LovGate-F [Wrm]",
+                "version": "21.1.5827.0"
+            },
+            "MaxSecure": {
+                "detected": false,
+                "update": 20211113,
+                "result": null,
+                "version": "1.0.0.1"
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "update": 20211113,
+                "result": null,
+                "version": "5.6.0.1032"
+            },
+            "GData": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32.Worm.Lovgate.AF.Dam",
+                "version": "A:25.31340B:27.25144"
+            },
+            "Cylance": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Unsafe",
+                "version": "2.3.1.101"
+            },
+            "Tencent": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "1.0.0.1"
+            },
+            "Jiangmin": {
+                "detected": true,
+                "update": 20211113,
+                "result": "Trojan.Generic.bagtk",
+                "version": "16.0.100"
+            },
+            "Elastic": {
+                "detected": true,
+                "update": 20211005,
+                "result": "malicious (high confidence)",
+                "version": "4.0.29"
+            },
+            "Symantec": {
+                "detected": false,
+                "update": 20211113,
+                "result": null,
+                "version": "1.16.0.0"
+            },
+            "Antiy-AVL": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "3.0.0.1"
+            },
+            "DrWeb": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "7.0.52.8270"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "update": 20211114,
+                "result": "BehavesLike.Win32.Generic.gz",
+                "version": "v2019.1.2+3728"
+            },
+            "McAfee": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "6.0.6.653"
+            },
+            "Yandex": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Trojan.GenAsa!DGdimWpMgzM",
+                "version": "5.5.2.24"
+            },
+            "Bkav": {
+                "detected": true,
+                "update": 20211113,
+                "result": "W32.AIDetect.malware1",
+                "version": "1.3.0.9899"
+            },
+            "Panda": {
+                "detected": false,
+                "update": 20211113,
+                "result": null,
+                "version": "4.6.4.2"
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Worm/Win32.LoveGate.R76947",
+                "version": "3.21.1.10219"
+            },
+            "Fortinet": {
+                "detected": true,
+                "update": 20211114,
+                "result": "W32/Lovgate.F!dam",
+                "version": "6.2.142.0"
+            },
+            "TrendMicro": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Possible_Virus",
+                "version": "11.0.0.1006"
+            },
+            "Paloalto": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": 1
+            },
+            "Cybereason": {
+                "detected": true,
+                "update": 20210330,
+                "result": "malicious.88214d",
+                "version": "1.2.449"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32.Worm.Lovgate.AF.Dam",
+                "version": "3.0.21.193"
+            },
+            "Lionic": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": 4.2
+            },
+            "BitDefender": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32.Worm.Lovgate.AF.Dam",
+                "version": 7.2
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "update": 20210203,
+                "result": "win/malicious_confidence_100% (D)",
+                "version": 1
+            },
+            "Sophos": {
+                "detected": true,
+                "update": 20211113,
+                "result": "ML/PE-A",
+                "version": "1.4.1.0"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "update": 20211028,
+                "result": "Static AI - Malicious PE",
+                "version": "6.3.0.2"
+            },
+            "CAT-QuickHeal": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": 14
+            },
+            "MAX": {
+                "detected": true,
+                "update": 20211114,
+                "result": "malware (ai score=88)",
+                "version": "2019.9.16.1"
+            },
+            "Ikarus": {
+                "detected": true,
+                "update": 20211113,
+                "result": "Worm.Win32.Lovgate",
+                "version": "0.1.5.2"
+            },
+            "K7AntiVirus": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "11.227.39283"
+            },
+            "VIPRE": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Trojan.Win32.Generic!BT",
+                "version": 96942
+            },
+            "Arcabit": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32.Worm.Lovgate.AF.Dam",
+                "version": "1.0.0.888"
+            },
+            "APEX": {
+                "detected": true,
+                "update": 20211113,
+                "result": "Malicious",
+                "version": 6.229
+            },
+            "Zillya": {
+                "detected": false,
+                "update": 20211112,
+                "result": null,
+                "version": "2.0.0.4495"
+            },
+            "Cynet": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Malicious (score: 100)",
+                "version": "4.0.0.27"
+            },
+            "ClamAV": {
+                "detected": true,
+                "update": 20211113,
+                "result": "Win.Worm.LovGate-5",
+                "version": "0.104.1.0"
+            },
+            "Microsoft": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Worm:Win32/Lovgate.F@mm.dam#1",
+                "version": "1.1.18700.4"
+            },
+            "CMC": {
+                "detected": false,
+                "update": 20211026,
+                "result": null,
+                "version": "2.10.2019.1"
+            },
+            "FireEye": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Generic.mg.4ad05b888214d0a2",
+                "version": "32.44.1.0"
+            },
+            "Webroot": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "1.0.0.403"
+            },
+            "Rising": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Trojan.Generic@ML.93 (RDML:med8mWAOTB23ergDoR4XhA)",
+                "version": "25.0.0.26"
+            },
+            "Alibaba": {
+                "detected": false,
+                "update": 20190527,
+                "result": null,
+                "version": "0.3.0.5"
+            },
+            "BitDefenderTheta": {
+                "detected": false,
+                "update": 20211104,
+                "result": null,
+                "version": "7.2.37796.0"
+            },
+            "Avast": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32:LovGate-F [Wrm]",
+                "version": "21.1.5827.0"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32.Worm.Lovgate.AF.Dam (B)",
+                "version": "2021.5.0.7597"
+            },
+            "ESET-NOD32": {
+                "detected": false,
+                "update": 20211113,
+                "result": null,
+                "version": 24288
+            },
+            "Zoner": {
+                "detected": false,
+                "update": 20211113,
+                "result": null,
+                "version": "2.2.2.0"
+            },
+            "Comodo": {
+                "detected": true,
+                "update": 20211102,
+                "result": "Heur.Corrupt.PE@1z141z3",
+                "version": 34044
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Possible_Virus",
+                "version": "10.0.0.1040"
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32.Worm.Lovgate.AF.Dam",
+                "version": "14.0.409.0"
+            },
+            "ViRobot": {
+                "detected": true,
+                "update": 20211113,
+                "result": "Worm.Win32.Lovgate.111470",
+                "version": "2014.3.20.0"
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "1.0.62.161"
+            },
+            "Avira": {
+                "detected": true,
+                "update": 20211114,
+                "result": "WORM/Lovgate.F",
+                "version": "8.3.3.12"
+            },
+            "Baidu": {
+                "detected": false,
+                "update": 20190318,
+                "result": null,
+                "version": "1.0.0.2"
+            },
+            "NANO-Antivirus": {
+                "detected": false,
+                "update": 20211114,
+                "result": null,
+                "version": "1.0.146.25409"
+            },
+            "ALYac": {
+                "detected": true,
+                "update": 20211114,
+                "result": "Win32.Worm.Lovgate.AF.Dam",
+                "version": "1.1.3.1"
+            }
+        }
+    },
+    "sha256": "47a135ce3d6f0eadbed1555d93932ea63a3c960e8f669306d4ea8b2d06e36fbc",
+    "exif": {
+        "CodeSize": 86016,
+        "EntryPoint": "0x617461",
+        "FileSize": "476 kB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageVersion": 0,
+        "InitializedDataSize": 299008,
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2031:05:20 16:54:01-04:00",
+        "UninitializedDataSize": 0
+    },
+    "size": 487424,
+    "ssdeep": "6144:/8r4/IHm9fCo9Az80zU/KFIk0SJlxekfh1Sw8:0r4/c+98rwXamw8",
+    "asha256": "789a5702e551f8d24f9e5505ddb758fa412c8a236f49650ff75b9348b2563395",
+    "mimetype": "application/x-dosexec",
+    "trid": {
+        "0": "Win16 NE executable (generic) (32.3%)",
+        "1": "Win32 Executable (generic) (28.9%)",
+        "2": "OS/2 Executable (generic) (13.0%)",
+        "3": "Generic Win/DOS Executable (12.8%)",
+        "4": "DOS Executable Generic (12.8%)"
+    },
+    "imphash": "30299cc530b2e0d3e31c8f3285b9eb4d",
+    "md5": "4ad05b888214d0a2e6b3968c4eae0c98",
+    "added_timestamp": "2021-11-18T07:27:33+00:00",
+    "extension": "exe",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "sha1": "dd9c6e3a870c7c71a2df2e56bcdbfc63e4e6819a",
+    "sha512": "20615d9641216ada25a773552004bc595541b02c94b1254e14654193916f20409cd2773c91a5d10c40a17502156e5616e4495031f56ea093702822b9adc75924",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "4ad05b888214d0a2e6b3968c4eae0c98",
+        "mode": "file"
+    }
+}

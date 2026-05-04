@@ -1,0 +1,431 @@
+{
+    "sha224": "977d111540ef3510c60fef678c026c4085f9654f8f6f730e61b35c55",
+    "sha384": "1e101e7b5d1679c4a2f36b02facc9283ab9516b324e9813808cbbd8513ec72ef2388efe967f4b630e7c478c5dfe347b9",
+    "virustotal": {
+        "positives": 53,
+        "permalink": "https://www.virustotal.com/gui/file/a076687aa37cffaa54dda7b21e5a95557e22554939b3eb1966431af441dec8e4/detection/f-a076687aa37cffaa54dda7b21e5a95557e22554939b3eb1966431af441dec8e4-1637218847",
+        "scan_date": "2021-11-18 07:00:47",
+        "total": 65,
+        "scans": {
+            "Kaspersky": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Trojan.Win32.Jorik.IRCbot.iet",
+                "version": "21.0.1.45"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Backdoor.IRCBot.ADMW",
+                "version": "3.0.21.193"
+            },
+            "F-Secure": {
+                "detected": false,
+                "update": 20211118,
+                "result": null,
+                "version": "12.0.86.52"
+            },
+            "TACHYON": {
+                "detected": false,
+                "update": 20211118,
+                "result": null,
+                "version": "2021-11-18.01"
+            },
+            "VBA32": {
+                "detected": true,
+                "update": 20211117,
+                "result": "BScope.Backdoor.IRC.NgrBot",
+                "version": "5.0.0"
+            },
+            "Acronis": {
+                "detected": true,
+                "update": 20210512,
+                "result": "suspicious",
+                "version": "1.1.1.82"
+            },
+            "BitDefender": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Backdoor.IRCBot.ADMW",
+                "version": 7.2
+            },
+            "Kingsoft": {
+                "detected": false,
+                "update": 20211118,
+                "result": null,
+                "version": "2017.9.26.565"
+            },
+            "Cyren": {
+                "detected": true,
+                "update": 20211118,
+                "result": "W32/Trojan.OYRN-2874",
+                "version": "6.3.0.2"
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Malware.AI.4226361233",
+                "version": "4.2.2.27"
+            },
+            "AVG": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Win32:Crypt-LYM [Trj]",
+                "version": "21.1.5827.0"
+            },
+            "SUPERAntiSpyware": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Trojan.Agent/Gen-Frokon",
+                "version": "5.6.0.1032"
+            },
+            "GData": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Backdoor.IRCBot.ADMW",
+                "version": "A:25.31375B:27.25192"
+            },
+            "Jiangmin": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Win32/Virut.bv",
+                "version": "16.0.100"
+            },
+            "Elastic": {
+                "detected": true,
+                "update": 20211005,
+                "result": "malicious (high confidence)",
+                "version": "4.0.29"
+            },
+            "Symantec": {
+                "detected": true,
+                "update": 20211118,
+                "result": "ML.Attribute.HighConfidence",
+                "version": "1.16.0.0"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Trojan/Generic.ASMalwS.5FA62",
+                "version": "3.0.0.1"
+            },
+            "DrWeb": {
+                "detected": true,
+                "update": 20211118,
+                "result": "BackDoor.IRC.Bot.1725",
+                "version": "7.0.52.8270"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "update": 20211118,
+                "result": "BehavesLike.Win32.Generic.mz",
+                "version": "v2019.1.2+3728"
+            },
+            "McAfee": {
+                "detected": true,
+                "update": 20211118,
+                "result": "GenericRXJN-FM!E9A9263CAFCF",
+                "version": "6.0.6.653"
+            },
+            "Yandex": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Trojan.IRCbot!PXTUUq4fPnQ",
+                "version": "5.5.2.24"
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Backdoor.IRCBot.ADMW",
+                "version": "14.0.409.0"
+            },
+            "Panda": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Trj/CI.A",
+                "version": "4.6.4.2"
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Win-Trojan/Jorik.60416.N",
+                "version": "3.21.1.10219"
+            },
+            "ViRobot": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Trojan.Win32.Z.Jorik.89600.A",
+                "version": "2014.3.20.0"
+            },
+            "Fortinet": {
+                "detected": true,
+                "update": 20211118,
+                "result": "W32/Kryptik.NBG!tr",
+                "version": "6.2.142.0"
+            },
+            "TrendMicro": {
+                "detected": true,
+                "update": 20211118,
+                "result": "TROJ_GEN.R002C0DK921",
+                "version": "11.0.0.1006"
+            },
+            "Paloalto": {
+                "detected": true,
+                "update": 20211118,
+                "result": "generic.ml",
+                "version": 1
+            },
+            "Cybereason": {
+                "detected": true,
+                "update": 20210330,
+                "result": "malicious.cafcf7",
+                "version": "1.2.449"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "update": 20211118,
+                "result": "TROJ_GEN.R002C0DK921",
+                "version": "10.0.0.1040"
+            },
+            "K7GW": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Riskware ( 0040eff71 )",
+                "version": "11.228.39358"
+            },
+            "Lionic": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Trojan.Win32.Jorik.4!c",
+                "version": 4.2
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "update": 20210203,
+                "result": "win/malicious_confidence_100% (W)",
+                "version": 1
+            },
+            "Sophos": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Mal/Generic-S",
+                "version": "1.4.1.0"
+            },
+            "CAT-QuickHeal": {
+                "detected": false,
+                "update": 20211118,
+                "result": null,
+                "version": 14
+            },
+            "MAX": {
+                "detected": true,
+                "update": 20211118,
+                "result": "malware (ai score=89)",
+                "version": "2019.9.16.1"
+            },
+            "Ikarus": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Trojan.Win32.Jorik",
+                "version": "0.1.5.2"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Riskware ( 0040eff71 )",
+                "version": "11.228.39358"
+            },
+            "BitDefenderTheta": {
+                "detected": false,
+                "update": 20211104,
+                "result": null,
+                "version": "7.2.37796.0"
+            },
+            "VIPRE": {
+                "detected": false,
+                "update": 20211118,
+                "result": null,
+                "version": 97040
+            },
+            "Arcabit": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Backdoor.IRCBot.ADMW",
+                "version": "1.0.0.888"
+            },
+            "APEX": {
+                "detected": true,
+                "update": 20211116,
+                "result": "Malicious",
+                "version": 6.23
+            },
+            "Zillya": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Trojan.Jorik.Win32.63410",
+                "version": "2.0.0.4499"
+            },
+            "Cynet": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Malicious (score: 100)",
+                "version": "4.0.0.27"
+            },
+            "ClamAV": {
+                "detected": false,
+                "update": 20211117,
+                "result": null,
+                "version": "0.104.1.0"
+            },
+            "Microsoft": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Worm:Win32/Phorpiex.B",
+                "version": "1.1.18700.4"
+            },
+            "CMC": {
+                "detected": false,
+                "update": 20211026,
+                "result": null,
+                "version": "2.10.2019.1"
+            },
+            "FireEye": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Generic.mg.e9a9263cafcf7d60",
+                "version": "32.44.1.0"
+            },
+            "Webroot": {
+                "detected": false,
+                "update": 20211118,
+                "result": null,
+                "version": "1.0.0.403"
+            },
+            "Rising": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Trojan.Generic@ML.100 (RDML:P8gnlPevz697qDRXqRNC5g)",
+                "version": "25.0.0.26"
+            },
+            "Alibaba": {
+                "detected": true,
+                "update": 20190527,
+                "result": "Trojan:Win32/Jorik.cb68190c",
+                "version": "0.3.0.5"
+            },
+            "MaxSecure": {
+                "detected": true,
+                "update": 20211117,
+                "result": "Trojan.Malware.300983.susgen",
+                "version": "1.0.0.1"
+            },
+            "Avast": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Win32:Crypt-LYM [Trj]",
+                "version": "21.1.5827.0"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Backdoor.IRCBot.ADMW (B)",
+                "version": "2021.5.0.7597"
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "update": 20211118,
+                "result": "a variant of Win32/Kryptik.ACSS",
+                "version": 24310
+            },
+            "Zoner": {
+                "detected": false,
+                "update": 20211117,
+                "result": null,
+                "version": "2.2.2.0"
+            },
+            "Comodo": {
+                "detected": true,
+                "update": 20211102,
+                "result": ".UnclassifiedMalware@0",
+                "version": 34044
+            },
+            "Tencent": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Virus.Win32.Virut.ue",
+                "version": "1.0.0.1"
+            },
+            "Bkav": {
+                "detected": true,
+                "update": 20211117,
+                "result": "W32.AIDetect.malware1",
+                "version": "1.3.0.9899"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "update": 20211028,
+                "result": "Static AI - Malicious PE",
+                "version": "6.3.0.2"
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "update": 20211118,
+                "result": null,
+                "version": "1.0.63.162"
+            },
+            "Avira": {
+                "detected": true,
+                "update": 20211118,
+                "result": "TR/Crypt.XPACK.Gen",
+                "version": "8.3.3.12"
+            },
+            "Baidu": {
+                "detected": false,
+                "update": 20190318,
+                "result": null,
+                "version": "1.0.0.2"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Trojan.Win32.Inject.voliw",
+                "version": "1.0.146.25409"
+            },
+            "ALYac": {
+                "detected": true,
+                "update": 20211118,
+                "result": "Backdoor.IRCBot.ADMW",
+                "version": "1.1.3.1"
+            }
+        }
+    },
+    "sha256": "a076687aa37cffaa54dda7b21e5a95557e22554939b3eb1966431af441dec8e4",
+    "exif": {
+        "Error": "Unknown file type",
+        "FileSize": "88 kB"
+    },
+    "size": 89600,
+    "ssdeep": "768:nuTVqBLnt+j1TPsFiwwzQDd1qBnkVuq/4IR30ActE6/n:nuxq1t+pYkwwEDmq//Xc66/n",
+    "asha256": "ea99a64b2363c415e7f89eb2e2e95ddd292352837e0d63854e80494b42ca1c37",
+    "mimetype": "application/x-dosexec",
+    "trid": {
+        "0": "Win32 Executable (generic) (47.1%)",
+        "1": "Generic Win/DOS Executable (20.9%)",
+        "2": "DOS Executable Generic (20.9%)",
+        "3": "Music Craft Score (10.5%)",
+        "4": "VXD Driver (0.3%)"
+    },
+    "md5": "e9a9263cafcf7d60a9e0f93a3f3d1d4d",
+    "added_timestamp": "2021-11-18T07:14:31+00:00",
+    "extension": "exe",
+    "filetype": "MS-DOS executable",
+    "sha1": "0f14667d2cf8d91a38173d7e93d6a4aa7def9f87",
+    "sha512": "bfd3a09b1e431c837541f87b1a03801e7399c1a5ece7c6f568e9b1e0cfcd1ae90cfa06c3ec0b42c2e99d9db58f9d06f320c636b5a281be7a7848158b2c906278",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "e9a9263cafcf7d60a9e0f93a3f3d1d4d",
+        "mode": "file"
+    }
+}

@@ -1,0 +1,398 @@
+{
+    "sha224": "19c7ff253a373cce9837e8c579acc3178a02b677823bbe1964c0bf15",
+    "sha384": "d5e11c8f9783f8c22ede7e021c7f4a7e147db7198fd6e6d95cd109ff370919fae564a600eb00db038a18ef1716f640b7",
+    "virustotal": {
+        "positives": 43,
+        "permalink": "https://www.virustotal.com/gui/file/5c79681fa059b19cd82d0f80e8c5dd1d4078ab38307e8639bc3e95cd6f3bb11c/detection/f-5c79681fa059b19cd82d0f80e8c5dd1d4078ab38307e8639bc3e95cd6f3bb11c-1636531935",
+        "scan_date": "2021-11-10 08:12:15",
+        "total": 57,
+        "scans": {
+            "Kaspersky": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Virus.Win32.Agent.es",
+                "version": "21.0.1.45"
+            },
+            "ZoneAlarm": {
+                "detected": true,
+                "update": 20211102,
+                "result": "Virus.Win32.Agent.es",
+                "version": 1
+            },
+            "F-Secure": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Malware.W32/Sivis.A",
+                "version": "12.0.86.52"
+            },
+            "TACHYON": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": "2021-11-10.02"
+            },
+            "VBA32": {
+                "detected": true,
+                "update": 20211109,
+                "result": "BScope.Trojan.Cosmu",
+                "version": "5.0.0"
+            },
+            "SUPERAntiSpyware": {
+                "detected": true,
+                "update": 20211106,
+                "result": "Trojan.Agent/Gen-Siggen",
+                "version": "5.6.0.1032"
+            },
+            "Cyren": {
+                "detected": true,
+                "update": 20211110,
+                "result": "W32/Sivis.A",
+                "version": "6.3.0.2"
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Malware.AI.1102861279",
+                "version": "4.2.2.27"
+            },
+            "eGambit": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": null
+            },
+            "Cylance": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Unsafe",
+                "version": "2.3.1.101"
+            },
+            "Jiangmin": {
+                "detected": true,
+                "update": 20211108,
+                "result": "Trojan/Cosmu.isk",
+                "version": "16.0.100"
+            },
+            "Elastic": {
+                "detected": true,
+                "update": 20211005,
+                "result": "malicious (high confidence)",
+                "version": "4.0.29"
+            },
+            "Symantec": {
+                "detected": true,
+                "update": 20211110,
+                "result": "W32.Suviapen",
+                "version": "1.16.0.0"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Virus/Win32.Agent.es",
+                "version": "3.0.0.1"
+            },
+            "Gridinsoft": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Trojan.Win32.Agent.ko!s1",
+                "version": "1.0.62.161"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": "2017.9.26.565"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "update": 20211110,
+                "result": "BehavesLike.Win32.Sivis.gt",
+                "version": "v2019.1.2+3728"
+            },
+            "Yandex": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Win32.Sivis.A",
+                "version": "5.5.2.24"
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Win32.Sivis.A",
+                "version": "14.0.409.0"
+            },
+            "Panda": {
+                "detected": false,
+                "update": 20211109,
+                "result": null,
+                "version": "4.6.4.2"
+            },
+            "Ikarus": {
+                "detected": true,
+                "update": 20211109,
+                "result": "Win32.Sivis",
+                "version": "0.1.5.2"
+            },
+            "AhnLab-V3": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": "3.21.1.10219"
+            },
+            "Paloalto": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": 1
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "update": 20211110,
+                "result": "PE_SIVIS.A",
+                "version": "10.0.0.1040"
+            },
+            "K7GW": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Trojan ( 00589a411 )",
+                "version": "11.227.39239"
+            },
+            "Lionic": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": 4.2
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "update": 20210203,
+                "result": "win/malicious_confidence_100% (D)",
+                "version": 1
+            },
+            "Sophos": {
+                "detected": true,
+                "update": 20211110,
+                "result": "ML/PE-A + W32/Sivis-A",
+                "version": "1.4.1.0"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "update": 20211028,
+                "result": "Static AI - Malicious PE",
+                "version": "6.3.0.2"
+            },
+            "CAT-QuickHeal": {
+                "detected": false,
+                "update": 20211109,
+                "result": null,
+                "version": 14
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Trojan ( 00589a411 )",
+                "version": "11.227.39239"
+            },
+            "VIPRE": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Virus.Win32.sivis.a (v)",
+                "version": 96844
+            },
+            "Baidu": {
+                "detected": true,
+                "update": 20190318,
+                "result": "Win32.Virus.Visisig.a",
+                "version": "1.0.0.2"
+            },
+            "MaxSecure": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Virus.W32.Agent.ES",
+                "version": "1.0.0.1"
+            },
+            "APEX": {
+                "detected": true,
+                "update": 20211107,
+                "result": "Malicious",
+                "version": 6.227
+            },
+            "Zillya": {
+                "detected": true,
+                "update": 20211109,
+                "result": "Trojan.Cosmu.Win32.8809",
+                "version": "2.0.0.4492"
+            },
+            "Cynet": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Malicious (score: 100)",
+                "version": "4.0.0.27"
+            },
+            "ClamAV": {
+                "detected": true,
+                "update": 20211109,
+                "result": "Win.Trojan.Agent-6943819-1",
+                "version": "0.104.1.0"
+            },
+            "CMC": {
+                "detected": false,
+                "update": 20211026,
+                "result": null,
+                "version": "2.10.2019.1"
+            },
+            "Fortinet": {
+                "detected": true,
+                "update": 20211110,
+                "result": "W32/Sivis.A!tr",
+                "version": "6.2.142.0"
+            },
+            "Webroot": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": "1.0.0.403"
+            },
+            "Rising": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Virus.Sivis!1.A647 (CLASSIC)",
+                "version": "25.0.0.26"
+            },
+            "Alibaba": {
+                "detected": false,
+                "update": 20190527,
+                "result": null,
+                "version": "0.3.0.5"
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "update": 20211104,
+                "result": "AI:FileInfector.0DC56C850D",
+                "version": "7.2.37796.0"
+            },
+            "DrWeb": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Win32.Siggen.28",
+                "version": "7.0.52.8270"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Win32.Sivis.A (B)",
+                "version": "2021.5.0.7597"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Virus.Win32.Agent.klkgx",
+                "version": "1.0.146.25409"
+            },
+            "Zoner": {
+                "detected": false,
+                "update": 20211109,
+                "result": null,
+                "version": "0.0.0.0"
+            },
+            "Comodo": {
+                "detected": true,
+                "update": 20211102,
+                "result": "Backdoor.Win32.Androm.XTA@4z809t",
+                "version": 34044
+            },
+            "Tencent": {
+                "detected": true,
+                "update": 20211110,
+                "result": "Trojan.Win32.Ausiv.a",
+                "version": "1.0.0.1"
+            },
+            "Bkav": {
+                "detected": true,
+                "update": 20211109,
+                "result": "W32.FamVT.LamerATTc.PE",
+                "version": "1.3.0.9899"
+            },
+            "ViRobot": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": "2014.3.20.0"
+            },
+            "Arcabit": {
+                "detected": false,
+                "update": 20211110,
+                "result": null,
+                "version": "1.0.0.888"
+            },
+            "Avira": {
+                "detected": true,
+                "update": 20211110,
+                "result": "W32/Sivis.A",
+                "version": "8.3.3.12"
+            },
+            "McAfee": {
+                "detected": true,
+                "update": 20211110,
+                "result": "W32/Sivis.gen.a",
+                "version": "6.0.6.653"
+            },
+            "Acronis": {
+                "detected": true,
+                "update": 20210512,
+                "result": "suspicious",
+                "version": "1.1.1.82"
+            },
+            "TrendMicro": {
+                "detected": true,
+                "update": 20211110,
+                "result": "PE_SIVIS.A",
+                "version": "11.0.0.1006"
+            }
+        }
+    },
+    "sha256": "5c79681fa059b19cd82d0f80e8c5dd1d4078ab38307e8639bc3e95cd6f3bb11c",
+    "exif": {
+        "CodeSize": 8704,
+        "EntryPoint": "0x1000",
+        "FileSize": "419 kB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageVersion": 0,
+        "InitializedDataSize": 3584,
+        "LinkerVersion": 2.5,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2011:04:03 08:07:51-04:00",
+        "UninitializedDataSize": 0
+    },
+    "size": 429521,
+    "ssdeep": "6144:5vikitEFMFn7EFMFnSd1E6dqi4py5O9kEPixTmAcThAkZThMTM1:hxwEFMFn7EFMFnEEy1cix1c60yE",
+    "asha256": "9a5f8cba90bda8395e6ce97cc1ad1c05650cbff9a457d7d8418b420303a52119",
+    "mimetype": "application/x-dosexec",
+    "trid": {
+        "0": "Microsoft Visual C++ compiled executable (generic) (25.6%)",
+        "1": "Windows screen saver (20.3%)",
+        "2": "Win64 Executable (generic) (16.3%)",
+        "3": "Win32 Dynamic Link Library (generic) (10.2%)",
+        "4": "Win16 NE executable (generic) (7.8%)"
+    },
+    "imphash": "38aa7c2ff6ef0e48a9520d6702d08df4",
+    "md5": "e4ac526c82dc7b0ccf5ddf76209567ac",
+    "added_timestamp": "2021-11-18T07:48:33+00:00",
+    "extension": "exe",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "sha1": "a5088eef2a2c8eb172298c81d7bdc45d79924907",
+    "sha512": "a1db5d650431af2c5057fe57ab6b6c210731f0db32d87b0dbda259bba97d7f8ffc3c67f1f3dde0d85dc98523e881043bf5d298ebad73490b193ad8fc93a8fb7b",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "C:\\Users\\ADOLF\\Desktop\\Repositorios\\Creacion_Dataset\\hashes\\VirusShare_00499.txt",
+        "hash": "e4ac526c82dc7b0ccf5ddf76209567ac",
+        "mode": "file"
+    }
+}
