@@ -8,11 +8,10 @@ SCRIPT: descarga_reportes_virusshare.py
 
 Lee hashes desde un TXT (uno por línea) y consulta VirusShare API v2.
 
-NO usa argumentos por consola.
-TODO se configura al inicio del script.
-Se ejecuta únicamente con:
+Puede configurarse al inicio del script, con variables de entorno o con
+argumentos por consola. Ejemplo:
 
-    python descarga_reportes_virusshare.py
+    python descarga_reportes_virusshare.py --input hashes/VirusShare_00499.txt
 
 ESTRUCTURA DE SALIDA POR LOTE
 -----------------------------
@@ -45,6 +44,7 @@ Puedes ponerlas aquí en API_KEYS o usar variables de entorno:
 
 from __future__ import annotations
 
+import argparse
 import datetime
 import json
 import logging
@@ -64,7 +64,7 @@ from tqdm import tqdm
 # ==============================================================================
 # [ --- CONFIGURACIÓN GENERAL --- ]
 # ==============================================================================
-INPUT_TXT = r"C:\Users\ADOLF\Desktop\Repositorios\Creacion_Dataset\hashes\VirusShare_00499.txt"
+INPUT_TXT = r"hashes\VirusShare_00499.txt"
 MODE = "file"                  # "file" o "quick"
 KEY_STRATEGY = "sequential"   # "sequential" o "roundrobin"
 MAX_KEYS = 0                    # solo roundrobin: 0=todas, 1..N=usar N keys
@@ -89,6 +89,7 @@ LOG_FILE_NAME = "proceso_virusshare.log"
 LISTA_EXITOSOS_FILE_NAME = "peticiones_exitosas_virusshare.txt"
 LISTA_NO_ENCONTRADOS_FILE_NAME = "peticiones_no_encontradas_virusshare.txt"
 LISTA_BENIGNOS_FILE_NAME = "peticiones_benignas_virusshare.txt"
+LISTA_ERRORES_FILE_NAME = "peticiones_errores_virusshare.txt"
 # ==============================================================================
 
 
@@ -103,6 +104,77 @@ class VirusShareAPIError(Exception):
         self.code = code
         self.message = message
         self.status_code = status_code
+
+
+def env_bool(name: str, default: bool) -> bool:
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "y", "si", "s"}
+
+
+def env_int(name: str, default: int) -> int:
+    value = os.environ.get(name, "").strip()
+    if not value:
+        return default
+    try:
+        return int(value)
+    except ValueError:
+        return default
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Descarga reportes de VirusShare para un TXT de hashes."
+    )
+    parser.add_argument(
+        "-i",
+        "--input",
+        default=os.environ.get("VIRUSSHARE_INPUT_TXT", INPUT_TXT),
+        help="TXT de hashes de entrada. Tambien puede usarse VIRUSSHARE_INPUT_TXT.",
+    )
+    parser.add_argument(
+        "--mode",
+        choices=("file", "quick"),
+        default=os.environ.get("VIRUSSHARE_MODE", MODE),
+        help="Endpoint de VirusShare a consultar.",
+    )
+    parser.add_argument(
+        "--key-strategy",
+        choices=("sequential", "roundrobin"),
+        default=os.environ.get("VIRUSSHARE_KEY_STRATEGY", KEY_STRATEGY),
+        help="Estrategia de uso de API keys.",
+    )
+    parser.add_argument(
+        "--max-keys",
+        type=int,
+        default=env_int("VIRUSSHARE_MAX_KEYS", MAX_KEYS),
+        help="Solo roundrobin: 0=todas, 1..N=usar N keys.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=os.environ.get("VIRUSSHARE_OUTPUT_DIR", DIR_SALIDA_BASE),
+        help="Directorio base de salida. Tambien puede usarse VIRUSSHARE_OUTPUT_DIR.",
+    )
+    parser.add_argument(
+        "--requests-per-minute",
+        type=int,
+        default=env_int("VIRUSSHARE_REQUESTS_PER_MIN", REQUESTS_PER_MIN_PER_KEY),
+        help="Limite de peticiones por minuto por key.",
+    )
+    parser.add_argument(
+        "--daily-limit",
+        type=int,
+        default=env_int("VIRUSSHARE_DAILY_LIMIT", DAILY_LIMIT_PER_KEY),
+        help="Limite diario por key para esta sesion.",
+    )
+    parser.add_argument(
+        "--no-continue-on-quota",
+        action="store_true",
+        default=not env_bool("VIRUSSHARE_CONTINUE_ON_PREVIOUS_QUOTA", CONTINUAR_SI_HAY_CUOTA_PREVIA),
+        help="Detiene la ejecucion si hay una pausa previa por cuota aun reciente.",
+    )
+    return parser.parse_args()
 
 
 class VirusShareClient:
@@ -276,6 +348,15 @@ def append_registro(registro_path: Path, hash_value: str) -> None:
         f.write(f"{hash_value}\n")
 
 
+def append_registro_error(registro_path: Path, hash_value: str, code: str, message: str, key_id: str) -> None:
+    if not registro_path.exists():
+        registro_path.write_text("Hash\tCode\tMessage\tKeyId\tUTC\n", encoding="utf-8")
+    safe_message = message.replace("\t", " ").replace("\n", " ")[:500]
+    timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    with registro_path.open("a", encoding="utf-8") as f:
+        f.write(f"{hash_value}\t{code}\t{safe_message}\t{key_id}\t{timestamp}\n")
+
+
 def construir_error_json(code: str, message: str, hash_val: str, key_id: str, lote: str, input_txt: Path) -> dict[str, Any]:
     return {
         "error_details": {
@@ -293,16 +374,25 @@ def construir_error_json(code: str, message: str, hash_val: str, key_id: str, lo
 
 
 def main() -> None:
-    input_path = Path(INPUT_TXT)
+    args = parse_args()
+    input_path = Path(args.input)
     lote_nombre = input_path.stem
+    mode = args.mode
+    key_strategy = args.key_strategy
+    max_keys = max(args.max_keys, 0)
+    output_dir = Path(args.output_dir)
+    requests_per_minute = max(args.requests_per_minute, 1)
+    daily_limit = max(args.daily_limit, 1)
+    continuar_si_hay_cuota_previa = not args.no_continue_on_quota
 
-    lote_dir = Path(DIR_SALIDA_BASE) / lote_nombre
+    lote_dir = output_dir / lote_nombre
     reportes_dir = lote_dir.joinpath(*SUBCARPETAS_REPORTES)
     estado_file_path = lote_dir / ESTADO_FILE_NAME
     log_file_path = lote_dir / LOG_FILE_NAME
     lista_exitosos_file = lote_dir / LISTA_EXITOSOS_FILE_NAME
     lista_no_encontrados_file = lote_dir / LISTA_NO_ENCONTRADOS_FILE_NAME
     lista_benignos_file = lote_dir / LISTA_BENIGNOS_FILE_NAME
+    lista_errores_file = lote_dir / LISTA_ERRORES_FILE_NAME
 
     lote_dir.mkdir(parents=True, exist_ok=True)
     reportes_dir.mkdir(parents=True, exist_ok=True)
@@ -320,7 +410,7 @@ def main() -> None:
     print(f"Carpeta de reportes: '{reportes_dir.resolve()}'")
     logging.info(f"Lote: {lote_nombre}")
     logging.info(f"Input TXT: {input_path.resolve()}")
-    logging.info(f"Modo: {MODE}")
+    logging.info(f"Modo: {mode}")
 
     keys = load_api_keys()
     if not keys:
@@ -328,7 +418,7 @@ def main() -> None:
         print("Configura API_KEYS en el script o usa VIRUSSHARE_API_KEY / VIRUSSHARE_API_KEYS.")
         sys.exit(1)
 
-    if KEY_STRATEGY not in {"sequential", "roundrobin"}:
+    if key_strategy not in {"sequential", "roundrobin"}:
         print("Error: KEY_STRATEGY debe ser 'sequential' o 'roundrobin'.")
         sys.exit(1)
 
@@ -339,16 +429,16 @@ def main() -> None:
         all_key_ids.append(kid)
         clients_pool[kid] = VirusShareClient(key, kid, timeout=REQUEST_TIMEOUT)
 
-    if KEY_STRATEGY == "roundrobin":
-        if MAX_KEYS == 0:
+    if key_strategy == "roundrobin":
+        if max_keys == 0:
             active_key_ids = all_key_ids[:]
         else:
-            active_key_ids = all_key_ids[:max(1, MAX_KEYS)]
+            active_key_ids = all_key_ids[:max_keys]
     else:
         active_key_ids = all_key_ids[:]
 
-    espera_por_key = 60.0 / max(REQUESTS_PER_MIN_PER_KEY, 1)
-    if KEY_STRATEGY == "roundrobin":
+    espera_por_key = 60.0 / requests_per_minute
+    if key_strategy == "roundrobin":
         tiempo_espera_api = espera_por_key / max(len(active_key_ids), 1)
     else:
         tiempo_espera_api = espera_por_key
@@ -367,7 +457,7 @@ def main() -> None:
                 )
                 print("[ADVERTENCIA] " + msg)
                 logging.warning(msg)
-                if not CONTINUAR_SI_HAY_CUOTA_PREVIA:
+                if not continuar_si_hay_cuota_previa:
                     print("Ejecución detenida por configuración (CONTINUAR_SI_HAY_CUOTA_PREVIA=False).")
                     sys.exit(0)
         except Exception:
@@ -389,6 +479,8 @@ def main() -> None:
 
     for registro in (lista_exitosos_file, lista_no_encontrados_file, lista_benignos_file):
         asegurar_header_registro(registro)
+    if not lista_errores_file.exists():
+        lista_errores_file.write_text("Hash\tCode\tMessage\tKeyId\tUTC\n", encoding="utf-8")
 
     registrados_ok = leer_registro_hashes(lista_exitosos_file)
     registrados_nf = leer_registro_hashes(lista_no_encontrados_file)
@@ -422,7 +514,7 @@ def main() -> None:
         escribir_estado(estado_file_path, "COMPLETADO")
         sys.exit(0)
 
-    daily_budget = len(active_key_ids) * DAILY_LIMIT_PER_KEY
+    daily_budget = len(active_key_ids) * daily_limit
     hashes_a_procesar_hoy = hashes_pendientes[:daily_budget]
     if len(hashes_pendientes) > daily_budget:
         print(f"\nSe procesarán {len(hashes_a_procesar_hoy)} hashes de {len(hashes_pendientes)} por cuota de sesión.")
@@ -438,7 +530,7 @@ def main() -> None:
     current_key_idx = 0
     per_key_used = {k: 0 for k in active_key_ids}
     next_key_from_state = estado_previo.get("next_free_key_id")
-    if KEY_STRATEGY == "sequential" and next_key_from_state in active_key_ids:
+    if key_strategy == "sequential" and next_key_from_state in active_key_ids:
         current_key_idx = active_key_ids.index(next_key_from_state)
         logging.info(f"Reanudando sequential desde key guardada: {next_key_from_state}")
 
@@ -451,7 +543,7 @@ def main() -> None:
         tries = 0
         while tries < len(active_key_ids):
             kid = active_key_ids[current_key_idx % len(active_key_ids)]
-            if per_key_used.get(kid, 0) < DAILY_LIMIT_PER_KEY:
+            if per_key_used.get(kid, 0) < daily_limit:
                 return kid, clients_pool[kid]
             current_key_idx += 1
             tries += 1
@@ -461,7 +553,7 @@ def main() -> None:
 
     try:
         for i, hash_val in enumerate(hashes_a_procesar_hoy):
-            if KEY_STRATEGY == "roundrobin":
+            if key_strategy == "roundrobin":
                 kid, client = get_client_roundrobin(i)
             else:
                 elegido = get_client_sequential()
@@ -474,10 +566,10 @@ def main() -> None:
             pbar.set_postfix_str(f"OK:{exito_count} NF:{nf_count} BN:{benign_count} ERR:{error_count} Key:{kid}")
             ruta_json_archivo = reportes_dir / f"{hash_val}.json"
 
-            logging.info(f"START hash={hash_val} lote={lote_nombre} key={kid} mode={MODE}")
+            logging.info(f"START hash={hash_val} lote={lote_nombre} key={kid} mode={mode}")
 
             try:
-                data = client.get_file_report(hash_val) if MODE == "file" else client.get_quick_report(hash_val)
+                data = client.get_file_report(hash_val) if mode == "file" else client.get_quick_report(hash_val)
                 response_value = data.get("response")
                 estado_resp = interpretar_response(response_value)
 
@@ -486,7 +578,7 @@ def main() -> None:
                         "lote": lote_nombre,
                         "input_txt": str(input_path),
                         "hash": hash_val,
-                        "mode": MODE,
+                        "mode": mode,
                     }
                     ruta_json_archivo.write_text(json.dumps(data, indent=4, ensure_ascii=False), encoding="utf-8")
                     append_registro(lista_exitosos_file, hash_val)
@@ -530,14 +622,13 @@ def main() -> None:
                 per_key_used[kid] = per_key_used.get(kid, 0) + 1
 
             except VirusShareAPIError as e:
-                error_json = construir_error_json(e.code, e.message, hash_val, kid, lote_nombre, input_path)
-                ruta_json_archivo.write_text(json.dumps(error_json, indent=4, ensure_ascii=False), encoding="utf-8")
                 error_count += 1
-                logging.error(f"ERR  hash={hash_val} code={e.code} saved='{ruta_json_archivo.as_posix()}' msg={e.message}")
+                append_registro_error(lista_errores_file, hash_val, e.code, e.message, kid)
+                logging.error(f"ERR  hash={hash_val} code={e.code} msg={e.message}")
 
                 if e.code == "QuotaExceededError":
-                    per_key_used[kid] = DAILY_LIMIT_PER_KEY
-                    if KEY_STRATEGY == "sequential":
+                    per_key_used[kid] = daily_limit
+                    if key_strategy == "sequential":
                         current_key_idx += 1
                         if current_key_idx < 10**9 and active_key_ids:
                             next_k = active_key_ids[current_key_idx % len(active_key_ids)]
@@ -545,7 +636,7 @@ def main() -> None:
                     time.sleep(BACKOFF_ON_204_SECONDS)
 
                 elif e.code == "WrongCredentialsError":
-                    per_key_used[kid] = DAILY_LIMIT_PER_KEY
+                    per_key_used[kid] = daily_limit
 
             pbar.update(1)
             time.sleep(tiempo_espera_api)
