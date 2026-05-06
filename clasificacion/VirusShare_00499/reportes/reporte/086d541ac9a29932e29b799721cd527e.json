@@ -1,0 +1,123 @@
+{
+    "md5": "086d541ac9a29932e29b799721cd527e",
+    "sha1": "32bc38a0bd586a0a53d8949fe4a1721bdc4a3d4e",
+    "sha224": "0728e6f55b2258fe6bf6d1d567b4088aed2b7f1b4157f7d5b9902c03",
+    "sha256": "875a37fb6b362b0db5012513de2235f9e4eda9875cd3fdd8d480d791d51c6d71",
+    "sha384": "e2847ce07705f720a588b903c42d02beeceb48de4b690b077df5e152c6159987f8e59523abb625dd7a7d8d8789556732",
+    "sha512": "ceed4144b272a69e8dcdadb2ff1403d13aafd2e27ac969b9c0e65a1f3e9c39d2cc8656431dea81b00b08cc1509ab95a9fe64aa42c0fc53c1b57a9641ae66bcfa",
+    "ssdeep": "196608:LwVo3q0OnnzmMnglrB3ytPqVxUQVmBDTSWhi:n3qtTn80PqbsBDTs",
+    "size": 28955685,
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows, UPX compressed",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 8192,
+        "EntryPoint": "0x8710",
+        "FileSize": "28 MiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "No relocs, Executable, No line numbers, No symbols, 32-bit",
+        "ImageVersion": 0,
+        "InitializedDataSize": 4096,
+        "LinkerVersion": 2.5,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2011:04:03 08:07:51-04:00",
+        "UninitializedDataSize": 24576
+    },
+    "trid": {
+        "0": "Microsoft Visual C++ compiled executable (generic) (42.6%)",
+        "1": "Win32 Dynamic Link Library (generic) (16.9%)",
+        "2": "Win16 NE executable (generic) (13.0%)",
+        "3": "Win32 Executable (generic) (11.6%)",
+        "4": "OS/2 Executable (generic) (5.2%)"
+    },
+    "extension": "exe",
+    "asha256": "a7532fd53f2c122d5c65fad28870152d80e37fc99977674685a01e101d39a9a0",
+    "imphash": "b10d16eedb1085ef7262dfc4ab03be6f",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 19:20:51",
+        "positives": 10,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "Virus.Win32.Agent.es\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": "W32/Sivis.gen.a virus",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": "Trojan.GenericKD.47288246 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "ESET-EEA": {
+                "result": "Win32/Agent.NBA",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "Avast": {
+                "result": "Win32:Malware-gen",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111810
+            },
+            "ClamAV": {
+                "result": null,
+                "detected": false,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "Microsoft": {
+                "result": "Virus:Win32/Sivis.A",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1213.0"
+            },
+            "F-Secure": {
+                "result": "Trojan.TR/Crypt.ULPM.Gen",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "GData": {
+                "result": "Trojan.GenericKD.47288246",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            },
+            "AdAware": {
+                "result": "Trojan.GenericKD.47288246",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            },
+            "Sophos": {
+                "result": "W32/Sivis-A",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T19:20:51+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "086d541ac9a29932e29b799721cd527e",
+        "mode": "file"
+    }
+}

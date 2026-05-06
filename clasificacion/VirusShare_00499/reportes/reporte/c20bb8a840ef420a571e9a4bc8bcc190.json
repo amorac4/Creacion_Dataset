@@ -1,0 +1,118 @@
+{
+    "md5": "c20bb8a840ef420a571e9a4bc8bcc190",
+    "sha1": "dd24e496689036e62520affcadcf429c1fd5dcc9",
+    "sha224": "3a70e1d016979fa816d52ac212588b2e31a25d6d2b2d79f2d5f3e668",
+    "sha256": "73a02eefb70afd2fce3067da8a5f973e46e4ec9831d4bf29b7f6e3823e6ab8b4",
+    "sha384": "f550859b7aee4e85e2ed2da377061949ee74fb4d64fb70a9bc52a5e4ac49f49b7345e0e7162b3a3afd8b00bea2a35f33",
+    "sha512": "a740fe428f4f43e2b4a26b18d84aae986c643c1397c25b20b7b134b14b01039d9296b2f2d9855c7976b8a1c8c0311606af2e80ac477869c91c1246977aac5368",
+    "ssdeep": "24576:/iWtw2XXZQ20nn+ucylSvP8ha2uQ5V3h3VC:FvC/ZlS8Q",
+    "size": 2140365,
+    "filetype": "PE32 executable (console) Intel 80386, for MS Windows",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 656384,
+        "EntryPoint": "0x12e0",
+        "FileSize": "2.0 MiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "No relocs, Executable, No line numbers, 32-bit",
+        "ImageVersion": 1,
+        "InitializedDataSize": 941056,
+        "LinkerVersion": 2.28,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows command line",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2021:11:14 09:41:09-05:00",
+        "UninitializedDataSize": 3072,
+        "Warning": "Error processing PE data dictionary"
+    },
+    "trid": {
+        "0": "Microsoft Visual C++ compiled executable (generic) (33.5%)",
+        "1": "Win64 Executable (generic) (21.3%)",
+        "2": "Win32 Dynamic Link Library (generic) (13.3%)",
+        "3": "Win16 NE executable (generic) (10.2%)",
+        "4": "Win32 Executable (generic) (9.1%)"
+    },
+    "extension": "exe",
+    "asha256": "50bae7e1d3f6752eb5cfae095176a328d9c0af124c11122d266f04e06968827c",
+    "imphash": "7a90351b9de13927cb9917ad690aae48",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 18:18:59",
+        "positives": 5,
+        "total": 10,
+        "scans": {
+            "Kaspersky": {
+                "result": "Trojan.Win32.Shelma.bqrq\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": null,
+                "detected": false,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": null,
+                "detected": false,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "Avast": {
+                "result": "Win32:TrojanX-gen [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "ClamAV": {
+                "result": null,
+                "detected": false,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "F-Secure": {
+                "result": "Trojan.TR/Swrort.erekw",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "Sophos": {
+                "result": null,
+                "detected": false,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "Microsoft": {
+                "result": "Trojan:Win32/Swrort.A",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1211.0"
+            },
+            "AdAware": {
+                "result": null,
+                "detected": false,
+                "version": 7.90255,
+                "update": 10505989
+            },
+            "GData": {
+                "result": "Win32.Trojan.Kryptik.EZO0LK",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T18:18:59+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "c20bb8a840ef420a571e9a4bc8bcc190",
+        "mode": "file"
+    }
+}

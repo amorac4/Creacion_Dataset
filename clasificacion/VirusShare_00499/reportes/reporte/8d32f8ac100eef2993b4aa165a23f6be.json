@@ -1,0 +1,109 @@
+{
+    "md5": "8d32f8ac100eef2993b4aa165a23f6be",
+    "sha1": "96b11400cc9086aca34699f133684416b0bca636",
+    "sha224": "557172d1e527964fa9a3e0fd67b580df4d3f5ed4eb341086e56616c8",
+    "sha256": "8d8cb5a10164f5084b7698c051a3798fa6017b16377bc9b2c2d3b777a109d491",
+    "sha384": "589bcb729da8f1db800bdf5f31c1e749e9ec6d68be70a627885136530727b4a0c54e2708dde1a202a59fbd003743302b",
+    "sha512": "039c7a006340884cdaa6d7f1394ab964074a936bf583c1e8b5b7f1130ca1a2a1241ca1205742d2d84acc93b6623ca7d50e1bca77b9ae541141bf4690e9de7e8a",
+    "ssdeep": "768:ijAMj8b7OS+tWrkvmA+PjFLh8f80hedQjgd:iDob7OS+tWIvmA+PFh8f80hHkd",
+    "size": 32768,
+    "filetype": "ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, missing section headers",
+    "mimetype": "application/x-executable",
+    "exif": {
+        "CPUArchitecture": "32 bit",
+        "CPUByteOrder": "Little endian",
+        "CPUType": "i386",
+        "FileSize": "32 KiB",
+        "FileType": "ELF executable",
+        "FileTypeExtension": "",
+        "MIMEType": "application/octet-stream",
+        "ObjectFileType": "Executable file"
+    },
+    "trid": {
+        "0": "ELF Executable and Linkable format (Linux) (50.1%)",
+        "1": "ELF Executable and Linkable format (generic) (49.8%)"
+    },
+    "extension": "o",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 18:23:56",
+        "positives": 8,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "HEUR:Backdoor.Linux.Mirai.b\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "Emsisoft": {
+                "result": null,
+                "detected": false,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "McAfee": {
+                "result": "Lnx/Mirai-FEBN!8D32F8AC100E trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "GData": {
+                "result": "Trojan.Linux.Generic.222978",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            },
+            "Avast": {
+                "result": "ELF:Mirai-APD [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "ESET-EEA": {
+                "result": "Linux/Mirai.BJP",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "F-Secure": {
+                "result": "Malware.LINUX/Mirai.nydec",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "ClamAV": {
+                "result": "Unix.Trojan.Mirai-9835278-0",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "Microsoft": {
+                "result": null,
+                "detected": false,
+                "version": "4.18.2110.6",
+                "update": "1.353.1211.0"
+            },
+            "Sophos": {
+                "result": null,
+                "detected": false,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "AdAware": {
+                "result": "Trojan.Linux.Generic.222978",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T18:23:56+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "8d32f8ac100eef2993b4aa165a23f6be",
+        "mode": "file"
+    }
+}

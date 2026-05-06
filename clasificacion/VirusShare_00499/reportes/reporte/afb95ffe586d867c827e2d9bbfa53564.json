@@ -1,0 +1,123 @@
+{
+    "md5": "afb95ffe586d867c827e2d9bbfa53564",
+    "sha1": "f69ef270a01b232ecee364b226548bc821d58921",
+    "sha224": "ec2fc659f2d5d7e8d5c91f0a76ed7d8cf0398cca30bf5ad6ac8e3eb1",
+    "sha256": "76e041bdb7e0fab48c10fec2f6f806b4e4db9ae34881c58bb66ca6439859b5c2",
+    "sha384": "ce6994c07dcb2206b831693d3f008319e28dd297f3d40de5eca8c07392b598ecb43516fdecb03ff92a085ac498ad788e",
+    "sha512": "a5a16af844567ed3d8d91480c1b9cba9579e5c153a91826f137662bf641b1fa5a9742d35f5bcec56744c446beb9c81c793abbe39c0079ad5cd0e2f2148c72c10",
+    "ssdeep": "393216:RxLEYFBdsihmVZZaVpQbUXAyRNnoS5e8veh84COrBxNn8g:RxLEYFBTgZS+bexNohO41xNJ",
+    "size": 13098783,
+    "filetype": "PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, Nullsoft Installer self-extracting archive",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 35840,
+        "EntryPoint": "0x435d",
+        "FileSize": "12 MiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "No relocs, Executable, No line numbers, No symbols, 32-bit, No debug",
+        "ImageVersion": 6,
+        "InitializedDataSize": 38400,
+        "LinkerVersion": 2.25,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2016:01:14 06:25:57-05:00",
+        "UninitializedDataSize": 110080
+    },
+    "trid": {
+        "0": "Win32 Executable MS Visual C++ (generic) (48.8%)",
+        "1": "Win64 Executable (generic) (16.4%)",
+        "2": "Win32 Dynamic Link Library (generic) (10.2%)",
+        "3": "Win16 NE executable (generic) (7.8%)",
+        "4": "Win32 Executable (generic) (7.0%)"
+    },
+    "extension": "exe",
+    "asha256": "0cceb91ed526f6c3d6bf99d3247da3b19fca32b517eeb4cab72cd2c76c817dfc",
+    "imphash": "ffe3cc63e5a1efb4d2f4cc004c584646",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 16:55:59",
+        "positives": 6,
+        "total": 11,
+        "scans": {
+            "Sophos": {
+                "result": null,
+                "detected": false,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "Emsisoft": {
+                "result": "Application.Bundler.CSZ (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "McAfee": {
+                "result": null,
+                "detected": false,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Kaspersky": {
+                "result": "HEUR:Trojan-Downloader.Win32.Bitser.gen\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "ESET-EEA": {
+                "result": "NSIS/TrojanDownloader.Agent.NZP",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "ClamAV": {
+                "result": "PUA.Win.Packer.AsylumMusicFile-1",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "Microsoft": {
+                "result": null,
+                "detected": false,
+                "version": "4.18.2110.6",
+                "update": "1.353.701.0"
+            },
+            "AdAware": {
+                "result": "Application.Bundler.CSZ",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            },
+            "F-Secure": {
+                "result": "Heuristic.HEUR/AGEN.1138824",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "Avast": {
+                "result": null,
+                "detected": false,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "GData": {
+                "result": null,
+                "detected": false,
+                "version": "25.5.10.23",
+                "update": 27.25092
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T16:55:59+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "afb95ffe586d867c827e2d9bbfa53564",
+        "mode": "file"
+    }
+}

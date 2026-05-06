@@ -1,0 +1,130 @@
+{
+    "md5": "0c3738d4ffe3bcca6b7b7d46de985c33",
+    "sha1": "9a2d0ab4685027e0f118a7576adb206466942d49",
+    "sha224": "f998c53ee7e883ce0b2fcd50e823ede876d962979406b125b2318844",
+    "sha256": "4ffc7f01d1247e158427f69b9e9de042a5f8f554cbb2ff2c067b5d40b9091c6f",
+    "sha384": "c4083d2bbbcb3e804129eec92907bb94f9f06f741aba8c7be141254ffda276a3990510536ee76eddbdc18c11f5f5b896",
+    "sha512": "c99512256a5b74d2320eeef35def267f15117a4a3286b7b03680f621537d286d1ca4c9ebe9f77ef22c1cf4ece754f817242d98b2c2fc05c9b4ea11bb1b0a510e",
+    "ssdeep": "24576:cIQIliHg1In4S9xJ+ROT7WUtLpwbtLpwdrRoNk7BZph59FF96X0JxQUAuDzxW:XCnt9cOvbtL2tLGrRokpHnDzx",
+    "size": 2470618,
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 20480,
+        "EntryPoint": "0x9001",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x0000",
+        "FileOS": "Win32",
+        "FileSize": "2.4 MiB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersionNumber": "1.0.0.7",
+        "ImageFileCharacteristics": "No relocs, Executable, No line numbers, No symbols, 32-bit",
+        "ImageVersion": 1,
+        "InitializedDataSize": 12288,
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "ObjectFileType": "Executable application",
+        "PEType": "PE32",
+        "ProductVersionNumber": "1.0.0.7",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2007:08:17 08:43:04-04:00",
+        "UninitializedDataSize": 0
+    },
+    "trid": {
+        "0": "Windows Control Panel Item (generic) (34.3%)",
+        "1": "Microsoft Resource Library (x86) (30.9%)",
+        "2": "Win32 Executable Microsoft Visual Basic 6 (14.3%)",
+        "3": "InstallShield setup (7.5%)",
+        "4": "Win32 Executable MS Visual C++ (generic) (5.4%)"
+    },
+    "extension": "exe",
+    "asha256": "1fa38b271c701dc774df355b244f6dc6aba5757814f2fba1bd633f13d768aa8f",
+    "imphash": "01392ca861cf87b8d28ad9ea90016bb4",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 18:42:49",
+        "positives": 11,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "Worm.Win32.AutoRun.vx\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": "GenericRXOU-ML!7A8E42D12DE7 trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": "Gen:Variant.Razy.551308 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "ESET-EEA": {
+                "result": "Win32/VB.NAR",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "Sophos": {
+                "result": "W32/Fakefire-A",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "ClamAV": {
+                "result": "PUA.Win.Packer.Asprotect-3",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "F-Secure": {
+                "result": "Trojan.TR/Dropper.Gen",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "Avast": {
+                "result": "Win32:Malware-gen",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "Microsoft": {
+                "result": "Trojan:Win32/Vindor.B",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1211.0"
+            },
+            "AdAware": {
+                "result": "Trojan.GenericKD.47365936",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            },
+            "GData": {
+                "result": "Trojan.GenericKD.47365936",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T18:42:49+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "0c3738d4ffe3bcca6b7b7d46de985c33",
+        "mode": "file"
+    }
+}

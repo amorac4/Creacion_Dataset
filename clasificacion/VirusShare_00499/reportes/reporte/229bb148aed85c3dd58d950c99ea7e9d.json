@@ -1,0 +1,123 @@
+{
+    "md5": "229bb148aed85c3dd58d950c99ea7e9d",
+    "sha1": "668253235ea75233fea7de23bb8c257f2ccc31ab",
+    "sha224": "a54bb6d1648748cee7af3cffeb2b8eb1deeae11edb9bf069dc8458ab",
+    "sha256": "39d5919b4c528836360411bc280b5a8ccdd43e1bbdd1cd90e4fdd5b9a83e7a4f",
+    "sha384": "f460cf38d3f288923c7da3b6164f26ea1fa1630863727ad5a68bacbaab371539fb056daa6e71e50274abf94f265ed80f",
+    "sha512": "d7a598074f9151b3b252e9f1b8d89bd44293a23ac0299092eb7d4b433e902ad9550aa1fded8772edc8e864c823589846ea0431545cbaa3177796681b41e2ad21",
+    "ssdeep": "3072:hkQXoRIV9/b+9Q1LHTSab3rTyaohgBGxWxxNYn7FNlv1p8e:hkgo6z+9EHmab3fs+0Nlv1p8",
+    "size": 192788,
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 176128,
+        "EntryPoint": "0x13b0",
+        "FileSize": "188 KiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "No relocs, Executable, No line numbers, No symbols, 32-bit",
+        "ImageVersion": 1,
+        "InitializedDataSize": 8192,
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2019:01:12 07:27:37-05:00",
+        "UninitializedDataSize": 0,
+        "Warning": "Invalid Version Info block"
+    },
+    "trid": {
+        "0": "Win64 Executable (generic) (55.2%)",
+        "1": "Win32 Executable (generic) (23.6%)",
+        "2": "Generic Win/DOS Executable (10.5%)",
+        "3": "DOS Executable Generic (10.5%)"
+    },
+    "extension": "exe",
+    "asha256": "c7730df1261530d860bb51e27634bebf49fa2ac5ebd4e81f356d0c05ccb8e5e7",
+    "imphash": "fe9b07b462004335ce64a971dc8f2989",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 19:01:36",
+        "positives": 11,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "Trojan.Win32.VB.dosp\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": "GenericRXHC-SS!229BB148AED8 trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": "Gen:Variant.Strictor.263260 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "Avast": {
+                "result": "Win32:VB-AJKU [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111810
+            },
+            "ESET-EEA": {
+                "result": "Win32/VBClone.D",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "F-Secure": {
+                "result": "HEUR/APC",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "Sophos": {
+                "result": "Mal/VB-AQT",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "ClamAV": {
+                "result": "Win.Malware.Midie-6847893-0",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "Microsoft": {
+                "result": "Trojan:Win32/Sabsik.FL.B!ml",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1213.0"
+            },
+            "AdAware": {
+                "result": "Gen:Variant.Strictor.263260",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            },
+            "GData": {
+                "result": "Gen:Variant.Strictor.263260",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T19:01:36+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "229bb148aed85c3dd58d950c99ea7e9d",
+        "mode": "file"
+    }
+}

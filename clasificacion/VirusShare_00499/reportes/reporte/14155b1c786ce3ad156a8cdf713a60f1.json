@@ -1,0 +1,124 @@
+{
+    "md5": "14155b1c786ce3ad156a8cdf713a60f1",
+    "sha1": "fa553e6265192a3c8f535e030d054ef4976b0aa7",
+    "sha224": "d8c50b5bf1c19a8945144133b847495356bc57c41c1ef5aa202aa1e0",
+    "sha256": "69b017c9ed66a4ca0f04266c3152a9113c8c32f6f7bc856957fe02d17a509aa1",
+    "sha384": "b37fab3da19a1bd347b8ae97c99fca18cee502c2421772eb42596a67e2d6d413068f1e8e22b28727b3d0996e37532252",
+    "sha512": "3d92e3c94350c0534e0384ce644ab66fa65c27d814533550ac392e5ec1437808dee7be993ad807608ce1ffe2fc54d5b9744205a4b6b7fb964943b5f5a196f5fe",
+    "ssdeep": "3072:t+UnobcfG9UZnO0WP6hRsiEOa9UrRA768rZjxHHi97NlxvyFC:t+go0OynyPiRsiq7H3ANlxvyF",
+    "size": 192673,
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 176128,
+        "EntryPoint": "0x13b0",
+        "FileSize": "188 KiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "No relocs, Executable, No line numbers, No symbols, 32-bit",
+        "ImageVersion": 1,
+        "InitializedDataSize": 8192,
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2019:01:12 07:27:37-05:00",
+        "UninitializedDataSize": 0,
+        "Warning": "Invalid Version Info block"
+    },
+    "trid": {
+        "0": "Win64 Executable (generic) (49.9%)",
+        "1": "Win32 Executable (generic) (21.3%)",
+        "2": "OS/2 Executable (generic) (9.6%)",
+        "3": "Generic Win/DOS Executable (9.5%)",
+        "4": "DOS Executable Generic (9.4%)"
+    },
+    "extension": "exe",
+    "asha256": "11537d4e1e76c9f92ac36c084ef0b4e7ea44d4c5a5799ba890ab59726a9cecd0",
+    "imphash": "4c119753bf97adbd91d1ca343fa0e7db",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 18:18:56",
+        "positives": 11,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "Trojan.Win32.VB.dosb\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": "GenericRXGY-YN!14155B1C786C trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": "Trojan.GenericKDZ.79328 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "ESET-EEA": {
+                "result": "Win32/VBClone.D",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "Avast": {
+                "result": "Win32:VB-AJKU [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "ClamAV": {
+                "result": "Win.Malware.Midie-6847893-0",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "F-Secure": {
+                "result": "HEUR/APC",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "Sophos": {
+                "result": "Mal/VB-AQT",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "Microsoft": {
+                "result": "Trojan:Win32/Fareit.VB!MTB",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1211.0"
+            },
+            "AdAware": {
+                "result": "Trojan.GenericKDZ.79328",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            },
+            "GData": {
+                "result": "Trojan.GenericKDZ.79328",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T18:18:56+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "14155b1c786ce3ad156a8cdf713a60f1",
+        "mode": "file"
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "md5": "013a440000b52fffabdb9b8bc5ec7d94",
+    "sha1": "021aff66f9a21444e9403401adb85995ae0bcd74",
+    "sha224": "a85c47726f79fc154adb95b0b88dc044c258da29a3df1df78b586e20",
+    "sha256": "a44746bd26daba7040cba077f18fded5b9c0a83e17bcd4176ea0ef14abe5bca7",
+    "sha384": "f82c205fe544225df5b6e85217980e6d2652443e73347be865c0b689fe3b0fb56d127680fbff7cf551d56daabc299185",
+    "sha512": "b8e8bc865cc0109e0da11aee0b016b6da87baed9a75cfa57e59de208b023089d7c580b5813dba506a66b24a165d561ab96cc61405c704b7ceaeec1d4ce66a131",
+    "ssdeep": "3072:MWoWIehYsTWUUv0cgmwgZAyxlmS5crXrb8VmC31RuinsWn4Ah2+thXmwgZAyxlml:MTWI4K0cgjgAiarmFRVsWnkUXjgAiar",
+    "size": 229376,
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 32768,
+        "EntryPoint": "0x30000",
+        "FileSize": "224 KiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "Executable, No line numbers, No symbols, 32-bit",
+        "ImageVersion": 0,
+        "InitializedDataSize": 16896,
+        "LinkerVersion": 2.55,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 1,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "1984:04:17 23:22:33-05:00",
+        "UninitializedDataSize": 136192,
+        "Warning": "Error processing PE data dictionary"
+    },
+    "trid": {
+        "0": "Win32 Dynamic Link Library (generic) (27.1%)",
+        "1": "Win16 NE executable (generic) (20.7%)",
+        "2": "Win32 Executable (generic) (18.5%)",
+        "3": "Win16/32 Executable Delphi generic (8.5%)",
+        "4": "OS/2 Executable (generic) (8.3%)"
+    },
+    "extension": "exe",
+    "asha256": "0567c628f02894fa1131a15b11a1306d7df25e16610bc3bf3ed159685a30da81",
+    "imphash": "62ec3dce1eba1b68f6a4511bb09f8c2c",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 17:43:56",
+        "positives": 11,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "Trojan-Proxy.Win32.Qukart.vih\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": "GenericRXNL-DN!013A440000B5 trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": "GenPack:Generic.Dacic.1.Backdoor.Hangup.A.004BF035 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "GData": {
+                "result": "GenPack:Generic.Dacic.1.Backdoor.Hangup.A.004BF035",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25092
+            },
+            "ESET-EEA": {
+                "result": "Win32/Padodor.NAX",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "Avast": {
+                "result": "Win32:TrojanX-gen [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "F-Secure": {
+                "result": "Trojan.TR/Crypt.XDR.Gen",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "ClamAV": {
+                "result": "Win.Trojan.Crypted-30",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "Sophos": {
+                "result": "Troj/Agent-BGRP",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "Microsoft": {
+                "result": "Backdoor:Win32/Berbew.AA!MTB",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1211.0"
+            },
+            "AdAware": {
+                "result": "GenPack:Generic.Dacic.1.Backdoor.Hangup.A.004BF035",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T17:43:56+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "013a440000b52fffabdb9b8bc5ec7d94",
+        "mode": "file"
+    }
+}

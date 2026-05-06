@@ -1,0 +1,123 @@
+{
+    "md5": "0110767e4def21968c69e0f55e60030c",
+    "sha1": "9d99679e28e659ee8050775780f226efb09d92ee",
+    "sha224": "f40bb8e2b0f21cdc1fc9171f86958fb3c8fa42c5dfd6d0ef8214a6e6",
+    "sha256": "1644781af373e159dca5e0bb0449da57298a1af58f9cf445d1124d0a820fc676",
+    "sha384": "9f9b953261749bf4c73958e5608364007973b749b3f38a477b608955d3a33103f604882a330c03506747bb8de1f146d7",
+    "sha512": "bbf56410ba4f546e5bbf7e2adf7b44f065710034764820f0ce11db7123f7f685364526ab47ea9deaf41a939f4730e6a6d4fd795c09793a1221a2983388296fcf",
+    "ssdeep": "6144:hGyGFU20/ZtWLCkwpaSA7Fm6OipmZsWhQlv3+LaBupU8QMihUj:h3u0RwLIprA7FmKAQlv3+bQMihUj",
+    "size": 324634,
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows, UPX compressed",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 28672,
+        "EntryPoint": "0x14de0",
+        "FileSize": "317 KiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "Executable, Large address aware, 32-bit",
+        "ImageVersion": 0,
+        "InitializedDataSize": 4096,
+        "LinkerVersion": 11,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 5.1,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 5.1,
+        "TimeStamp": "2015:05:05 09:45:31-04:00",
+        "UninitializedDataSize": 57344
+    },
+    "trid": {
+        "0": "UPX compressed Win32 Executable (54.9%)",
+        "1": "Win32 Dynamic Link Library (generic) (13.3%)",
+        "2": "Win16 NE executable (generic) (10.2%)",
+        "3": "Win32 Executable (generic) (9.1%)",
+        "4": "OS/2 Executable (generic) (4.1%)"
+    },
+    "extension": "exe",
+    "asha256": "8992008870c8216406ac26fb5063736550f1ad3a87b62090501193e35aa8265b",
+    "imphash": "f1a539a5b71ad53ac586f053145f08ec",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 17:20:37",
+        "positives": 11,
+        "total": 11,
+        "scans": {
+            "McAfee": {
+                "result": "GenericRXKC-DF!5DBE6878677D trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Kaspersky": {
+                "result": "Trojan.Win32.Agent.neyndy\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "Emsisoft": {
+                "result": "Trojan.Generic.30018129 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "GData": {
+                "result": "Trojan.Generic.30018129",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25092
+            },
+            "ESET-EEA": {
+                "result": "Win32/Agent.NCK",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "Avast": {
+                "result": "Win32:FileinfectorX-gen [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "ClamAV": {
+                "result": "PUA.Win.Packer.Upolyx-12",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "Sophos": {
+                "result": "W32/CTSInf-B",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "Microsoft": {
+                "result": "Trojan:Win32/Prepscram",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1211.0"
+            },
+            "F-Secure": {
+                "result": "Heuristic.HEUR/AGEN.1135904",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "AdAware": {
+                "result": "Trojan.Generic.30018129",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T17:20:37+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "0110767e4def21968c69e0f55e60030c",
+        "mode": "file"
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "md5": "9b33b1ad9774c4ffce988770e9cfde59",
+    "sha1": "9554f53e84d5a2bb63d4c40693cc1df8136569d2",
+    "sha224": "d29729e0677322a20a22daacb6610a25b39b5324c5d43353b90e3bed",
+    "sha256": "39385740e19d81834a87b95c13f8b749f99d8d9370a8cd028149aad7ce92308c",
+    "sha384": "6fbc3959aa6454629466cd3b52835620f602145da4dbafd2fdcb6383d865802a38bb542f5580bc249412f103a40d4655",
+    "sha512": "f4bd184414ebc66f8a493fdf73080765c5fd6ceef6c00b303589c9259e29ab2054541eea8880c5073dc1e8a7a6776da134754557a3befe846eeb5cff7a847256",
+    "ssdeep": "96:f9JQXXBk92W990bbaeHo54pLR8K82PUB+4DSC4IXqdzggRhhweuaX:f8XxkXfgtI544KKbqdx7uO",
+    "size": 6607,
+    "filetype": "ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.9, not stripped",
+    "mimetype": "application/x-executable",
+    "exif": {
+        "CPUArchitecture": "32 bit",
+        "CPUByteOrder": "Little endian",
+        "CPUType": "i386",
+        "FileSize": "6.5 KiB",
+        "FileType": "ELF executable",
+        "FileTypeExtension": "",
+        "MIMEType": "application/octet-stream",
+        "ObjectFileType": "Executable file"
+    },
+    "trid": {
+        "0": "ELF Executable and Linkable format (Linux) (50.1%)",
+        "1": "ELF Executable and Linkable format (generic) (49.8%)"
+    },
+    "extension": "o",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 18:55:49",
+        "positives": 8,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "HEUR:Exploit.Linux.Lotoor.bj\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "Emsisoft": {
+                "result": null,
+                "detected": false,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "McAfee": {
+                "result": "GenericRXIR-TA!9B33B1AD9774 trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "ESET-EEA": {
+                "result": "Linux/Exploit.Agent.J",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "F-Secure": {
+                "result": "Exploit.EXP/LNX.Agent.xqfgu",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "Sophos": {
+                "result": "Mal/Behav-175",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "GData": {
+                "result": "Linux.Trojan.Agent.9FP4YW",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            },
+            "ClamAV": {
+                "result": "Unix.Tool.13356-1",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "Avast": {
+                "result": "ELF:Local-AX [Expl]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111810
+            },
+            "Microsoft": {
+                "result": null,
+                "detected": false,
+                "version": "4.18.2110.6",
+                "update": "1.353.1213.0"
+            },
+            "AdAware": {
+                "result": null,
+                "detected": false,
+                "version": 7.90255,
+                "update": 10505989
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T18:55:49+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "9b33b1ad9774c4ffce988770e9cfde59",
+        "mode": "file"
+    }
+}

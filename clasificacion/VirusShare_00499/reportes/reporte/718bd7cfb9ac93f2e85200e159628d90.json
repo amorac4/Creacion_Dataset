@@ -1,0 +1,109 @@
+{
+    "md5": "718bd7cfb9ac93f2e85200e159628d90",
+    "sha1": "9b31e4953e0b0740dd35b4dacf5f6aeef3977c23",
+    "sha224": "5b7069fffefe785018d420bf49df1a12cfec1eee798b43d35e96bc08",
+    "sha256": "f6384e463f21a1ddd33be1e5dcf825bfb073834bcca722fec592e10c32188115",
+    "sha384": "3f1e70d977d7412a35d8d243b16a22fe7706de6659275104b6a0bd602d315613ed134b4a1421fa25c786126206f995f0",
+    "sha512": "aad0690e0ab1484442815d4d5664682cec816d95d2705105b93d308ce12add465d4e422d5753242c11675686d7839b56479e6ed0cb238f340fabcfcf2caf70d3",
+    "ssdeep": "192:Ryg8pIEVTeuzIURtyIcaD+bxZUNzu1WSiix:otV6uzIUjyIcaD+bxAu",
+    "size": 13200,
+    "filetype": "ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=83f5afeb8c94a1edaf4047fd25bd08c1b2bf2592, not stripped",
+    "mimetype": "application/x-sharedlib",
+    "exif": {
+        "CPUArchitecture": "64 bit",
+        "CPUByteOrder": "Little endian",
+        "CPUType": "AMD x86-64",
+        "FileSize": "13 KiB",
+        "FileType": "ELF shared library",
+        "FileTypeExtension": "so",
+        "MIMEType": "application/octet-stream",
+        "ObjectFileType": "Shared object file"
+    },
+    "trid": {
+        "0": "ELF Executable and Linkable format (Linux) (50.1%)",
+        "1": "ELF Executable and Linkable format (generic) (49.8%)"
+    },
+    "extension": "so",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 19:04:50",
+        "positives": 8,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": null,
+                "detected": false,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": "GenericRXJK-HY!718BD7CFB9AC trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": "Gen:Variant.Trojan.Linux.LibProcesshider.1 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "GData": {
+                "result": "Gen:Variant.Trojan.Linux.LibProcesshider.1",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            },
+            "Avast": {
+                "result": "ELF:Agent-RV [Rtk]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111810
+            },
+            "F-Secure": {
+                "result": "Malware.LINUX/Rootkit.xlnte",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "ESET-EEA": {
+                "result": "Linux/Rootkit.Agent.AQ",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "Microsoft": {
+                "result": null,
+                "detected": false,
+                "version": "4.18.2110.6",
+                "update": "1.353.1213.0"
+            },
+            "ClamAV": {
+                "result": null,
+                "detected": false,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "AdAware": {
+                "result": "Gen:Variant.Trojan.Linux.LibProcesshider.1",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            },
+            "Sophos": {
+                "result": "Linux/ProcHid-A",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T19:04:50+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "718bd7cfb9ac93f2e85200e159628d90",
+        "mode": "file"
+    }
+}

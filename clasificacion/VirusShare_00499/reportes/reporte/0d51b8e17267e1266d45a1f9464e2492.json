@@ -1,0 +1,108 @@
+{
+    "md5": "0d51b8e17267e1266d45a1f9464e2492",
+    "sha1": "459cfde63f8bc4fe0444aa7226e3ff66fe15af7a",
+    "sha224": "961e370987ba314e2dd0083bf3c70f30976dfd2923cfe94f5bc2d3ac",
+    "sha256": "3e3c2ffb6bc7c64e3f8e2d348f4636fd1561e135804a736d7b680fa72f43f392",
+    "sha384": "7ec2b827af05cab36ae8891b32e422b44cab04723b1ca07690de51018dd437003c06af54562f4dcd1b0a7ad3a6a86e6e",
+    "sha512": "1ba989d11f38fad30903c22df40e06258bc435df91176b988a2317c3f665cd8f42066a2dcde29874f51d144438b3a6d9037ae3ed8a8bef8aebccdaabb49ae6ca",
+    "ssdeep": "1536:LE2dKd40y5tgm28q6PgN8l8MsINprfm7uCciPY:I2hqOg6um+iLiPY",
+    "size": 61216,
+    "filetype": "ELF 32-bit MSB executable, Motorola m68k, 68020, version 1 (SYSV), statically linked, stripped",
+    "mimetype": "application/x-executable",
+    "exif": {
+        "CPUArchitecture": "32 bit",
+        "CPUByteOrder": "Big endian",
+        "CPUType": "Motorola 68000",
+        "FileSize": "60 KiB",
+        "FileType": "ELF executable",
+        "FileTypeExtension": "",
+        "MIMEType": "application/octet-stream",
+        "ObjectFileType": "Executable file"
+    },
+    "trid": {
+        "0": "ELF Executable and Linkable format (generic) (100.0%)"
+    },
+    "extension": "o",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-18 18:22:41",
+        "positives": 11,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "HEUR:Backdoor.Linux.Mirai.b\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-18"
+            },
+            "McAfee": {
+                "result": "GenericRXNS-ZM!0D51B8E17267 trojan",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10172
+            },
+            "Emsisoft": {
+                "result": "Trojan.Linux.Mirai.1 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "GData": {
+                "result": "Trojan.Linux.Mirai.1",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25199
+            },
+            "Avast": {
+                "result": "ELF:Mirai-ATX [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21111804
+            },
+            "F-Secure": {
+                "result": "Malware.LINUX/Mirai.missy",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.814"
+            },
+            "ESET-EEA": {
+                "result": "Linux/Mirai.ASX",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "Sophos": {
+                "result": "Linux/DDoS-CI",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "Microsoft": {
+                "result": "Trojan:Win32/Bitrep.B",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.1211.0"
+            },
+            "ClamAV": {
+                "result": "Unix.Dropper.Mirai-7136035-0",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26357
+            },
+            "AdAware": {
+                "result": "Trojan.Linux.Mirai.1",
+                "detected": true,
+                "version": 7.90255,
+                "update": 10505989
+            }
+        }
+    },
+    "added_timestamp": "2021-11-18T18:22:41+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00499",
+        "input_txt": "hashes\\VirusShare_00499.txt",
+        "hash": "0d51b8e17267e1266d45a1f9464e2492",
+        "mode": "file"
+    }
+}
