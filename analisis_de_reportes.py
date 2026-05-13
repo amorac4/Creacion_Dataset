@@ -31,9 +31,9 @@ from openpyxl.chart import BarChart, LineChart, PieChart, Reference
 from openpyxl.styles import Font, PatternFill
 
 
-DEFAULT_REPORTS_DIR = r"clasificacion\VirusShare_00499\reportes\reporte"
+DEFAULT_REPORTS_DIR = r"clasificacion\VirusShare_00495\reportes\reporte"
 DEFAULT_OUTPUT_DIR = "outputs"
-DEFAULT_NAME = "Analisis_de_Reportes_VirusShare_00499"
+DEFAULT_NAME = "Analisis_de_Reportes_VirusShare_00495"
 EXCEL_MAX_ROWS = 1_048_576
 DETECTIONS_ROWS_PER_SHEET = 1_000_000
 
@@ -231,6 +231,9 @@ SAMPLE_FIELDS = [
     "dia_escaneo_vt",
     "fecha_agregado_virusshare",
     "dia_agregado_virusshare",
+    "fecha_creacion_archivo",
+    "dia_creacion_archivo",
+    "timestamp_creacion_raw",
     "vt_positives",
     "vt_total",
     "detection_ratio",
@@ -302,6 +305,24 @@ def parse_datetime(value: Any) -> dt.datetime | None:
         return parsed.replace(tzinfo=dt.timezone.utc)
     except ValueError:
         return None
+
+
+def parse_exif_timestamp(value: Any) -> dt.datetime | None:
+    if not value:
+        return None
+    text = str(value).strip()
+    if not text or text.startswith("0000:00:00"):
+        return None
+
+    for fmt in ("%Y:%m:%d %H:%M:%S%z", "%Y:%m:%d %H:%M:%S"):
+        try:
+            parsed = dt.datetime.strptime(text, fmt)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=dt.timezone.utc)
+            return parsed.astimezone(dt.timezone.utc)
+        except ValueError:
+            pass
+    return parse_datetime(text)
 
 
 def parse_date_filter(value: str | None) -> dt.date | None:
@@ -432,10 +453,13 @@ def detection_ratio(positives: Any, total: Any) -> float:
 
 def row_from_report(path: Path, report: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     vt = report.get("virustotal") or {}
+    exif = report.get("exif") or {}
     detections = extract_detections(report)
     inferred = infer_type_and_family(detections)
     scan_dt = parse_datetime(vt.get("scan_date"))
     added_dt = parse_datetime(report.get("added_timestamp"))
+    creation_raw = exif.get("TimeStamp") if isinstance(exif, dict) else ""
+    creation_dt = parse_exif_timestamp(creation_raw)
     positives = int(vt.get("positives") or 0)
     total = int(vt.get("total") or 0)
     ratio = detection_ratio(positives, total)
@@ -452,6 +476,9 @@ def row_from_report(path: Path, report: dict[str, Any]) -> tuple[dict[str, Any],
         "dia_escaneo_vt": fmt_date(scan_dt),
         "fecha_agregado_virusshare": fmt_datetime(added_dt),
         "dia_agregado_virusshare": fmt_date(added_dt),
+        "fecha_creacion_archivo": fmt_datetime(creation_dt),
+        "dia_creacion_archivo": fmt_date(creation_dt),
+        "timestamp_creacion_raw": str(creation_raw or ""),
         "vt_positives": positives,
         "vt_total": total,
         "detection_ratio": round(ratio, 4),
@@ -513,6 +540,9 @@ def create_schema(conn: sqlite3.Connection) -> None:
             dia_escaneo_vt TEXT,
             fecha_agregado_virusshare TEXT,
             dia_agregado_virusshare TEXT,
+            fecha_creacion_archivo TEXT,
+            dia_creacion_archivo TEXT,
+            timestamp_creacion_raw TEXT,
             vt_positives INTEGER,
             vt_total INTEGER,
             detection_ratio REAL,

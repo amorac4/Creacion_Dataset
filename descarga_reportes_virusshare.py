@@ -64,7 +64,7 @@ from tqdm import tqdm
 # ==============================================================================
 # [ --- CONFIGURACIÓN GENERAL --- ]
 # ==============================================================================
-INPUT_TXT = r"hashes\VirusShare_00499.txt"
+INPUT_TXT = r"hashes\VirusShare_00495.txt"
 MODE = "file"                  # "file" o "quick"
 KEY_STRATEGY = "sequential"   # "sequential" o "roundrobin"
 MAX_KEYS = 0                    # solo roundrobin: 0=todas, 1..N=usar N keys

@@ -144,6 +144,11 @@ En `Muestras` se incluyen, entre otros:
 
 - `fecha_escaneo_vt`: fecha de escaneo reportada por VirusTotal.
 - `fecha_agregado_virusshare`: fecha en que VirusShare agrego la muestra.
+- `fecha_creacion_archivo`: fecha tomada de `exif.TimeStamp` cuando el reporte la
+  incluye. En ejecutables PE suele corresponder al timestamp de compilacion; debe
+  tratarse como metadato del archivo, no como fecha garantizada de creacion del
+  malware.
+- `timestamp_creacion_raw`: valor original de `exif.TimeStamp` para auditoria.
 - `vt_positives`, `vt_total`, `detection_ratio`: indicadores de deteccion.
 - `detection_percent`: porcentaje de motores que detectaron la muestra.
 - `familia_probable`: familia inferida desde etiquetas AV.
@@ -184,10 +189,16 @@ FROM type_day_counts
 ORDER BY dia_escaneo_vt, muestras DESC;
 
 -- Muestras de una familia concreta
-SELECT hash_md5, fecha_escaneo_vt, tipo_probable, familia_confianza, vt_positives, vt_total
+SELECT hash_md5, fecha_escaneo_vt, fecha_creacion_archivo, tipo_probable, familia_confianza, vt_positives, vt_total
 FROM samples
 WHERE familia_probable = 'cryxos'
 ORDER BY fecha_escaneo_vt;
+
+-- Muestras por fecha de creacion/compilacion del archivo
+SELECT hash_md5, familia_probable, tipo_probable, detection_percent, fecha_creacion_archivo
+FROM samples
+WHERE dia_creacion_archivo BETWEEN '2013-12-01' AND '2013-12-31'
+ORDER BY fecha_creacion_archivo;
 
 -- Detecciones crudas de una muestra
 -- Requiere ejecutar con --include-engine-details
