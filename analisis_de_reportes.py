@@ -31,9 +31,9 @@ from openpyxl.chart import BarChart, LineChart, PieChart, Reference
 from openpyxl.styles import Font, PatternFill
 
 
-DEFAULT_REPORTS_DIR = r"clasificacion\VirusShare_00495\reportes\reporte"
+DEFAULT_REPORTS_DIR = r"clasificacion\VirusShare_00499\reportes\reporte"
 DEFAULT_OUTPUT_DIR = "outputs"
-DEFAULT_NAME = "Analisis_de_Reportes_VirusShare_00495"
+DEFAULT_NAME = "Analisis_de_Reportes_VirusShare_00499"
 EXCEL_MAX_ROWS = 1_048_576
 DETECTIONS_ROWS_PER_SHEET = 1_000_000
 

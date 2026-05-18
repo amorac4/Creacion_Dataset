@@ -1,0 +1,482 @@
+{
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 52224,
+        "CompanyName": "Microsoft Corporation",
+        "EntryPoint": "0xc6a0",
+        "FileDescription": "Application Layer Gateway Service",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Windows NT 32-bit",
+        "FileSize": "484 kB",
+        "FileSubtype": 0,
+        "FileType": "Win64 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+        "FileVersionNumber": "10.0.17134.1",
+        "ImageVersion": 10,
+        "InitializedDataSize": 40448,
+        "InternalName": "ALG.exe",
+        "LanguageCode": "English (U.S.)",
+        "LegalCopyright": "© Microsoft Corporation. All rights reserved.",
+        "LinkerVersion": 14.12,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "AMD AMD64",
+        "OSVersion": 10,
+        "ObjectFileType": "Dynamic link library",
+        "OriginalFileName": "ALG.exe",
+        "PEType": "PE32+",
+        "ProductName": "Microsoft® Windows® Operating System",
+        "ProductVersion": "10.0.17134.1",
+        "ProductVersionNumber": "10.0.17134.1",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 10,
+        "TimeStamp": "2047:05:20 07:53:14-04:00",
+        "UninitializedDataSize": 0,
+        "Warning": "Possibly corrupt Version resource"
+    },
+    "asha256": "88248ae0490a125e795d39048d7818e8a08d710ec9b26994ca0cf59fbed8615e",
+    "sha384": "fbc57e758c962503bfd334491b8e43d822b30e5c6765082933a2aab46a738ee912de773b011c22f304b51e64fb9d5f0a",
+    "mimetype": "application/x-dosexec",
+    "sha1": "dcfe974ee051a9aa7161b5de2840d8e31e82e1f6",
+    "extension": "exe",
+    "filetype": "PE32+ executable (GUI) x86-64, for MS Windows",
+    "virustotal": {
+        "permalink": "https://www.virustotal.com/gui/file/9dad3b67b4e7e625eba5c6aaa7090b9f87ad6567991ac596e0cbb9bc07ed4a0b/detection/f-9dad3b67b4e7e625eba5c6aaa7090b9f87ad6567991ac596e0cbb9bc07ed4a0b-1635950215",
+        "total": 68,
+        "scan_date": "2021-11-03 14:36:55",
+        "positives": 37,
+        "scans": {
+            "Cyren": {
+                "update": 20211103,
+                "result": "W64/Expiro.AH.gen!Eldorado",
+                "detected": true,
+                "version": "6.3.0.2"
+            },
+            "ESET-NOD32": {
+                "update": 20211103,
+                "result": "a variant of Win64/Expiro.CO",
+                "detected": true,
+                "version": 24230
+            },
+            "McAfee-GW-Edition": {
+                "update": 20211102,
+                "result": null,
+                "detected": false,
+                "version": "v2019.1.2+3728"
+            },
+            "Elastic": {
+                "update": 20211005,
+                "result": "malicious (high confidence)",
+                "detected": true,
+                "version": "4.0.29"
+            },
+            "CMC": {
+                "update": 20211026,
+                "result": null,
+                "detected": false,
+                "version": "2.10.2019.1"
+            },
+            "FireEye": {
+                "update": 20211103,
+                "result": "Generic.mg.8f4324c787b70c1a",
+                "detected": true,
+                "version": "32.44.1.0"
+            },
+            "SentinelOne": {
+                "update": 20211028,
+                "result": "Static AI - Malicious PE",
+                "detected": true,
+                "version": "6.3.0.2"
+            },
+            "CrowdStrike": {
+                "update": 20210203,
+                "result": "win/malicious_confidence_90% (D)",
+                "detected": true,
+                "version": 1
+            },
+            "DrWeb": {
+                "update": 20211103,
+                "result": "Win64.Expiro.132",
+                "detected": true,
+                "version": "7.0.52.8270"
+            },
+            "CAT-QuickHeal": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": 14
+            },
+            "Gridinsoft": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "1.0.60.158"
+            },
+            "BitDefenderTheta": {
+                "update": 20211021,
+                "result": null,
+                "detected": false,
+                "version": "7.2.37796.0"
+            },
+            "MaxSecure": {
+                "update": 20211103,
+                "result": "virus.win64.expiro.gen",
+                "detected": true,
+                "version": "1.0.0.1"
+            },
+            "Jiangmin": {
+                "update": 20211102,
+                "result": "Trojan.Bingoml.akq",
+                "detected": true,
+                "version": "16.0.100"
+            },
+            "Lionic": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": 4.2
+            },
+            "AVG": {
+                "update": 20211103,
+                "result": "Win64:Xpirat [Inf]",
+                "detected": true,
+                "version": "21.1.5827.0"
+            },
+            "Zillya": {
+                "update": 20211102,
+                "result": null,
+                "detected": false,
+                "version": "2.0.0.4487"
+            },
+            "Ad-Aware": {
+                "update": 20211103,
+                "result": "Win64.Expiro.Gen.6",
+                "detected": true,
+                "version": "3.0.21.193"
+            },
+            "ClamAV": {
+                "update": 20211103,
+                "result": "Win.Virus.Expiro-9876440-0",
+                "detected": true,
+                "version": "0.104.0.0"
+            },
+            "Antiy-AVL": {
+                "update": 20211103,
+                "result": "Trojan/Generic.ASVirus.30B",
+                "detected": true,
+                "version": "3.0.0.1"
+            },
+            "VBA32": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "5.0.0"
+            },
+            "ZoneAlarm": {
+                "update": 20211102,
+                "result": null,
+                "detected": false,
+                "version": 1
+            },
+            "Rising": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "25.0.0.26"
+            },
+            "Baidu": {
+                "update": 20190318,
+                "result": null,
+                "detected": false,
+                "version": "1.0.0.2"
+            },
+            "K7GW": {
+                "update": 20211103,
+                "result": "Virus ( 00535e4a1 )",
+                "detected": true,
+                "version": "11.225.39132"
+            },
+            "Yandex": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "5.5.2.24"
+            },
+            "Sangfor": {
+                "update": 20211103,
+                "result": "Trojan.Win32.Save.a",
+                "detected": true,
+                "version": "2.9.0.0"
+            },
+            "McAfee": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "6.0.6.653"
+            },
+            "Microsoft": {
+                "update": 20211103,
+                "result": "Trojan:Win32/Sabsik.FL.B!ml",
+                "detected": true,
+                "version": "1.1.18700.4"
+            },
+            "Zoner": {
+                "update": 20211102,
+                "result": null,
+                "detected": false,
+                "version": "0.0.0.0"
+            },
+            "Comodo": {
+                "update": 20211102,
+                "result": null,
+                "detected": false,
+                "version": 34044
+            },
+            "GData": {
+                "update": 20211103,
+                "result": "Win64.Expiro.Gen.6",
+                "detected": true,
+                "version": "A:25.31231B:27.25017"
+            },
+            "Webroot": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "1.0.0.403"
+            },
+            "BitDefender": {
+                "update": 20211103,
+                "result": "Win64.Expiro.Gen.6",
+                "detected": true,
+                "version": 7.2
+            },
+            "Avast": {
+                "update": 20211103,
+                "result": "Win64:Xpirat [Inf]",
+                "detected": true,
+                "version": "21.1.5827.0"
+            },
+            "Bkav": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "1.3.0.9899"
+            },
+            "Kaspersky": {
+                "update": 20211103,
+                "result": "HEUR:Virus.Win64.Expiro.gen",
+                "detected": true,
+                "version": "21.0.1.45"
+            },
+            "SUPERAntiSpyware": {
+                "update": 20211030,
+                "result": null,
+                "detected": false,
+                "version": "5.6.0.1032"
+            },
+            "MicroWorld-eScan": {
+                "update": 20211103,
+                "result": "Win64.Expiro.Gen.6",
+                "detected": true,
+                "version": "14.0.409.0"
+            },
+            "Cybereason": {
+                "update": 20210330,
+                "result": "malicious.ee051a",
+                "detected": true,
+                "version": "1.2.449"
+            },
+            "Acronis": {
+                "update": 20210512,
+                "result": "suspicious",
+                "detected": true,
+                "version": "1.1.1.82"
+            },
+            "Alibaba": {
+                "update": 20190527,
+                "result": null,
+                "detected": false,
+                "version": "0.3.0.5"
+            },
+            "Fortinet": {
+                "update": 20211103,
+                "result": "W64/Expiro.BS",
+                "detected": true,
+                "version": "6.2.142.0"
+            },
+            "MAX": {
+                "update": 20211103,
+                "result": "malware (ai score=82)",
+                "detected": true,
+                "version": "2019.9.16.1"
+            },
+            "TrendMicro-HouseCall": {
+                "update": 20211101,
+                "result": "Virus.Win64.EXPIRO.MR",
+                "detected": true,
+                "version": "10.0.0.1040"
+            },
+            "Tencent": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "1.0.0.1"
+            },
+            "Arcabit": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "1.0.0.888"
+            },
+            "NANO-Antivirus": {
+                "update": 20211103,
+                "result": "Virus.Win64.Expiro.clnvwd",
+                "detected": true,
+                "version": "1.0.146.25370"
+            },
+            "Malwarebytes": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "4.2.2.27"
+            },
+            "VIPRE": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": 96684
+            },
+            "K7AntiVirus": {
+                "update": 20211103,
+                "result": "Virus ( 00535e4a1 )",
+                "detected": true,
+                "version": "11.225.39136"
+            },
+            "Symantec": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "1.16.0.0"
+            },
+            "APEX": {
+                "update": 20211101,
+                "result": "Malicious",
+                "detected": true,
+                "version": 6.225
+            },
+            "TrendMicro": {
+                "update": 20211103,
+                "result": "Virus.Win64.EXPIRO.MR",
+                "detected": true,
+                "version": "11.0.0.1006"
+            },
+            "Avira": {
+                "update": 20211103,
+                "result": "TR/Patched.Gen",
+                "detected": true,
+                "version": "8.3.3.12"
+            },
+            "Panda": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "4.6.4.2"
+            },
+            "Paloalto": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": 1
+            },
+            "ALYac": {
+                "update": 20211103,
+                "result": "Win64.Expiro.Gen.6",
+                "detected": true,
+                "version": "1.1.3.1"
+            },
+            "ViRobot": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "2014.3.20.0"
+            },
+            "Emsisoft": {
+                "update": 20211103,
+                "result": "Win64.Expiro.Gen.6 (B)",
+                "detected": true,
+                "version": "2021.5.0.7597"
+            },
+            "TACHYON": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "2021-11-03.02"
+            },
+            "eGambit": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": null
+            },
+            "Cynet": {
+                "update": 20211103,
+                "result": "Malicious (score: 100)",
+                "detected": true,
+                "version": "4.0.0.27"
+            },
+            "Cylance": {
+                "update": 20211103,
+                "result": "Unsafe",
+                "detected": true,
+                "version": "2.3.1.101"
+            },
+            "AhnLab-V3": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "3.21.1.10219"
+            },
+            "Sophos": {
+                "update": 20211103,
+                "result": "ML/PE-A + W64/Expiro-AX",
+                "detected": true,
+                "version": "1.4.1.0"
+            },
+            "Ikarus": {
+                "update": 20211103,
+                "result": "Virus.Win64.Expiro",
+                "detected": true,
+                "version": "0.1.5.2"
+            },
+            "F-Secure": {
+                "update": 20211103,
+                "result": null,
+                "detected": false,
+                "version": "12.0.86.52"
+            }
+        }
+    },
+    "sha224": "0fc5b9c364c2ff2cea73cb76fb02f949322244e0fd01c9bc9825c4d6",
+    "added_timestamp": "2021-11-08T19:13:06+00:00",
+    "md5": "8f4324c787b70c1ac7c802fb8605a0b7",
+    "sha512": "ec90bbc6b1bc2e76ba656224372506fad0271e6c55a7cd841ca313922a13f7e3ae93f3bb106780ff9391d0b83828a856c5a8da076262dfec173b73e89cf77aab",
+    "imphash": "0880969dd70df552ede1edaf71e17a74",
+    "sha256": "9dad3b67b4e7e625eba5c6aaa7090b9f87ad6567991ac596e0cbb9bc07ed4a0b",
+    "ssdeep": "12288:exJsTgGsqI5wAJuzYFYEqYsg/VlVqjuX97OSN7go9x2tF:eWgbq2TFLq+T7O6x2t",
+    "trid": {
+        "0": "Windows Control Panel Item (generic) (90.1%)",
+        "1": "Win64 Executable (generic) (4.8%)",
+        "2": "Win16 NE executable (generic) (2.3%)",
+        "3": "OS/2 Executable (generic) (0.9%)",
+        "4": "Generic Win/DOS Executable (0.9%)"
+    },
+    "size": 496128,
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "8f4324c787b70c1ac7c802fb8605a0b7",
+        "mode": "file"
+    }
+}

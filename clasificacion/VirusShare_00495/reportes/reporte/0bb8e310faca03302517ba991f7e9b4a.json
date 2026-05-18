@@ -1,0 +1,139 @@
+{
+    "md5": "0bb8e310faca03302517ba991f7e9b4a",
+    "sha1": "6d21cad4e02e2feb91edf2dd06e2f9a9ffe67edf",
+    "sha224": "49b721ccc3bb9786d3d2e20e64dceb28e771d87a119a939abb1ec231",
+    "sha256": "3f7706e01ab896a9265a292467baa091fd94f0b81a3734bbd3cca49699370a13",
+    "sha384": "fdb413777943f50d4e677cc074046512815b13584035686b1bf96602678c50496a1a87d1913cf5614a279af4709923cc",
+    "sha512": "fbfc177d54e125a3513896d6c5abddfcaf69eda579b645409e5c7ee3a367c80b8377e7765cdce52e9297b5772dc759c8628cca09a320bbbefafddb5204f61986",
+    "ssdeep": "196608:m2qIAKuNWVWn0Z+ba5Fb1X9EFzwoMGVMgs4um/UysMyH6l6:1qEOSF5Fh2Fag06sMP",
+    "size": 8539136,
+    "filetype": "PE32+ executable (console) x86-64, for MS Windows",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 11907584,
+        "CompanyName": "www.microsoft.com",
+        "EntryPoint": "0x19e91fd",
+        "FileDescription": "Windows Updater Service",
+        "FileFlags": "Debug",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Win32",
+        "FileSize": "8.1 MiB",
+        "FileSubtype": 0,
+        "FileType": "Win64 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": "6.12.1",
+        "FileVersionNumber": "6.12.1.0",
+        "ImageFileCharacteristics": "Executable, Large address aware",
+        "ImageVersion": 0,
+        "InitializedDataSize": 7826432,
+        "LanguageCode": "Neutral",
+        "LegalCopyright": "Copyright (C) 2016-2021 microsoft.com",
+        "LinkerVersion": 14.29,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "AMD AMD64",
+        "OSVersion": 6,
+        "ObjectFileType": "Executable application",
+        "OriginalFileName": "update.exe",
+        "PEType": "PE32+",
+        "ProductName": "windows updater",
+        "ProductVersion": "6.12.1",
+        "ProductVersionNumber": "6.12.1.0",
+        "Subsystem": "Windows command line",
+        "SubsystemVersion": 6,
+        "TimeStamp": "2021:08:24 10:53:22-04:00",
+        "UninitializedDataSize": 0
+    },
+    "trid": {
+        "0": "Win64 Executable (generic) (48.7%)",
+        "1": "Win16 NE executable (generic) (23.3%)",
+        "2": "OS/2 Executable (generic) (9.3%)",
+        "3": "Generic Win/DOS Executable (9.2%)",
+        "4": "DOS Executable Generic (9.2%)"
+    },
+    "extension": "exe",
+    "asha256": "9d853e35596a5644c06ac1b7db5e7dcd9398bfe4df0599ebf3a52a6a004b4a18",
+    "imphash": "5d180d34888d55a8f22a77e214a2f23a",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-08 20:07:42",
+        "positives": 7,
+        "total": 11,
+        "scans": {
+            "Kaspersky": {
+                "result": "UDS:Trojan.Win64.Miner\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-08"
+            },
+            "GData": {
+                "result": "Gen:Variant.Bulz.649237",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25081
+            },
+            "Emsisoft": {
+                "result": "Gen:Variant.Bulz.649237 (B)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "McAfee": {
+                "result": null,
+                "detected": false,
+                "version": "6.1.5.312",
+                "update": 10162
+            },
+            "Avast": {
+                "result": "Win64:MalwareX-gen [Trj]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21110804
+            },
+            "ESET-EEA": {
+                "result": "Win64/Packed.VMProtect.MK",
+                "detected": true,
+                "version": "8.1.3.0",
+                "update": ""
+            },
+            "F-Secure": {
+                "result": "Trojan.TR/Miner.fbqwo",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.790"
+            },
+            "Microsoft": {
+                "result": null,
+                "detected": false,
+                "version": "4.18.2110.6",
+                "update": "1.353.652.0"
+            },
+            "Sophos": {
+                "result": null,
+                "detected": false,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "ClamAV": {
+                "result": null,
+                "detected": false,
+                "version": "0.103.2",
+                "update": 26347
+            },
+            "AdAware": {
+                "result": "Gen:Variant.Bulz.649237",
+                "detected": true,
+                "version": 7.90166,
+                "update": 10699509
+            }
+        }
+    },
+    "added_timestamp": "2021-11-08T20:07:42+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "0bb8e310faca03302517ba991f7e9b4a",
+        "mode": "file"
+    }
+}
