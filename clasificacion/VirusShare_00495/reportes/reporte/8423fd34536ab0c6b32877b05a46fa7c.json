@@ -1,0 +1,464 @@
+{
+    "sha1": "4558eb2b95e1e25b1aa7784430d357963bbd0f33",
+    "filetype": "PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, UPX compressed",
+    "sha384": "bb82d52c1348834e52f41a59fb803aeec9c088c00dc8b58401985e3838d898e2479291cd0f4b89c95f01978adc6d6225",
+    "extension": "exe",
+    "sha224": "990635d14b5c0080d62ddf2e80cfdaf8f2f80f1a506307758a36312f",
+    "imphash": "e5aeba1370cd589885e8d7029ec051f5",
+    "sha256": "1b7d1827d9bc4c36b71cab4e20372bbbd1bf3c3b861ec6c4b7ab039ab619645e",
+    "md5": "8423fd34536ab0c6b32877b05a46fa7c",
+    "trid": {
+        "0": "UPX compressed Win32 Executable (37.1%)",
+        "1": "Win32 EXE Yoda's Crypter (36.4%)",
+        "2": "Win32 Dynamic Link Library (generic) (9.0%)",
+        "3": "Win32 Executable (generic) (6.1%)",
+        "4": "Win16/32 Executable Delphi generic (2.8%)"
+    },
+    "virustotal": {
+        "scan_date": "2021-11-04 20:31:14",
+        "permalink": "https://www.virustotal.com/gui/file/1b7d1827d9bc4c36b71cab4e20372bbbd1bf3c3b861ec6c4b7ab039ab619645e/detection/f-1b7d1827d9bc4c36b71cab4e20372bbbd1bf3c3b861ec6c4b7ab039ab619645e-1636057874",
+        "positives": 50,
+        "scans": {
+            "Alibaba": {
+                "update": 20190527,
+                "detected": false,
+                "version": "0.3.0.5",
+                "result": null
+            },
+            "Cyren": {
+                "update": 20211104,
+                "detected": false,
+                "version": "6.3.0.2",
+                "result": null
+            },
+            "Elastic": {
+                "update": 20211005,
+                "detected": true,
+                "version": "4.0.29",
+                "result": "malicious (high confidence)"
+            },
+            "Comodo": {
+                "update": 20211102,
+                "detected": true,
+                "version": 34044,
+                "result": "Packed.Win32.MUPX.Gen@24tbus"
+            },
+            "Antiy-AVL": {
+                "update": 20211104,
+                "detected": true,
+                "version": "3.0.0.1",
+                "result": "Worm[Email]/Win32.Nevereg"
+            },
+            "Kingsoft": {
+                "update": 20211104,
+                "detected": false,
+                "version": "2017.9.26.565",
+                "result": null
+            },
+            "VIPRE": {
+                "update": 20211104,
+                "detected": true,
+                "version": 96716,
+                "result": "BehavesLike.Win32.Malware.tsc (mx-v)"
+            },
+            "Paloalto": {
+                "update": 20211104,
+                "detected": false,
+                "version": 1,
+                "result": null
+            },
+            "GData": {
+                "update": 20211104,
+                "detected": true,
+                "version": "A:25.31247B:27.25033",
+                "result": "DeepScan:Generic.Malware.PfV!hid!!p2p!u.267548EA"
+            },
+            "MAX": {
+                "update": 20211104,
+                "detected": true,
+                "version": "2019.9.16.1",
+                "result": "malware (ai score=82)"
+            },
+            "DrWeb": {
+                "update": 20211104,
+                "detected": true,
+                "version": "7.0.52.8270",
+                "result": "Win32.HLLW.Pluton.46080"
+            },
+            "Panda": {
+                "update": 20211104,
+                "detected": true,
+                "version": "4.6.4.2",
+                "result": "Worm Generic.LC"
+            },
+            "eGambit": {
+                "update": 20211104,
+                "detected": true,
+                "version": null,
+                "result": "Unsafe.AI_Score_99%"
+            },
+            "Ad-Aware": {
+                "update": 20211104,
+                "detected": true,
+                "version": "3.0.21.193",
+                "result": "DeepScan:Generic.Malware.PfV!hid!!p2p!u.267548EA"
+            },
+            "VBA32": {
+                "update": 20211104,
+                "detected": true,
+                "version": "5.0.0",
+                "result": "Worm.Nevereg"
+            },
+            "McAfee-GW-Edition": {
+                "update": 20211104,
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "result": "BehavesLike.Win32.Sytro.nt"
+            },
+            "ZoneAlarm": {
+                "update": 20211102,
+                "detected": true,
+                "version": 1,
+                "result": "Email-Worm.Win32.Nevereg"
+            },
+            "AVG": {
+                "update": 20211104,
+                "detected": true,
+                "version": "21.1.5827.0",
+                "result": "Win32:Nevereg [Wrm]"
+            },
+            "ESET-NOD32": {
+                "update": 20211104,
+                "detected": true,
+                "version": 24238,
+                "result": "a variant of Win32/Nevereg.A"
+            },
+            "Webroot": {
+                "update": 20211104,
+                "detected": false,
+                "version": "1.0.0.403",
+                "result": null
+            },
+            "Avast": {
+                "update": 20211104,
+                "detected": true,
+                "version": "21.1.5827.0",
+                "result": "Win32:Nevereg [Wrm]"
+            },
+            "Arcabit": {
+                "update": 20211104,
+                "detected": false,
+                "version": "1.0.0.888",
+                "result": null
+            },
+            "F-Secure": {
+                "update": 20211104,
+                "detected": true,
+                "version": "12.0.86.52",
+                "result": "Heuristic.HEUR/AGEN.1104201"
+            },
+            "K7GW": {
+                "update": 20211104,
+                "detected": true,
+                "version": "11.225.39163",
+                "result": "Riskware ( 00584baa1 )"
+            },
+            "Avira": {
+                "update": 20211104,
+                "detected": true,
+                "version": "8.3.3.12",
+                "result": "HEUR/AGEN.1104201"
+            },
+            "APEX": {
+                "update": 20211104,
+                "detected": true,
+                "version": 6.226,
+                "result": "Malicious"
+            },
+            "CrowdStrike": {
+                "update": 20210203,
+                "detected": true,
+                "version": 1,
+                "result": "win/malicious_confidence_90% (W)"
+            },
+            "Zillya": {
+                "update": 20211104,
+                "detected": true,
+                "version": "2.0.0.4488",
+                "result": "Worm.Nevereg.Win32.1"
+            },
+            "Emsisoft": {
+                "update": 20211104,
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "result": "DeepScan:Generic.Malware.PfV!hid!!p2p!u.267548EA (B)"
+            },
+            "BitDefenderTheta": {
+                "update": 20211104,
+                "detected": true,
+                "version": "7.2.37796.0",
+                "result": "AI:Packer.D4551A6621"
+            },
+            "MaxSecure": {
+                "update": 20211103,
+                "detected": false,
+                "version": "1.0.0.1",
+                "result": null
+            },
+            "NANO-Antivirus": {
+                "update": 20211104,
+                "detected": true,
+                "version": "1.0.146.25409",
+                "result": "Trojan.Win32.Nevereg.enis"
+            },
+            "TrendMicro": {
+                "update": 20211104,
+                "detected": false,
+                "version": "11.0.0.1006",
+                "result": null
+            },
+            "TrendMicro-HouseCall": {
+                "update": 20211101,
+                "detected": false,
+                "version": "10.0.0.1040",
+                "result": null
+            },
+            "K7AntiVirus": {
+                "update": 20211104,
+                "detected": true,
+                "version": "11.225.39162",
+                "result": "Riskware ( 00584baa1 )"
+            },
+            "Acronis": {
+                "update": 20210512,
+                "detected": true,
+                "version": "1.1.1.82",
+                "result": "suspicious"
+            },
+            "Tencent": {
+                "update": 20211104,
+                "detected": true,
+                "version": "1.0.0.1",
+                "result": "Malware.Win32.Gencirc.10cf3f9f"
+            },
+            "Sophos": {
+                "update": 20211104,
+                "detected": true,
+                "version": "1.4.1.0",
+                "result": "ML/PE-A + W32/Nevereg-A"
+            },
+            "MicroWorld-eScan": {
+                "update": 20211104,
+                "detected": true,
+                "version": "14.0.409.0",
+                "result": "DeepScan:Generic.Malware.PfV!hid!!p2p!u.267548EA"
+            },
+            "Microsoft": {
+                "update": 20211104,
+                "detected": true,
+                "version": "1.1.18700.4",
+                "result": "Worm:Win32/Nevereg.A@mm"
+            },
+            "Fortinet": {
+                "update": 20211104,
+                "detected": true,
+                "version": "6.2.142.0",
+                "result": "W32/Nevereg.A!worm"
+            },
+            "CMC": {
+                "update": 20211026,
+                "detected": false,
+                "version": "2.10.2019.1",
+                "result": null
+            },
+            "CAT-QuickHeal": {
+                "update": 20211104,
+                "detected": false,
+                "version": 14,
+                "result": null
+            },
+            "Lionic": {
+                "update": 20211104,
+                "detected": false,
+                "version": 4.2,
+                "result": null
+            },
+            "TACHYON": {
+                "update": 20211104,
+                "detected": false,
+                "version": "2021-11-04.01",
+                "result": null
+            },
+            "Malwarebytes": {
+                "update": 20211104,
+                "detected": true,
+                "version": "4.2.2.27",
+                "result": "Malware.Heuristic.1003"
+            },
+            "AhnLab-V3": {
+                "update": 20211104,
+                "detected": true,
+                "version": "3.21.1.10219",
+                "result": "Malware/Win.Generic.C4587090"
+            },
+            "Zoner": {
+                "update": 20211103,
+                "detected": false,
+                "version": "0.0.0.0",
+                "result": null
+            },
+            "BitDefender": {
+                "update": 20211104,
+                "detected": true,
+                "version": 7.2,
+                "result": "DeepScan:Generic.Malware.PfV!hid!!p2p!u.267548EA"
+            },
+            "SUPERAntiSpyware": {
+                "update": 20211030,
+                "detected": false,
+                "version": "5.6.0.1032",
+                "result": null
+            },
+            "McAfee": {
+                "update": 20211104,
+                "detected": true,
+                "version": "6.0.6.653",
+                "result": "GenericRXAA-AA!8423FD34536A"
+            },
+            "ClamAV": {
+                "update": 20211104,
+                "detected": false,
+                "version": "0.104.1.0",
+                "result": null
+            },
+            "FireEye": {
+                "update": 20211104,
+                "detected": true,
+                "version": "32.44.1.0",
+                "result": "Generic.mg.8423fd34536ab0c6"
+            },
+            "Rising": {
+                "update": 20211104,
+                "detected": true,
+                "version": "25.0.0.26",
+                "result": "Worm.Mail.Nevereg (CLASSIC)"
+            },
+            "SentinelOne": {
+                "update": 20211028,
+                "detected": true,
+                "version": "6.3.0.2",
+                "result": "Static AI - Malicious PE"
+            },
+            "Cylance": {
+                "update": 20211104,
+                "detected": true,
+                "version": "2.3.1.101",
+                "result": "Unsafe"
+            },
+            "ALYac": {
+                "update": 20211104,
+                "detected": true,
+                "version": "1.1.3.1",
+                "result": "DeepScan:Generic.Malware.PfV!hid!!p2p!u.267548EA"
+            },
+            "Cybereason": {
+                "update": 20210330,
+                "detected": true,
+                "version": "1.2.449",
+                "result": "malicious.4536ab"
+            },
+            "Gridinsoft": {
+                "update": 20211104,
+                "detected": true,
+                "version": "1.0.61.160",
+                "result": "Malware.Win32.Gen.bot!se30272"
+            },
+            "Ikarus": {
+                "update": 20211104,
+                "detected": true,
+                "version": "0.1.5.2",
+                "result": "Email-Worm.Win32.Fearso"
+            },
+            "Bkav": {
+                "update": 20211103,
+                "detected": true,
+                "version": "1.3.0.9899",
+                "result": "W32.AIDetect.malware1"
+            },
+            "Kaspersky": {
+                "update": 20211104,
+                "detected": true,
+                "version": "21.0.1.45",
+                "result": "Email-Worm.Win32.Nevereg"
+            },
+            "Symantec": {
+                "update": 20211104,
+                "detected": true,
+                "version": "1.16.0.0",
+                "result": "ML.Attribute.HighConfidence"
+            },
+            "Yandex": {
+                "update": 20211104,
+                "detected": true,
+                "version": "5.5.2.24",
+                "result": "I-Worm.Nevereg!3U+glq8UQaU"
+            },
+            "Jiangmin": {
+                "update": 20211103,
+                "detected": true,
+                "version": "16.0.100",
+                "result": "Worm.Nevereg.a"
+            },
+            "Baidu": {
+                "update": 20190318,
+                "detected": false,
+                "version": "1.0.0.2",
+                "result": null
+            },
+            "ViRobot": {
+                "update": 20211104,
+                "detected": false,
+                "version": "2014.3.20.0",
+                "result": null
+            },
+            "Cynet": {
+                "update": 20211104,
+                "detected": true,
+                "version": "4.0.0.27",
+                "result": "Malicious (score: 100)"
+            }
+        },
+        "total": 68
+    },
+    "sha512": "d3a77878309fb1a7e38b0e3f46921c583d33753267da6f9c75d5224ffb4c2feb1069733bfb68ee8e35157b7d6cd4e5ab8c51ac5c7d6107efd407b8f784e244af",
+    "added_timestamp": "2021-11-08T22:11:26+00:00",
+    "asha256": "e576cda0ab2514d8e00470977e71d4a55db2b71c1d44bcc28f15ff7f01fb5a24",
+    "ssdeep": "768:jGvbqsQdX5BhGEnOsIzfJ4i4g5p0syi+hvN18K3H8T6++3KI4Fyu8hcLCikhU6:CzqsQ5PIt4+/yfeB6r6YcOika6",
+    "mimetype": "application/x-dosexec",
+    "size": 99147,
+    "exif": {
+        "CodeSize": 24576,
+        "EntryPoint": "0xa630",
+        "FileSize": "97 kB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageVersion": 0,
+        "InitializedDataSize": 4096,
+        "LinkerVersion": 2.25,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "1992:06:19 18:22:17-04:00",
+        "UninitializedDataSize": 73728
+    },
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "8423fd34536ab0c6b32877b05a46fa7c",
+        "mode": "file"
+    }
+}

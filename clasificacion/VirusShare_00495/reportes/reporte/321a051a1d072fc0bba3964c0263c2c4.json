@@ -1,0 +1,105 @@
+{
+    "md5": "321a051a1d072fc0bba3964c0263c2c4",
+    "sha1": "430bbfe2b18fa7f8b5f95d64a5426d03292f485e",
+    "sha224": "504c70cb8b36502f372aa515b3cc3af8fa3e35876838231c2399d34d",
+    "sha256": "9344ca1c9e01ab57ef667f52656fcba8a65d07e10f62c0f703df4e06f92370ea",
+    "sha384": "f9fd98d5e6790e9946b26304eef4f3403dd405e0d29ac7c28346ac3e0cea9c1f460a066bf3748f47c95801c7cf072903",
+    "sha512": "7e0db59653d2130c0f58a5a0739f5335898fd831ed084970960e42137b0370e1b047b94de94c20795e137338cfaade130249c7ec0ae0d24c94737d087def7428",
+    "ssdeep": "6144:zCAX3vMvPQVgKLga+6KVxU3yH49/6RcxE4cWl+25c:zCUf8YVtp+dTU3R9/c2/l+22",
+    "size": 208280,
+    "filetype": "PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, Nullsoft Installer self-extracting archive",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CodeSize": 33280,
+        "EntryPoint": "0x3a5d",
+        "FileSize": "203 KiB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageFileCharacteristics": "No relocs, Executable, No line numbers, No symbols, 32-bit, No debug",
+        "ImageVersion": 6,
+        "InitializedDataSize": 15872,
+        "LinkerVersion": 2.56,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2016:08:23 22:45:13-04:00",
+        "UninitializedDataSize": 175104
+    },
+    "trid": {
+        "0": "Win32 Executable MS Visual C++ (generic) (48.8%)",
+        "1": "Win64 Executable (generic) (16.4%)",
+        "2": "Win32 Dynamic Link Library (generic) (10.2%)",
+        "3": "Win16 NE executable (generic) (7.8%)",
+        "4": "Win32 Executable (generic) (7.0%)"
+    },
+    "extension": "exe",
+    "asha256": "cbd5c9ade430c055926931926a64004a5d4d8fe5407de52d9c43497dbb46ccff",
+    "imphash": "27d9b683a4c844409fcc5060187a5733",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-09 01:50:24",
+        "positives": 5,
+        "total": 8,
+        "scans": {
+            "McAfee": {
+                "result": null,
+                "detected": false,
+                "version": "6.1.5.312",
+                "update": 10162
+            },
+            "Emsisoft": {
+                "result": "Application.AdLoad (A)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "Sophos": {
+                "result": "Xetapp",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "ClamAV": {
+                "result": "PUA.Win.Downloader.Unwanted-6804420-0",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26347
+            },
+            "Avast": {
+                "result": "Win32:AdwareSig [Adw]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21110804
+            },
+            "F-Secure": {
+                "result": "Heuristic.HEUR/AGEN.1127151",
+                "detected": true,
+                "version": "4.60.2790.0",
+                "update": "18.0.790"
+            },
+            "Microsoft": {
+                "result": null,
+                "detected": false,
+                "version": "4.18.2110.6",
+                "update": "1.353.669.0"
+            },
+            "AdAware": {
+                "result": null,
+                "detected": false,
+                "version": 7.90169,
+                "update": 10670024
+            }
+        }
+    },
+    "added_timestamp": "2021-11-09T01:50:24+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "321a051a1d072fc0bba3964c0263c2c4",
+        "mode": "file"
+    }
+}

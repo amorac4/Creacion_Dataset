@@ -1,0 +1,391 @@
+{
+    "mimetype": "text/html",
+    "exif": {
+        "Description": "今天博主在给处理客户问题的时候发现Webmin网页跳转的问题  一是网站IP配置问题。就是域名ping处理的ip不是你的解析的ip或者说配置给站点的ip不是解析的ip，应该改为一致的。  二是Default website for IP address  IP默认网站设置问题。  第一个问题的解决办法：  网站IP配置问题  首先ping一下这个域名，查看这个域名解析在哪一个IP上。  然后登陆webmin 操作面板，查看这个域名IP配",
+        "FileSize": "24 kB",
+        "FileType": "HTML",
+        "FileTypeExtension": "html",
+        "HTTPEquivXUACompatible": "IE=10,IE=9,IE=8",
+        "Keywords": "webmin, 站点跳转, webmin面板",
+        "MIMEType": "text/html",
+        "Title": "webmin站点跳转到其他站点 – VPS面板知识",
+        "viewport": "width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    },
+    "filetype": "HTML document, UTF-8 Unicode (with BOM) text, with very long lines, with CRLF, LF line terminators",
+    "virustotal": {
+        "positives": 31,
+        "scans": {
+            "Zillya": {
+                "detected": true,
+                "result": "Downloader.FakejQuery.JS.1",
+                "version": "2.0.0.4488",
+                "update": 20211104
+            },
+            "ViRobot": {
+                "detected": false,
+                "result": null,
+                "version": "2014.3.20.0",
+                "update": 20211105
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "result": "JS/TrojanDownloader.FakejQuery.B",
+                "version": 24241,
+                "update": 20211105
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "result": "Trojan/HTML.Redirect.S1202",
+                "version": "3.21.1.10219",
+                "update": 20211105
+            },
+            "F-Secure": {
+                "detected": false,
+                "result": null,
+                "version": "12.0.86.52",
+                "update": 20211105
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "result": null,
+                "version": "5.6.0.1032",
+                "update": 20211030
+            },
+            "Emsisoft": {
+                "detected": true,
+                "result": "Trojan.FakeJquery.1 (B)",
+                "version": "2021.5.0.7597",
+                "update": 20211105
+            },
+            "Bkav": {
+                "detected": false,
+                "result": null,
+                "version": "1.3.0.9899",
+                "update": 20211103
+            },
+            "BitDefender": {
+                "detected": true,
+                "result": "Trojan.FakeJquery.1",
+                "version": 7.2,
+                "update": 20211105
+            },
+            "Symantec": {
+                "detected": true,
+                "result": "ISB.Downloader!gen391",
+                "version": "1.16.0.0",
+                "update": 20211105
+            },
+            "Baidu": {
+                "detected": true,
+                "result": "JS.Trojan-Downloader.FakejQuery.c",
+                "version": "1.0.0.2",
+                "update": 20190318
+            },
+            "McAfee": {
+                "detected": false,
+                "result": null,
+                "version": "6.0.6.653",
+                "update": 20211105
+            },
+            "FireEye": {
+                "detected": true,
+                "result": "Trojan.FakeJquery.1",
+                "version": "32.44.1.0",
+                "update": 20211105
+            },
+            "Zoner": {
+                "detected": false,
+                "result": null,
+                "version": "0.0.0.0",
+                "update": 20211104
+            },
+            "MAX": {
+                "detected": true,
+                "result": "malware (ai score=86)",
+                "version": "2019.9.16.1",
+                "update": 20211105
+            },
+            "TACHYON": {
+                "detected": false,
+                "result": null,
+                "version": "2021-11-05.01",
+                "update": 20211105
+            },
+            "Kingsoft": {
+                "detected": false,
+                "result": null,
+                "version": "2017.9.26.565",
+                "update": 20211105
+            },
+            "Arcabit": {
+                "detected": false,
+                "result": null,
+                "version": "1.0.0.888",
+                "update": 20211105
+            },
+            "Avira": {
+                "detected": true,
+                "result": "HTML/ExpKit.Gen2",
+                "version": "8.3.3.12",
+                "update": 20211105
+            },
+            "VIPRE": {
+                "detected": false,
+                "result": null,
+                "version": 96724,
+                "update": 20211105
+            },
+            "Tencent": {
+                "detected": false,
+                "result": null,
+                "version": "1.0.0.1",
+                "update": 20211105
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "result": "Trojan.FakeJquery.1",
+                "version": "3.0.21.193",
+                "update": 20211105
+            },
+            "Cynet": {
+                "detected": true,
+                "result": "Malicious (score: 99)",
+                "version": "4.0.0.27",
+                "update": 20211105
+            },
+            "Yandex": {
+                "detected": false,
+                "result": null,
+                "version": "5.5.2.24",
+                "update": 20211105
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "result": null,
+                "version": "1.0.61.160",
+                "update": 20211105
+            },
+            "K7AntiVirus": {
+                "detected": false,
+                "result": null,
+                "version": "11.225.39169",
+                "update": 20211105
+            },
+            "Jiangmin": {
+                "detected": false,
+                "result": null,
+                "version": "16.0.100",
+                "update": 20211104
+            },
+            "Sophos": {
+                "detected": true,
+                "result": "Troj/JSRedir-RX",
+                "version": "1.4.1.0",
+                "update": 20211105
+            },
+            "MaxSecure": {
+                "detected": false,
+                "result": null,
+                "version": "1.0.0.1",
+                "update": 20211103
+            },
+            "GData": {
+                "detected": true,
+                "result": "Script.Trojan-Downloader.FakejQuery.D",
+                "version": "A:25.31251B:27.25037",
+                "update": 20211105
+            },
+            "Ikarus": {
+                "detected": true,
+                "result": "Trojan.JS.FakejQuery",
+                "version": "0.1.5.2",
+                "update": 20211104
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "result": "Trojan.FakeJquery.1",
+                "version": "14.0.409.0",
+                "update": 20211105
+            },
+            "Microsoft": {
+                "detected": true,
+                "result": "TrojanDownloader:JS/FakejQuery.A!bit",
+                "version": "1.1.18700.4",
+                "update": 20211105
+            },
+            "Lionic": {
+                "detected": false,
+                "result": null,
+                "version": 4.2,
+                "update": 20211105
+            },
+            "ZoneAlarm": {
+                "detected": false,
+                "result": null,
+                "version": 1,
+                "update": 20211102
+            },
+            "DrWeb": {
+                "detected": true,
+                "result": "JS.DownLoader.FakejQuery.1",
+                "version": "7.0.52.8270",
+                "update": 20211105
+            },
+            "CMC": {
+                "detected": false,
+                "result": null,
+                "version": "2.10.2019.1",
+                "update": 20211026
+            },
+            "Fortinet": {
+                "detected": true,
+                "result": "JS/FakeJquery.G!tr",
+                "version": "6.2.142.0",
+                "update": 20211105
+            },
+            "Comodo": {
+                "detected": true,
+                "result": "TrojWare.JS.FakejQuery.B@75aotp",
+                "version": 34044,
+                "update": 20211102
+            },
+            "VBA32": {
+                "detected": false,
+                "result": null,
+                "version": "5.0.0",
+                "update": 20211104
+            },
+            "ALYac": {
+                "detected": true,
+                "result": "Trojan.FakeJquery.1",
+                "version": "1.1.3.1",
+                "update": 20211105
+            },
+            "Kaspersky": {
+                "detected": false,
+                "result": null,
+                "version": "21.0.1.45",
+                "update": 20211105
+            },
+            "Avast": {
+                "detected": true,
+                "result": "JS:Agent-EAO [Trj]",
+                "version": "21.1.5827.0",
+                "update": 20211105
+            },
+            "Panda": {
+                "detected": false,
+                "result": null,
+                "version": "4.6.4.2",
+                "update": 20211104
+            },
+            "McAfee-GW-Edition": {
+                "detected": false,
+                "result": null,
+                "version": "v2019.1.2+3728",
+                "update": 20211105
+            },
+            "Malwarebytes": {
+                "detected": false,
+                "result": null,
+                "version": "4.2.2.27",
+                "update": 20211105
+            },
+            "ClamAV": {
+                "detected": false,
+                "result": null,
+                "version": "0.104.1.0",
+                "update": 20211104
+            },
+            "K7GW": {
+                "detected": false,
+                "result": null,
+                "version": "11.225.39169",
+                "update": 20211105
+            },
+            "AVG": {
+                "detected": true,
+                "result": "JS:Agent-EAO [Trj]",
+                "version": "21.1.5827.0",
+                "update": 20211105
+            },
+            "Rising": {
+                "detected": true,
+                "result": "Trojan.FakejQuery/JS!1.A136 (CLASSIC)",
+                "version": "25.0.0.26",
+                "update": 20211105
+            },
+            "Sangfor": {
+                "detected": true,
+                "result": "Exploit.Generic-Script.Save.ma18",
+                "version": "2.9.0.0",
+                "update": 20211103
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "result": "JS.FakejQuery.A",
+                "version": 14,
+                "update": 20211104
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "result": "Trojan.Script.Redirector.eiyypi",
+                "version": "1.0.146.25409",
+                "update": 20211105
+            },
+            "TrendMicro": {
+                "detected": true,
+                "result": "JS_REDIR.ISCP",
+                "version": "11.0.0.1006",
+                "update": 20211105
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "result": "Trojan/Generic.ASMalwRG.139",
+                "version": "3.0.0.1",
+                "update": 20211105
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "result": "JS_REDIR.ISCP",
+                "version": "10.0.0.1040",
+                "update": 20211105
+            },
+            "Acronis": {
+                "detected": false,
+                "result": null,
+                "version": "1.1.1.82",
+                "update": 20210512
+            },
+            "Cyren": {
+                "detected": true,
+                "result": "JS/FakejQuery.B!Eldorado",
+                "version": "6.3.0.2",
+                "update": 20211105
+            }
+        },
+        "scan_date": "2021-11-05 05:28:15",
+        "total": 58,
+        "permalink": "https://www.virustotal.com/gui/file/6aeca28289bee0646e3af7799cd324dd4714f99ca6a1e297a3d37c62889e0d39/detection/f-6aeca28289bee0646e3af7799cd324dd4714f99ca6a1e297a3d37c62889e0d39-1636090095"
+    },
+    "ssdeep": "384:EIbxR8BMbqOXAGmEE+1RhsHDMToKKATkpy7aiupOChR:rbxR8CbX6EEqRhsHZKKAJ7aiupOChR",
+    "md5": "e80438949bf9b23567382c16fc54011b",
+    "sha1": "9ed26fc9cb3d96e5822fe48e0af2093cb7c8731e",
+    "sha384": "9789e8248aa97d4b7579fb4fd166639c4747bdcbbb7ad8bcc4bfb9ec5ee6d641c015bb5850a3028cb463244b6175e90d",
+    "sha256": "6aeca28289bee0646e3af7799cd324dd4714f99ca6a1e297a3d37c62889e0d39",
+    "sha512": "8f708f8ff51b2d28ccc97267f9883309eb2363acff7cae9b3273d256f64d9034495d8237f6e3c175f3faedc442d966d9fac4884686e3e687d1deddf2c34715f1",
+    "sha224": "7dd5a737fcbfa1b0c3b1f3e27e7a10b9621f3af9c4566f4613615e87",
+    "trid": {
+        "0": "Text - UTF-8 encoded (100.0%)"
+    },
+    "size": 24615,
+    "extension": "html",
+    "added_timestamp": "2021-11-09T00:36:00+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "e80438949bf9b23567382c16fc54011b",
+        "mode": "file"
+    }
+}

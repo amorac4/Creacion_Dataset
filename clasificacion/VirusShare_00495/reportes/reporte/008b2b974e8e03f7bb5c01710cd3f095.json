@@ -1,0 +1,485 @@
+{
+    "added_timestamp": "2021-11-08T23:51:46+00:00",
+    "mimetype": "application/x-dosexec",
+    "size": 166976,
+    "asha256": "a29fbb3e5ca45b67d71354ad8178bcfccf20061e05179d2bd74d66b227987218",
+    "virustotal": {
+        "total": 68,
+        "positives": 41,
+        "scans": {
+            "Yandex": {
+                "detected": false,
+                "version": "5.5.2.24",
+                "update": 20211104,
+                "result": null
+            },
+            "ClamAV": {
+                "detected": true,
+                "version": "0.104.1.0",
+                "update": 20211104,
+                "result": "Win.Trojan.Dialer-6652"
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211104,
+                "result": "Generic.mg.008b2b974e8e03f7"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211101,
+                "result": "DIAL_INSTACCES"
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "Avast": {
+                "detected": false,
+                "version": "21.1.5827.0",
+                "update": 20211104,
+                "result": null
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211104,
+                "result": "Gen:Variant.Bulz.183240"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211104,
+                "result": "Win32.Trojan.Crypt.Dbf"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211104,
+                "result": null
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.226,
+                "update": 20211104,
+                "result": "Malicious"
+            },
+            "MAX": {
+                "detected": false,
+                "version": "2019.9.16.1",
+                "update": 20211104,
+                "result": null
+            },
+            "Alibaba": {
+                "detected": true,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": "RiskWare:Win32/Dialer.b3a9d43f"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211104,
+                "result": "TR/Crypt.CFI.Gen"
+            },
+            "K7AntiVirus": {
+                "detected": false,
+                "version": "11.225.39156",
+                "update": 20211104,
+                "result": null
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211104,
+                "result": "not-a-virus:HEUR:Porn-Dialer.Win32.Generic"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211104,
+                "result": null
+            },
+            "Arcabit": {
+                "detected": true,
+                "version": "1.0.0.888",
+                "update": 20211104,
+                "result": "Trojan.Bulz.D2CBC8"
+            },
+            "Lionic": {
+                "detected": true,
+                "version": 4.2,
+                "update": 20211104,
+                "result": "Riskware.Win32.Generic.1!c"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211104,
+                "result": "Gen:Variant.Bulz.183240 (B)"
+            },
+            "VBA32": {
+                "detected": false,
+                "version": "5.0.0",
+                "update": 20211104,
+                "result": null
+            },
+            "eGambit": {
+                "detected": false,
+                "version": null,
+                "update": 20211104,
+                "result": null
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-11-04.01",
+                "update": 20211104,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": false,
+                "version": "4.2.2.27",
+                "update": 20211104,
+                "result": null
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_60% (W)"
+            },
+            "NANO-Antivirus": {
+                "detected": false,
+                "version": "1.0.146.25409",
+                "update": 20211104,
+                "result": null
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211104,
+                "result": "Riskware/Generic"
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211104,
+                "result": "not-a-virus:Porn-Dialer.Win32.EgroupDial"
+            },
+            "Comodo": {
+                "detected": true,
+                "version": 34044,
+                "update": 20211102,
+                "result": "TrojWare.Win32.Trojan.XPACK.Gen@2ho5ur"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "CAT-QuickHeal": {
+                "detected": false,
+                "version": 14,
+                "update": 20211104,
+                "result": null
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211104,
+                "result": "DIAL_INSTACCES"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "0.0.0.0",
+                "update": 20211103,
+                "result": null
+            },
+            "Zillya": {
+                "detected": true,
+                "version": "2.0.0.4488",
+                "update": 20211104,
+                "result": "Adware.Symmi.Win32.18"
+            },
+            "AhnLab-V3": {
+                "detected": false,
+                "version": "3.21.1.10219",
+                "update": 20211104,
+                "result": null
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "K7GW": {
+                "detected": false,
+                "version": "11.225.39155",
+                "update": 20211104,
+                "result": null
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211104,
+                "result": "Artemis!008B2B974E8E"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211104,
+                "result": "Malicious (score: 100)"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211104,
+                "result": "InstantAccess (PUA)"
+            },
+            "ZoneAlarm": {
+                "detected": true,
+                "version": 1,
+                "update": 20211102,
+                "result": "not-a-virus:HEUR:Porn-Dialer.Win32.Generic"
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211104,
+                "result": "Gen:Variant.Bulz.183240"
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211104,
+                "result": "Program:Win32/Wacapew.C!ml"
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.74e8e0"
+            },
+            "Gridinsoft": {
+                "detected": true,
+                "version": "1.0.61.160",
+                "update": 20211104,
+                "result": "Adware.Win32.Gen.bot!i"
+            },
+            "Antiy-AVL": {
+                "detected": false,
+                "version": "3.0.0.1",
+                "update": 20211104,
+                "result": null
+            },
+            "Cyren": {
+                "detected": false,
+                "version": "6.3.0.2",
+                "update": 20211104,
+                "result": null
+            },
+            "ESET-NOD32": {
+                "detected": false,
+                "version": 24236,
+                "update": 20211104,
+                "result": null
+            },
+            "Paloalto": {
+                "detected": false,
+                "version": 1,
+                "update": 20211104,
+                "result": null
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211104,
+                "result": "BehavesLike.Win32.PUP.cc"
+            },
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211103,
+                "result": "Trojan.Malware.300983.susgen"
+            },
+            "Sangfor": {
+                "detected": true,
+                "version": "2.9.0.0",
+                "update": 20211103,
+                "result": "PUP.Win32.Generic.ky"
+            },
+            "SUPERAntiSpyware": {
+                "detected": true,
+                "version": "5.6.0.1032",
+                "update": 20211030,
+                "result": "Trojan.Agent/Gen-PornDial"
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211104,
+                "result": "Gen:NN.ZexaF.34266.ki2aa8XgXRee"
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31244B:27.25029",
+                "update": 20211104,
+                "result": "Gen:Variant.Bulz.183240"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211104,
+                "result": "Gen:Variant.Bulz.183240"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211104,
+                "result": "Unsafe"
+            },
+            "Baidu": {
+                "detected": false,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": null
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211104,
+                "result": null
+            },
+            "Panda": {
+                "detected": false,
+                "version": "4.6.4.2",
+                "update": 20211104,
+                "result": null
+            },
+            "VIPRE": {
+                "detected": true,
+                "version": 96708,
+                "update": 20211104,
+                "result": "Porndialer.Gen (fs)"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211104,
+                "result": "Gen:Variant.Bulz.183240"
+            },
+            "DrWeb": {
+                "detected": false,
+                "version": "7.0.52.8270",
+                "update": 20211104,
+                "result": null
+            },
+            "ViRobot": {
+                "detected": true,
+                "version": "2014.3.20.0",
+                "update": 20211104,
+                "result": "Adware.Symmi.166976"
+            },
+            "Acronis": {
+                "detected": false,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": null
+            },
+            "Jiangmin": {
+                "detected": false,
+                "version": "16.0.100",
+                "update": 20211103,
+                "result": null
+            },
+            "Bkav": {
+                "detected": true,
+                "version": "1.3.0.9899",
+                "update": 20211103,
+                "result": "W32.AIDetect.malware2"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211104,
+                "result": "ML.Attribute.HighConfidence"
+            },
+            "Rising": {
+                "detected": false,
+                "version": "25.0.0.26",
+                "update": 20211104,
+                "result": null
+            }
+        },
+        "permalink": "https://www.virustotal.com/gui/file/003a9dab6762e18b0d1cc4dce0c1516a89dfeac7910e42b7f8f866455564c251/detection/f-003a9dab6762e18b0d1cc4dce0c1516a89dfeac7910e42b7f8f866455564c251-1636040214",
+        "scan_date": "2021-11-04 15:36:54"
+    },
+    "sha384": "52b9a4678ccaa215474e33f66f04be9979df601ae09b451ba519c9dc328cc5cf134f90a7d130112988c913d53985a61d",
+    "md5": "008b2b974e8e03f7bb5c01710cd3f095",
+    "extension": "exe",
+    "sha512": "2c528f7612d75313f0aae11952fe6b4e34d1be1367fa2e6a8bbb384659ef0573a03049e78cb2b2c7f0816e2408ffe59492997cccbec064dd8d10c71fddc2c6bd",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows, PECompact2 compressed",
+    "sha1": "191ef4a7a1c5c29dbfa99ce070db3f0c3eef32ae",
+    "imphash": "09d0478591d4f788cb3e5ea416c25237",
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 4096,
+        "Comments": "",
+        "CompanyName": "",
+        "EntryPoint": "0x1000",
+        "FileDescription": "",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Windows NT 32-bit",
+        "FileSize": "163 kB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": "1, 0, 0, 1",
+        "FileVersionNumber": "1.0.0.1",
+        "ImageVersion": 0,
+        "InitializedDataSize": 102400,
+        "InternalName": "",
+        "LanguageCode": "French",
+        "LegalCopyright": "Copyright © 2006",
+        "LegalTrademarks": "",
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "ObjectFileType": "Executable application",
+        "OriginalFileName": "",
+        "PEType": "PE32",
+        "PrivateBuild": "",
+        "ProductName": "",
+        "ProductVersion": "1, 0, 0, 1",
+        "ProductVersionNumber": "1.0.0.1",
+        "SpecialBuild": "",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2008:01:29 05:48:49-05:00",
+        "UninitializedDataSize": 0
+    },
+    "sha256": "003a9dab6762e18b0d1cc4dce0c1516a89dfeac7910e42b7f8f866455564c251",
+    "sha224": "5aeef7b29954db789b734853b51063d0978ef0bc1ecd3a3201097591",
+    "trid": {
+        "0": "Win32 Dynamic Link Library (generic) (29.6%)",
+        "1": "Win16 NE executable (generic) (22.7%)",
+        "2": "Win32 Executable (generic) (20.3%)",
+        "3": "OS/2 Executable (generic) (9.1%)",
+        "4": "Generic Win/DOS Executable (9.0%)"
+    },
+    "ssdeep": "3072:YdKEIxQINSLoW4lKw1A3EshZHajhKIjzmI478tOMqAsmvbjrNzV7I:YdXcQ5n4lK2MEsh+KMzmI4CRkmvbjk",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "008b2b974e8e03f7bb5c01710cd3f095",
+        "mode": "file"
+    }
+}
