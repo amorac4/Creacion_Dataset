@@ -1,0 +1,127 @@
+{
+    "md5": "87273fd8f8e9e5e876c32195a0503ac9",
+    "sha1": "f51a42eccd177b13717f941a8c7bfc63be36dc30",
+    "sha224": "2b39f56ff08cc92366792ddb8df88a5f7859941aaeb0dcea90c51bd2",
+    "sha256": "934a19a061a294d97d4da09259081e01e7a24a3248b5d76d11b1c07b7c758d94",
+    "sha384": "ec2078d0241f82e5f66f93b2fce1d092d601ec1451ada54d5cc43d88b45e3b4417fdd25894e7f1cf8c753151a0e57300",
+    "sha512": "50d5272791fed13756c2088e5ba269206a0166e209d33f15d9c9624c3fb083f57b7d22df9fcbef6743105cf4078970785a2d1a56705c680f90ddd84d37f4de58",
+    "ssdeep": "12288:b4fmuV/2SlI1MCAHab5I0WozQsmknY87Z1EPclMkc9A7Z2D:b42DMCA6b5fWQmknY87LEPcl9nlO",
+    "size": 559952,
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "mimetype": "application/x-dosexec",
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 361472,
+        "EntryPoint": "0x14c3c",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Windows NT 32-bit",
+        "FileSize": "547 KiB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": "3.1.0.201",
+        "FileVersionNumber": "3.1.0.201",
+        "ImageFileCharacteristics": "Executable, 32-bit",
+        "ImageVersion": 0,
+        "InitializedDataSize": 200704,
+        "LanguageCode": "Russian",
+        "LinkerVersion": 10,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 5.1,
+        "ObjectFileType": "Executable application",
+        "PEType": "PE32",
+        "ProductVersionNumber": "3.1.0.201",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 5.1,
+        "TimeStamp": "2018:11:16 00:03:04-05:00",
+        "UninitializedDataSize": 0
+    },
+    "trid": {
+        "0": "Win32 Executable MS Visual C++ (generic) (48.8%)",
+        "1": "Win64 Executable (generic) (16.4%)",
+        "2": "Win32 Dynamic Link Library (generic) (10.2%)",
+        "3": "Win16 NE executable (generic) (7.8%)",
+        "4": "Win32 Executable (generic) (7.0%)"
+    },
+    "extension": "exe",
+    "asha256": "cecafa9669393dd421581247d335814aeb642088d42e6ff67d37cc7daca90e9a",
+    "imphash": "c581e778ba559d8e6a1073ed4b145b6f",
+    "virustotal": {
+        "note": "Scan results are from the VirusShare scanning infrastructure. The use of the VirusTotal key name in this data is used only to maintain consistency.",
+        "scan_date": "2021-11-09 03:49:56",
+        "positives": 9,
+        "total": 10,
+        "scans": {
+            "GData": {
+                "result": "Gen:Variant.Application.Bundler.DownloadGuide.24",
+                "detected": true,
+                "version": "25.5.10.23",
+                "update": 27.25086
+            },
+            "Kaspersky": {
+                "result": "not-a-virus:HEUR:Downloader.Win32.DownloaderGuide.gen\r",
+                "detected": true,
+                "version": "21.3.10.391",
+                "update": "2021-11-08"
+            },
+            "Emsisoft": {
+                "result": "Application.Downloader (A)",
+                "detected": true,
+                "version": "2021.10.0.11201",
+                "update": null
+            },
+            "McAfee": {
+                "result": "Found potentially unwanted program PUP-FXK.",
+                "detected": true,
+                "version": "6.1.5.312",
+                "update": 10162
+            },
+            "Avast": {
+                "result": "Win32:Freemium-A [PUP]",
+                "detected": true,
+                "version": "21.9.2494",
+                "update": 21110804
+            },
+            "F-Secure": {
+                "result": null,
+                "detected": false,
+                "version": "4.60.2790.0",
+                "update": "18.0.790"
+            },
+            "Microsoft": {
+                "result": "Backdoor:Win32/Bladabindi.YPS!MTB",
+                "detected": true,
+                "version": "4.18.2110.6",
+                "update": "1.353.675.0"
+            },
+            "Sophos": {
+                "result": "DownloadGuide",
+                "detected": true,
+                "version": "5.76.0",
+                "update": 5.88
+            },
+            "ClamAV": {
+                "result": "Win.Malware.Downloadguide-6803841-0",
+                "detected": true,
+                "version": "0.103.2",
+                "update": 26347
+            },
+            "AdAware": {
+                "result": "Gen:Variant.Application.Bundler.DownloadGuide.24",
+                "detected": true,
+                "version": 7.90169,
+                "update": 10670024
+            }
+        }
+    },
+    "added_timestamp": "2021-11-09T03:49:56+00:00",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "87273fd8f8e9e5e876c32195a0503ac9",
+        "mode": "file"
+    }
+}

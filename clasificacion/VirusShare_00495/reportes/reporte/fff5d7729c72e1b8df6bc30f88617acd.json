@@ -1,0 +1,464 @@
+{
+    "added_timestamp": "2021-11-09T05:43:15+00:00",
+    "mimetype": "application/x-dosexec",
+    "size": 288768,
+    "asha256": "7b2d43caf131e9aa82ae0db3131e0c2029803fab6f1456b9cd7e7faebdf287d9",
+    "virustotal": {
+        "total": 68,
+        "positives": 52,
+        "scans": {
+            "Yandex": {
+                "detected": true,
+                "version": "5.5.2.24",
+                "update": 20211108,
+                "result": "Trojan.DL.Stantinko!5U1mmIu5ynM"
+            },
+            "ClamAV": {
+                "detected": true,
+                "version": "0.104.1.0",
+                "update": 20211108,
+                "result": "Win.Downloader.Stantinko-9886006-0"
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.227,
+                "update": 20211107,
+                "result": "Malicious"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211108,
+                "result": "TROJ_GEN.R03BC0WK421"
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211108,
+                "result": "Win32:TrojanX-gen [Trj]"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211108,
+                "result": "Gen:Variant.Razy.861383"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211108,
+                "result": "Malware.Win32.Gencirc.10b9a82b"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211108,
+                "result": null
+            },
+            "Baidu": {
+                "detected": false,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": null
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211108,
+                "result": "Generic.mg.fff5d7729c72e1b8"
+            },
+            "Alibaba": {
+                "detected": true,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": "TrojanDownloader:Win32/Stantinko.5bc7145c"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211108,
+                "result": "HEUR/AGEN.1133254"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.226.39226",
+                "update": 20211108,
+                "result": "Trojan-Downloader ( 005764ef1 )"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211108,
+                "result": "Trojan-Downloader.Win32.Stantinko.fgsb"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211108,
+                "result": null
+            },
+            "Lionic": {
+                "detected": true,
+                "version": 4.2,
+                "update": 20211108,
+                "result": "Trojan.Win32.Stantinko.a!c"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211108,
+                "result": "Gen:Variant.Razy.861383 (B)"
+            },
+            "VBA32": {
+                "detected": true,
+                "version": "5.0.0",
+                "update": 20211108,
+                "result": "TrojanDownloader.Stantinko"
+            },
+            "eGambit": {
+                "detected": true,
+                "version": null,
+                "update": 20211108,
+                "result": "Unsafe.AI_Score_98%"
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-11-08.02",
+                "update": 20211108,
+                "result": null
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211108,
+                "result": "malware (ai score=83)"
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_100% (W)"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25409",
+                "update": 20211108,
+                "result": "Trojan.Win32.Stantinko.fpryzi"
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211108,
+                "result": "W32/Stantinko.MC!tr.dldr"
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211108,
+                "result": "Trojan.Generic@ML.87 (RDMK:49qsHh8+utZe2hY6t9O8HA)"
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211108,
+                "result": "Trojan-Downloader.Win32.Stantinko"
+            },
+            "Comodo": {
+                "detected": false,
+                "version": 34044,
+                "update": 20211102,
+                "result": null
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "CAT-QuickHeal": {
+                "detected": false,
+                "version": 14,
+                "update": 20211108,
+                "result": null
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211108,
+                "result": "TROJ_GEN.R03BC0WK421"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "0.0.0.0",
+                "update": 20211107,
+                "result": null
+            },
+            "Zillya": {
+                "detected": false,
+                "version": "2.0.0.4489",
+                "update": 20211105,
+                "result": null
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211108,
+                "result": "Malware/Win32.Generic.C3178029"
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.226.39226",
+                "update": 20211108,
+                "result": "Trojan-Downloader ( 005764ef1 )"
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211108,
+                "result": "GenericRXAA-AA!FFF5D7729C72"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211108,
+                "result": "Malicious (score: 100)"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211108,
+                "result": "Mal/Generic-S"
+            },
+            "ZoneAlarm": {
+                "detected": false,
+                "version": 1,
+                "update": 20211102,
+                "result": null
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211108,
+                "result": "Gen:Variant.Razy.861383"
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211108,
+                "result": "Trojan:Win32/Tiggre!rfn"
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211108,
+                "result": null
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "version": "1.0.61.160",
+                "update": 20211108,
+                "result": null
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "version": "3.0.0.1",
+                "update": 20211108,
+                "result": "Trojan/Generic.ASMalwS.2B1B0CF"
+            },
+            "Cyren": {
+                "detected": false,
+                "version": "6.3.0.2",
+                "update": 20211108,
+                "result": null
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24257,
+                "update": 20211108,
+                "result": "a variant of Win32/TrojanDownloader.Stantinko.MC"
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211108,
+                "result": "Win32:TrojanX-gen [Trj]"
+            },
+            "Paloalto": {
+                "detected": true,
+                "version": 1,
+                "update": 20211108,
+                "result": "generic.ml"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211108,
+                "result": "Artemis!Trojan"
+            },
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211108,
+                "result": "Trojan.Malware.1728101.susgen"
+            },
+            "Sangfor": {
+                "detected": true,
+                "version": "2.9.0.0",
+                "update": 20211103,
+                "result": "Trojan.Win32.Save.a"
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "version": "5.6.0.1032",
+                "update": 20211106,
+                "result": null
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31287B:27.25078",
+                "update": 20211108,
+                "result": "Gen:Variant.Razy.861383"
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211104,
+                "result": "Gen:NN.ZedlaF.34266.ru4@aiSzgTf"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211108,
+                "result": "Gen:Variant.Razy.861383"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211108,
+                "result": "Unsafe"
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "version": "4.2.2.27",
+                "update": 20211108,
+                "result": "Malware.AI.4248967996"
+            },
+            "Panda": {
+                "detected": true,
+                "version": "4.6.4.2",
+                "update": 20211108,
+                "result": "Trj/GdSda.A"
+            },
+            "VIPRE": {
+                "detected": true,
+                "version": 96808,
+                "update": 20211108,
+                "result": "Trojan.Win32.Generic!BT"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211108,
+                "result": "Gen:Variant.Razy.861383"
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211108,
+                "result": "Trojan.Kbdmai.495"
+            },
+            "ViRobot": {
+                "detected": true,
+                "version": "2014.3.20.0",
+                "update": 20211108,
+                "result": "Trojan.Win32.Z.Stantinko.288768.H"
+            },
+            "Acronis": {
+                "detected": false,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": null
+            },
+            "Jiangmin": {
+                "detected": true,
+                "version": "16.0.100",
+                "update": 20211107,
+                "result": "TrojanDownloader.Stantinko.cec"
+            },
+            "Bkav": {
+                "detected": false,
+                "version": "1.3.0.9899",
+                "update": 20211106,
+                "result": null
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211108,
+                "result": "ML.Attribute.HighConfidence"
+            },
+            "Arcabit": {
+                "detected": true,
+                "version": "1.0.0.888",
+                "update": 20211108,
+                "result": "Trojan.Razy.DD24C7"
+            }
+        },
+        "permalink": "https://www.virustotal.com/gui/file/c48558656bfcb51f5fda8da525034d07260e313008830cf10c9948e7bb346e19/detection/f-c48558656bfcb51f5fda8da525034d07260e313008830cf10c9948e7bb346e19-1636390998",
+        "scan_date": "2021-11-08 17:03:18"
+    },
+    "sha384": "25e489cfce27c97f13780ebeacf6904f49f407ca271193cd2b772900090fff63b53222d20e4023e17525e7276061fc37",
+    "md5": "fff5d7729c72e1b8df6bc30f88617acd",
+    "extension": "dll",
+    "sha512": "9dfa9c17be33fa73cd9521d2c16d9b01d8f9fec7c410bc434a2a086379ccdc509211d0e8e2ec56819a84d8d2e5932120b7643d3c9f0d09d3559791912365bdda",
+    "filetype": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+    "sha1": "dc2bcdf078ef7ee05000761591ea5768665eb0f5",
+    "imphash": "0a4f588b247bd26fe97211b032edfb27",
+    "exif": {
+        "CodeSize": 243712,
+        "EntryPoint": "0x2ca55",
+        "FileSize": "282 kB",
+        "FileType": "Win32 DLL",
+        "FileTypeExtension": "dll",
+        "ImageVersion": 1.32,
+        "InitializedDataSize": 47104,
+        "LinkerVersion": 14.1,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 6,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 6,
+        "TimeStamp": "2018:04:24 08:16:29-04:00",
+        "UninitializedDataSize": 0
+    },
+    "sha256": "c48558656bfcb51f5fda8da525034d07260e313008830cf10c9948e7bb346e19",
+    "sha224": "cae701d60dda095bc2b85412cc25a6ff09123a19f86dd5b9aa0a319e",
+    "trid": {
+        "0": "Win64 Executable (generic) (32.2%)",
+        "1": "Win32 Dynamic Link Library (generic) (20.1%)",
+        "2": "Win16 NE executable (generic) (15.4%)",
+        "3": "Win32 Executable (generic) (13.7%)",
+        "4": "OS/2 Executable (generic) (6.2%)"
+    },
+    "ssdeep": "6144:EJgihq2pciZAiKDvB7ZvglcrTW1mGMyC:EaGCwA5Rglc/Wk5",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "fff5d7729c72e1b8df6bc30f88617acd",
+        "mode": "file"
+    }
+}

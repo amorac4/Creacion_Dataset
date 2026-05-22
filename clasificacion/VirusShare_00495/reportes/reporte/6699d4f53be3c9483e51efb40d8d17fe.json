@@ -1,0 +1,483 @@
+{
+    "added_timestamp": "2021-11-09T05:35:47+00:00",
+    "mimetype": "application/x-dosexec",
+    "size": 253440,
+    "asha256": "f69b50be71ffa05ea82f2d792e0ac0a8c8e756891e96e6917125410b49ced718",
+    "virustotal": {
+        "total": 68,
+        "positives": 38,
+        "scans": {
+            "Yandex": {
+                "detected": false,
+                "version": "5.5.2.24",
+                "update": 20211101,
+                "result": null
+            },
+            "ClamAV": {
+                "detected": false,
+                "version": "0.104.0.0",
+                "update": 20211101,
+                "result": null
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211101,
+                "result": "Win32.Padmer.A"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211101,
+                "result": "TROJ_GEN.R002C0PJV21"
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211101,
+                "result": "Win32:Padmer"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211101,
+                "result": "Win32.Padmer.A"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211101,
+                "result": "Win32.Virus.Padmer.Wpjt"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211101,
+                "result": null
+            },
+            "APEX": {
+                "detected": false,
+                "version": 6.225,
+                "update": 20211101,
+                "result": null
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211101,
+                "result": "malware (ai score=80)"
+            },
+            "Alibaba": {
+                "detected": true,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": "Virus:Win32/Padmer.08e2e3b9"
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211101,
+                "result": "W32/Padmer.B"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.224.39106",
+                "update": 20211101,
+                "result": "Riskware ( 00584baa1 )"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211101,
+                "result": "Virus.Win32.Padmer.a"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211101,
+                "result": null
+            },
+            "Lionic": {
+                "detected": true,
+                "version": 4.2,
+                "update": 20211101,
+                "result": "Virus.Win32.Padmer.n!c"
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211101,
+                "result": "Win32.Padmer.A (B)"
+            },
+            "VBA32": {
+                "detected": false,
+                "version": "5.0.0",
+                "update": 20211101,
+                "result": null
+            },
+            "SentinelOne": {
+                "detected": false,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": null
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-11-01.02",
+                "update": 20211101,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": false,
+                "version": "4.2.2.27",
+                "update": 20211101,
+                "result": null
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_80% (W)"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25370",
+                "update": 20211101,
+                "result": "Virus.Win64.Gen.ccng"
+            },
+            "Paloalto": {
+                "detected": true,
+                "version": 1,
+                "update": 20211101,
+                "result": "generic.ml"
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211101,
+                "result": "W32/Padmer.A!worm"
+            },
+            "Rising": {
+                "detected": false,
+                "version": "25.0.0.26",
+                "update": 20211101,
+                "result": null
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211101,
+                "result": "Win32.Padmer"
+            },
+            "Comodo": {
+                "detected": false,
+                "version": 34043,
+                "update": 20211101,
+                "result": null
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211101,
+                "result": "Win32/Padmer.X1822"
+            },
+            "CAT-QuickHeal": {
+                "detected": false,
+                "version": 14,
+                "update": 20211101,
+                "result": null
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211101,
+                "result": "TROJ_GEN.R002C0PJV21"
+            },
+            "Zillya": {
+                "detected": false,
+                "version": "2.0.0.4485",
+                "update": 20211101,
+                "result": null
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "0.0.0.0",
+                "update": 20211031,
+                "result": null
+            },
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211030,
+                "result": "Virus.W32.Padmer.A"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.224.39109",
+                "update": 20211101,
+                "result": "Riskware ( 00584baa1 )"
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211101,
+                "result": "W32/Padmer!p2p"
+            },
+            "Cynet": {
+                "detected": false,
+                "version": "4.0.0.27",
+                "update": 20211101,
+                "result": null
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211101,
+                "result": "Mal/Generic-R + W32/Mepad-A"
+            },
+            "ZoneAlarm": {
+                "detected": true,
+                "version": 1,
+                "update": 20211101,
+                "result": "Virus.Win32.Padmer.a"
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211101,
+                "result": "Win32.Padmer.A"
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211101,
+                "result": "Trojan:Win32/Wacatac.B!ml"
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.53be3c"
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "version": "1.0.60.158",
+                "update": 20211101,
+                "result": null
+            },
+            "Antiy-AVL": {
+                "detected": false,
+                "version": "3.0.0.1",
+                "update": 20211101,
+                "result": null
+            },
+            "Cyren": {
+                "detected": false,
+                "version": "6.3.0.2",
+                "update": 20211101,
+                "result": null
+            },
+            "ESET-NOD32": {
+                "detected": false,
+                "version": 24221,
+                "update": 20211101,
+                "result": null
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211101,
+                "result": "Win32:Padmer"
+            },
+            "Baidu": {
+                "detected": false,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": null
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211101,
+                "result": "W32/Padmer!p2p"
+            },
+            "Elastic": {
+                "detected": false,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": null
+            },
+            "eGambit": {
+                "detected": false,
+                "version": null,
+                "update": 20211101,
+                "result": null
+            },
+            "Sangfor": {
+                "detected": true,
+                "version": "2.9.0.0",
+                "update": 20210930,
+                "result": "Virus.Win32.Padmer.a"
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "version": "5.6.0.1032",
+                "update": 20211030,
+                "result": null
+            },
+            "BitDefenderTheta": {
+                "detected": false,
+                "version": "7.2.37796.0",
+                "update": 20211021,
+                "result": null
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31214B:27.24998",
+                "update": 20211101,
+                "result": "Win32.Padmer.A"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211101,
+                "result": "Win32.Padmer.A"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211101,
+                "result": "Unsafe"
+            },
+            "Webroot": {
+                "detected": true,
+                "version": "1.0.0.403",
+                "update": 20211101,
+                "result": "W32.Trojan.Dropper"
+            },
+            "Panda": {
+                "detected": true,
+                "version": "4.6.4.2",
+                "update": 20211101,
+                "result": "Generic Suspicious"
+            },
+            "VIPRE": {
+                "detected": true,
+                "version": 96648,
+                "update": 20211101,
+                "result": "BehavesLike.Win32.Malware.spi (mx-v)"
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211101,
+                "result": "Win32.Padmer.A"
+            },
+            "DrWeb": {
+                "detected": false,
+                "version": "7.0.52.8270",
+                "update": 20211101,
+                "result": null
+            },
+            "ViRobot": {
+                "detected": false,
+                "version": "2014.3.20.0",
+                "update": 20211101,
+                "result": null
+            },
+            "Acronis": {
+                "detected": false,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": null
+            },
+            "Jiangmin": {
+                "detected": false,
+                "version": "16.0.100",
+                "update": 20211031,
+                "result": null
+            },
+            "Bkav": {
+                "detected": false,
+                "version": "1.3.0.9899",
+                "update": 20211101,
+                "result": null
+            },
+            "Arcabit": {
+                "detected": true,
+                "version": "1.0.0.886",
+                "update": 20211101,
+                "result": "Win32.Padmer.A"
+            }
+        },
+        "permalink": "https://www.virustotal.com/gui/file/1dfab062f2984028ec0f236ebcf3759542aa2d2518c93bd83facfad453f05e04/detection/f-1dfab062f2984028ec0f236ebcf3759542aa2d2518c93bd83facfad453f05e04-1635804304",
+        "scan_date": "2021-11-01 22:05:04"
+    },
+    "sha384": "281fb28872337c2d3dab38f1e020a343e8c361cfd24895c31bbbee34babab49b493ca7553e80ef0f4af348cc15a590d0",
+    "md5": "6699d4f53be3c9483e51efb40d8d17fe",
+    "extension": "exe",
+    "sha512": "fd89f5a134ed0e38bb71672fb53a72777bb5982f96c532a8e550cc92c44bc8eeff635bec592d03fed4280c9c7c0ac99318b1991ef7ea8b7d339eaa915b24d3a7",
+    "filetype": "PE32+ executable (GUI) x86-64, for MS Windows",
+    "sha1": "2a194eb6483a98e184374d6e0effdbc913a7d761",
+    "imphash": "ac0e5dbe2574db51b11c9e46b96ab0e8",
+    "exif": {
+        "CharacterSet": "Windows, Latin1",
+        "CodeSize": 136704,
+        "CompanyName": "Microsoft Corporation",
+        "EntryPoint": "0x3da00",
+        "FileDescription": "Outlook Conflict Note",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Windows NT 32-bit",
+        "FileSize": "248 kB",
+        "FileSubtype": 0,
+        "FileType": "Win64 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": "16.0.12430.20288",
+        "FileVersionNumber": "16.0.12430.20288",
+        "ImageVersion": 0,
+        "InitializedDataSize": 92160,
+        "InternalName": "cnfnot32",
+        "LanguageCode": "Neutral",
+        "LegalTrademarks1": "Microsoft® is a registered trademark of Microsoft Corporation.",
+        "LegalTrademarks2": "Windows® is a registered trademark of Microsoft Corporation.",
+        "LinkerVersion": 14.16,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "AMD AMD64",
+        "OSVersion": 6.1,
+        "ObjectFileType": "Executable application",
+        "OriginalFileName": "cnfnot32.exe",
+        "PEType": "PE32+",
+        "ProductName": "Microsoft Outlook",
+        "ProductVersion": "16.0.12430.20288",
+        "ProductVersionNumber": "16.0.12430.20288",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 6.1,
+        "TimeStamp": "2020:02:12 17:02:51-05:00",
+        "UninitializedDataSize": 0,
+        "Warning": "Possibly corrupt Version resource"
+    },
+    "sha256": "1dfab062f2984028ec0f236ebcf3759542aa2d2518c93bd83facfad453f05e04",
+    "sha224": "359118b7086fa0d47033c933e790063fe06a2272c8d5f3c2a54d60b8",
+    "trid": {
+        "0": "Win64 Executable (generic) (48.7%)",
+        "1": "Win16 NE executable (generic) (23.3%)",
+        "2": "OS/2 Executable (generic) (9.3%)",
+        "3": "Generic Win/DOS Executable (9.2%)",
+        "4": "DOS Executable Generic (9.2%)"
+    },
+    "ssdeep": "3072:2J6TKnBShvitKRmHVJm9nx/IpkCVl0u+J17/AUpE/V75fJPECMYDBeoIQ3:2J6iUh6tOmHVAPgDX0uc7oZV1fiCz4Q",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "6699d4f53be3c9483e51efb40d8d17fe",
+        "mode": "file"
+    }
+}
