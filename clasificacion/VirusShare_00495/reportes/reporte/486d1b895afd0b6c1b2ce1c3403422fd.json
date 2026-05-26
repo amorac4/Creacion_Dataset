@@ -1,0 +1,452 @@
+{
+    "added_timestamp": "2021-11-09T07:50:59+00:00",
+    "mimetype": "application/x-dosexec",
+    "size": 2551210,
+    "asha256": "15b04ce479db2f74c015ab02f1d9ef42f3d53c645968b7ce57f775249dca005a",
+    "virustotal": {
+        "total": 66,
+        "positives": 52,
+        "scans": {
+            "Yandex": {
+                "detected": true,
+                "version": "5.5.2.24",
+                "update": 20211031,
+                "result": "Trojan.Scar!O1pwF9Z0s/8"
+            },
+            "ClamAV": {
+                "detected": true,
+                "version": "0.104.0.0",
+                "update": 20211031,
+                "result": "Win.Worm.Fasong-9753929-0"
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211031,
+                "result": "Generic.mg.486d1b895afd0b6c"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": false,
+                "version": "10.0.0.1040",
+                "update": 20211031,
+                "result": null
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211031,
+                "result": "Win32:Fasong-G [Wrm]"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211031,
+                "result": "Gen:Heur.Mint.Zard.30"
+            },
+            "Tencent": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211031,
+                "result": "Malware.Win32.Gencirc.10b07a41"
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211031,
+                "result": null
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.224,
+                "update": 20211031,
+                "result": "Malicious"
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211031,
+                "result": "malware (ai score=80)"
+            },
+            "Alibaba": {
+                "detected": false,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": null
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211031,
+                "result": "WORM/Fasong.brrw"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.224.39087",
+                "update": 20211031,
+                "result": "Trojan ( 0048b81e1 )"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211031,
+                "result": "Trojan.Win32.Scar.ofhn"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211031,
+                "result": null
+            },
+            "Lionic": {
+                "detected": false,
+                "version": 4.2,
+                "update": 20211031,
+                "result": null
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211031,
+                "result": "Gen:Heur.Mint.Zard.30 (B)"
+            },
+            "VBA32": {
+                "detected": true,
+                "version": "5.0.0",
+                "update": 20211029,
+                "result": "TScope.Trojan.Delf"
+            },
+            "SentinelOne": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": "Static AI - Malicious PE"
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-10-31.02",
+                "update": 20211031,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": true,
+                "version": "4.2.2.27",
+                "update": 20211031,
+                "result": "Worm.Agent"
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_70% (D)"
+            },
+            "NANO-Antivirus": {
+                "detected": true,
+                "version": "1.0.146.25370",
+                "update": 20211031,
+                "result": "Trojan.Win32.Fasong.hmzl"
+            },
+            "Paloalto": {
+                "detected": false,
+                "version": 1,
+                "update": 20211031,
+                "result": null
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211031,
+                "result": "W32/Fasong.GA!worm"
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211031,
+                "result": "Worm.Fasong!1.D14C (CLASSIC)"
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211031,
+                "result": "Worm.Win32.Fasong"
+            },
+            "Comodo": {
+                "detected": true,
+                "version": 34039,
+                "update": 20211031,
+                "result": "Worm.Win32.Fasong.A.unp@295j"
+            },
+            "AhnLab-V3": {
+                "detected": true,
+                "version": "3.21.1.10219",
+                "update": 20211031,
+                "result": "Trojan/Win32.Bancos.C25065"
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "version": 14,
+                "update": 20211031,
+                "result": "Worm.Fasong.S15321194"
+            },
+            "TrendMicro": {
+                "detected": false,
+                "version": "11.0.0.1006",
+                "update": 20211031,
+                "result": null
+            },
+            "Zillya": {
+                "detected": true,
+                "version": "2.0.0.4484",
+                "update": 20211029,
+                "result": "Worm.Fasong.Win32.12"
+            },
+            "Elastic": {
+                "detected": true,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.224.39090",
+                "update": 20211031,
+                "result": "Trojan ( 0048b81e1 )"
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211031,
+                "result": "W32/Worm-FGN!486D1B895AFD"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211031,
+                "result": "Malicious (score: 100)"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211031,
+                "result": "ML/PE-A + Troj/Fasong-A"
+            },
+            "ZoneAlarm": {
+                "detected": true,
+                "version": 1,
+                "update": 20211031,
+                "result": "Worm.Win32.Fasong.a"
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211031,
+                "result": "Gen:Heur.Mint.Zard.30"
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211031,
+                "result": "Worm:Win32/Fasong"
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.95afd0"
+            },
+            "Gridinsoft": {
+                "detected": true,
+                "version": "1.0.60.158",
+                "update": 20211031,
+                "result": "Trojan.Win32.Agent.vb!s2"
+            },
+            "Antiy-AVL": {
+                "detected": true,
+                "version": "3.0.0.1",
+                "update": 20211031,
+                "result": "Worm/Win32.Fasong"
+            },
+            "Cyren": {
+                "detected": true,
+                "version": "6.3.0.2",
+                "update": 20211031,
+                "result": "W32/Fasong.B.gen!Eldorado"
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24217,
+                "update": 20211031,
+                "result": "a variant of Win32/Fasong.I"
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211031,
+                "result": "Win32:Fasong-G [Wrm]"
+            },
+            "Baidu": {
+                "detected": true,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": "Win32.Trojan-PSW.OLGames.bm"
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211031,
+                "result": "BehavesLike.Win32.Sytro.vc"
+            },
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211030,
+                "result": "Trojan.Malware.121218.susgen"
+            },
+            "eGambit": {
+                "detected": true,
+                "version": null,
+                "update": 20211031,
+                "result": "Unsafe.AI_Score_100%"
+            },
+            "Sangfor": {
+                "detected": true,
+                "version": "2.9.0.0",
+                "update": 20210930,
+                "result": "Suspicious.Win32.Save.a"
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "version": "5.6.0.1032",
+                "update": 20211030,
+                "result": null
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211021,
+                "result": "Gen:NN.ZelphiF.34236.BoJfaijStY"
+            },
+            "Cylance": {
+                "detected": false,
+                "version": "2.3.1.101",
+                "update": 20211031,
+                "result": null
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211031,
+                "result": null
+            },
+            "Panda": {
+                "detected": true,
+                "version": "4.6.4.2",
+                "update": 20211031,
+                "result": "Trj/Genetic.gen"
+            },
+            "VIPRE": {
+                "detected": true,
+                "version": 96624,
+                "update": 20211031,
+                "result": "Worm.Win32.Fasong.a (v)"
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "0.0.0.0",
+                "update": 20211030,
+                "result": null
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211031,
+                "result": "Win32.HLLW.Fasong.1"
+            },
+            "ViRobot": {
+                "detected": true,
+                "version": "2014.3.20.0",
+                "update": 20211031,
+                "result": "Worm.Win32.A.Fasong.165572[UPX]"
+            },
+            "Acronis": {
+                "detected": true,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": "suspicious"
+            },
+            "Jiangmin": {
+                "detected": true,
+                "version": "16.0.100",
+                "update": 20211031,
+                "result": "AdWare.Generic.vdqd"
+            },
+            "Bkav": {
+                "detected": true,
+                "version": "1.3.0.9899",
+                "update": 20211030,
+                "result": "W32.FasongHTTc.Worm"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211031,
+                "result": "Trojan.Benfgame"
+            },
+            "Arcabit": {
+                "detected": false,
+                "version": "1.0.0.886",
+                "update": 20211031,
+                "result": null
+            }
+        },
+        "permalink": "https://www.virustotal.com/gui/file/e8d213def8012eebb5b64a8769cab9e39500a85eec58875c06486910a3dabc92/detection/f-e8d213def8012eebb5b64a8769cab9e39500a85eec58875c06486910a3dabc92-1635723167",
+        "scan_date": "2021-10-31 23:32:47"
+    },
+    "sha384": "fd56f9bf666f7221b1b9f365e348ca32a46c8c0c70ad276f3ac097253df6b581070eff5f95d43808133f4f8998985318",
+    "md5": "486d1b895afd0b6c1b2ce1c3403422fd",
+    "extension": "exe",
+    "sha512": "d5dff961aab4a723b661484aa16b2ec713c9063c6e9de3c05f88f2769c834ca4539d93d10dfe20bec5c73eea5e1961929745a7ffff19230aef6ffaa0edef1d71",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows, UPX compressed",
+    "sha1": "f3a85a9c0326571dd77547d36c8c596d90454120",
+    "imphash": "9a40b556f04c6c6d3d61394c56be6bd5",
+    "exif": {
+        "CodeSize": 159744,
+        "EntryPoint": "0x6cde0",
+        "FileSize": "2.4 MB",
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "ImageVersion": 0,
+        "InitializedDataSize": 4096,
+        "LinkerVersion": 2.25,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 1,
+        "PEType": "PE32",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "1992:06:19 18:22:17-04:00",
+        "UninitializedDataSize": 282624
+    },
+    "sha256": "e8d213def8012eebb5b64a8769cab9e39500a85eec58875c06486910a3dabc92",
+    "sha224": "ea8b2a44c3874dd2fe19815120eef18e1c7d0b1fbf0c537766ff4cb6",
+    "trid": {
+        "0": "UPX compressed Win32 Executable (32.6%)",
+        "1": "Win32 EXE Yoda's Crypter (32.0%)",
+        "2": "DOS Borland compiled Executable (generic) (12.0%)",
+        "3": "Win32 Dynamic Link Library (generic) (7.9%)",
+        "4": "Win32 Executable (generic) (5.4%)"
+    },
+    "ssdeep": "49152:81Kv1i1Kv1i1Kv1i1Kv1o1Kv1i1Kv1i1Kv1i1Kv1:W2I2I2I2K2I2I2I2",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "486d1b895afd0b6c1b2ce1c3403422fd",
+        "mode": "file"
+    }
+}

@@ -1,0 +1,473 @@
+{
+    "added_timestamp": "2021-11-09T07:05:35+00:00",
+    "mimetype": "application/x-dosexec",
+    "size": 415744,
+    "asha256": "e69562da83740dff655ea43f123114f5ea9fca28cd390e26215e91e44381d630",
+    "virustotal": {
+        "total": 68,
+        "positives": 38,
+        "scans": {
+            "Yandex": {
+                "detected": false,
+                "version": "5.5.2.24",
+                "update": 20211103,
+                "result": null
+            },
+            "ClamAV": {
+                "detected": true,
+                "version": "0.104.1.0",
+                "update": 20211103,
+                "result": "Win.Ransomware.Philadelphia-7057772-0"
+            },
+            "FireEye": {
+                "detected": true,
+                "version": "32.44.1.0",
+                "update": 20211103,
+                "result": "Generic.mg.91d265faa3ca4f19"
+            },
+            "TrendMicro-HouseCall": {
+                "detected": true,
+                "version": "10.0.0.1040",
+                "update": 20211101,
+                "result": "Ransom_STAMPADO.SMAUIT"
+            },
+            "CMC": {
+                "detected": false,
+                "version": "2.10.2019.1",
+                "update": 20211026,
+                "result": null
+            },
+            "Avast": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211103,
+                "result": "FileRepMetagen [Malware]"
+            },
+            "BitDefender": {
+                "detected": true,
+                "version": 7.2,
+                "update": 20211103,
+                "result": "Dropped:Generic.Ransom.PhiladephiaB.1AB94953"
+            },
+            "Tencent": {
+                "detected": false,
+                "version": "1.0.0.1",
+                "update": 20211103,
+                "result": null
+            },
+            "Kingsoft": {
+                "detected": false,
+                "version": "2017.9.26.565",
+                "update": 20211103,
+                "result": null
+            },
+            "APEX": {
+                "detected": true,
+                "version": 6.225,
+                "update": 20211101,
+                "result": "Malicious"
+            },
+            "MAX": {
+                "detected": true,
+                "version": "2019.9.16.1",
+                "update": 20211103,
+                "result": "malware (ai score=87)"
+            },
+            "Alibaba": {
+                "detected": false,
+                "version": "0.3.0.5",
+                "update": 20190527,
+                "result": null
+            },
+            "Avira": {
+                "detected": true,
+                "version": "8.3.3.12",
+                "update": 20211103,
+                "result": "HEUR/AGEN.1102700"
+            },
+            "K7AntiVirus": {
+                "detected": true,
+                "version": "11.225.39136",
+                "update": 20211103,
+                "result": "Trojan ( 00502b391 )"
+            },
+            "Kaspersky": {
+                "detected": true,
+                "version": "21.0.1.45",
+                "update": 20211103,
+                "result": "Trojan-Ransom.Win32.Agent.iza"
+            },
+            "F-Secure": {
+                "detected": false,
+                "version": "12.0.86.52",
+                "update": 20211103,
+                "result": null
+            },
+            "Lionic": {
+                "detected": false,
+                "version": 4.2,
+                "update": 20211103,
+                "result": null
+            },
+            "Emsisoft": {
+                "detected": true,
+                "version": "2021.5.0.7597",
+                "update": 20211103,
+                "result": "Dropped:Generic.Ransom.PhiladephiaB.1AB94953 (B)"
+            },
+            "VBA32": {
+                "detected": false,
+                "version": "5.0.0",
+                "update": 20211103,
+                "result": null
+            },
+            "eGambit": {
+                "detected": true,
+                "version": null,
+                "update": 20211103,
+                "result": "Unsafe.AI_Score_53%"
+            },
+            "TACHYON": {
+                "detected": false,
+                "version": "2021-11-03.02",
+                "update": 20211103,
+                "result": null
+            },
+            "Malwarebytes": {
+                "detected": false,
+                "version": "4.2.2.27",
+                "update": 20211103,
+                "result": null
+            },
+            "CrowdStrike": {
+                "detected": true,
+                "version": 1,
+                "update": 20210203,
+                "result": "win/malicious_confidence_60% (D)"
+            },
+            "SentinelOne": {
+                "detected": false,
+                "version": "6.3.0.2",
+                "update": 20211028,
+                "result": null
+            },
+            "NANO-Antivirus": {
+                "detected": false,
+                "version": "1.0.146.25370",
+                "update": 20211103,
+                "result": null
+            },
+            "Fortinet": {
+                "detected": true,
+                "version": "6.2.142.0",
+                "update": 20211103,
+                "result": "AutoIt/Philadelphia.E!tr"
+            },
+            "Rising": {
+                "detected": true,
+                "version": "25.0.0.26",
+                "update": 20211103,
+                "result": "Ransom.Agent/Autoit!1.B5E9 (CLASSIC)"
+            },
+            "Ikarus": {
+                "detected": true,
+                "version": "0.1.5.2",
+                "update": 20211103,
+                "result": "Worm.Win32.Filecoder"
+            },
+            "Comodo": {
+                "detected": false,
+                "version": 34044,
+                "update": 20211102,
+                "result": null
+            },
+            "AhnLab-V3": {
+                "detected": false,
+                "version": "3.21.1.10219",
+                "update": 20211103,
+                "result": null
+            },
+            "CAT-QuickHeal": {
+                "detected": true,
+                "version": 14,
+                "update": 20211103,
+                "result": "Trojan.AutoIt.Dropper.ZZ"
+            },
+            "TrendMicro": {
+                "detected": true,
+                "version": "11.0.0.1006",
+                "update": 20211103,
+                "result": "Ransom_STAMPADO.SMAUIT"
+            },
+            "Zillya": {
+                "detected": false,
+                "version": "2.0.0.4487",
+                "update": 20211102,
+                "result": null
+            },
+            "Zoner": {
+                "detected": false,
+                "version": "0.0.0.0",
+                "update": 20211102,
+                "result": null
+            },
+            "Elastic": {
+                "detected": false,
+                "version": "4.0.29",
+                "update": 20211005,
+                "result": null
+            },
+            "K7GW": {
+                "detected": true,
+                "version": "11.225.39139",
+                "update": 20211103,
+                "result": "Trojan ( 00502b391 )"
+            },
+            "McAfee": {
+                "detected": true,
+                "version": "6.0.6.653",
+                "update": 20211103,
+                "result": "Artemis!91D265FAA3CA"
+            },
+            "Cynet": {
+                "detected": true,
+                "version": "4.0.0.27",
+                "update": 20211103,
+                "result": "Malicious (score: 99)"
+            },
+            "Sophos": {
+                "detected": true,
+                "version": "1.4.1.0",
+                "update": 20211103,
+                "result": "Troj/PhilRns-A"
+            },
+            "ZoneAlarm": {
+                "detected": false,
+                "version": 1,
+                "update": 20211102,
+                "result": null
+            },
+            "MicroWorld-eScan": {
+                "detected": true,
+                "version": "14.0.409.0",
+                "update": 20211103,
+                "result": "Dropped:Generic.Ransom.PhiladephiaB.1AB94953"
+            },
+            "Microsoft": {
+                "detected": true,
+                "version": "1.1.18700.4",
+                "update": 20211103,
+                "result": "Ransom:Win32/Philadelphia.A!bit"
+            },
+            "Cybereason": {
+                "detected": true,
+                "version": "1.2.449",
+                "update": 20210330,
+                "result": "malicious.aa3ca4"
+            },
+            "Gridinsoft": {
+                "detected": false,
+                "version": "1.0.60.158",
+                "update": 20211103,
+                "result": null
+            },
+            "Antiy-AVL": {
+                "detected": false,
+                "version": "3.0.0.1",
+                "update": 20211103,
+                "result": null
+            },
+            "Cyren": {
+                "detected": false,
+                "version": "6.3.0.2",
+                "update": 20211103,
+                "result": null
+            },
+            "ESET-NOD32": {
+                "detected": true,
+                "version": 24231,
+                "update": 20211103,
+                "result": "Win32/Filecoder.Philadelphia.E"
+            },
+            "AVG": {
+                "detected": true,
+                "version": "21.1.5827.0",
+                "update": 20211103,
+                "result": "FileRepMetagen [Malware]"
+            },
+            "Paloalto": {
+                "detected": false,
+                "version": 1,
+                "update": 20211103,
+                "result": null
+            },
+            "McAfee-GW-Edition": {
+                "detected": true,
+                "version": "v2019.1.2+3728",
+                "update": 20211103,
+                "result": "BehavesLike.Win32.TrojanAitInject.gc"
+            },
+            "MaxSecure": {
+                "detected": true,
+                "version": "1.0.0.1",
+                "update": 20211103,
+                "result": "Trojan.Malware.300983.susgen"
+            },
+            "SUPERAntiSpyware": {
+                "detected": false,
+                "version": "5.6.0.1032",
+                "update": 20211030,
+                "result": null
+            },
+            "BitDefenderTheta": {
+                "detected": true,
+                "version": "7.2.37796.0",
+                "update": 20211021,
+                "result": "AI:Packer.F5FF277D17"
+            },
+            "GData": {
+                "detected": true,
+                "version": "A:25.31234B:27.25019",
+                "update": 20211103,
+                "result": "Dropped:Generic.Ransom.PhiladephiaB.1AB94953"
+            },
+            "Ad-Aware": {
+                "detected": true,
+                "version": "3.0.21.193",
+                "update": 20211103,
+                "result": "Dropped:Generic.Ransom.PhiladephiaB.1AB94953"
+            },
+            "Cylance": {
+                "detected": true,
+                "version": "2.3.1.101",
+                "update": 20211103,
+                "result": "Unsafe"
+            },
+            "Baidu": {
+                "detected": false,
+                "version": "1.0.0.2",
+                "update": 20190318,
+                "result": null
+            },
+            "Webroot": {
+                "detected": false,
+                "version": "1.0.0.403",
+                "update": 20211103,
+                "result": null
+            },
+            "Panda": {
+                "detected": true,
+                "version": "4.6.4.2",
+                "update": 20211103,
+                "result": "Trj/CI.A"
+            },
+            "VIPRE": {
+                "detected": false,
+                "version": 96686,
+                "update": 20211103,
+                "result": null
+            },
+            "ALYac": {
+                "detected": true,
+                "version": "1.1.3.1",
+                "update": 20211103,
+                "result": "Dropped:Generic.Ransom.PhiladephiaB.1AB94953"
+            },
+            "DrWeb": {
+                "detected": true,
+                "version": "7.0.52.8270",
+                "update": 20211103,
+                "result": "Trojan.Siggen7.10497"
+            },
+            "ViRobot": {
+                "detected": false,
+                "version": "2014.3.20.0",
+                "update": 20211103,
+                "result": null
+            },
+            "Acronis": {
+                "detected": false,
+                "version": "1.1.1.82",
+                "update": 20210512,
+                "result": null
+            },
+            "Jiangmin": {
+                "detected": false,
+                "version": "16.0.100",
+                "update": 20211102,
+                "result": null
+            },
+            "Bkav": {
+                "detected": true,
+                "version": "1.3.0.9899",
+                "update": 20211103,
+                "result": "W32.AIDetect.malware2"
+            },
+            "Symantec": {
+                "detected": true,
+                "version": "1.16.0.0",
+                "update": 20211103,
+                "result": "ML.Attribute.HighConfidence"
+            },
+            "Arcabit": {
+                "detected": false,
+                "version": "1.0.0.888",
+                "update": 20211103,
+                "result": null
+            }
+        },
+        "permalink": "https://www.virustotal.com/gui/file/8adccadd42c4f8ca11dc11e828f64d7e0e8ffbd376083bf0a130af67bd871ca8/detection/f-8adccadd42c4f8ca11dc11e828f64d7e0e8ffbd376083bf0a130af67bd871ca8-1635959142",
+        "scan_date": "2021-11-03 17:05:42"
+    },
+    "sha384": "a14eca2717452e24570d6aad36b8be9561bf43e01bdf0d055cdd4786c06fdd3d19c853efed3d14c137d62e75f37655b1",
+    "md5": "91d265faa3ca4f19f63e6b86217c621e",
+    "extension": "exe",
+    "sha512": "1e7e8d104aed4ced1159a9668fd9d30ed130e7584e1018ec513dcade3239aa2a116deaf7d34a671eea41a3650e04bb30b6b69f5ea2c5e3f6ea37b9ab54fd5660",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows, UPX compressed",
+    "sha1": "13c254b16d9cf3f25dea1f259f60b9bff795eb8d",
+    "imphash": "fc6683d30d9f25244a50fd5357825e79",
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 352256,
+        "EntryPoint": "0xe7a00",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x0000",
+        "FileOS": "Win32",
+        "FileSize": "406 kB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersionNumber": "0.0.0.0",
+        "ImageVersion": 0,
+        "InitializedDataSize": 65536,
+        "LanguageCode": "English (British)",
+        "LinkerVersion": 12,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 5.1,
+        "ObjectFileType": "Executable application",
+        "PEType": "PE32",
+        "ProductVersionNumber": "0.0.0.0",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 5.1,
+        "TimeStamp": "2021:11:01 16:42:04-04:00",
+        "UninitializedDataSize": 593920
+    },
+    "sha256": "8adccadd42c4f8ca11dc11e828f64d7e0e8ffbd376083bf0a130af67bd871ca8",
+    "sha224": "34b7b172417c6950ea9bde5b35b159c45da12dab1588b0349960f9da",
+    "trid": {
+        "0": "UPX compressed Win32 Executable (35.7%)",
+        "1": "Win32 EXE Yoda's Crypter (35.0%)",
+        "2": "Win32 Dynamic Link Library (generic) (8.6%)",
+        "3": "Win16 NE executable (generic) (6.6%)",
+        "4": "Win32 Executable (generic) (5.9%)"
+    },
+    "ssdeep": "12288:AozGdX0M4ornOmZIzfMwHHQmRROXKTGmY:A4GHnhIzOa7Y",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "91d265faa3ca4f19f63e6b86217c621e",
+        "mode": "file"
+    }
+}
