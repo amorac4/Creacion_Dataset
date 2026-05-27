@@ -1,0 +1,70 @@
+{
+  "db_path": "outputs/Analisis_de_Reportes_Todos.db",
+  "output_dir": "outputs/dataset_final",
+  "dataset_name": "dataset_final",
+  "batch_id": "",
+  "copy_reports": true,
+  "copy_workers": 0,
+  "overwrite_reports": false,
+  "organize_reports_by": [
+    "familia_probable",
+    "lote_origen"
+  ],
+  "filters": {
+    "exclude_families": [
+      "sin_inferir"
+    ],
+    "families": ["salgorea"],
+    "family_confidence": [
+      "alta",
+      "media"
+    ],
+    "types": [],
+    "lotes": [],
+    "min_detection_percent": 20,
+    "max_detection_percent": 100,
+    "min_vt_positives": 1,
+    "date_field": "dia_creacion_archivo",
+    "date_from": "",
+    "date_to": "",
+    "creation_date_from": "",
+    "creation_date_to": ""
+  },
+  "selection": {
+    "min_per_family": 0,
+    "max_per_family": 200,
+    "max_total": 0,
+    "exclude_families_below_min": true,
+    "balance_by": [
+      "estrato_deteccion",
+      "estrato_fecha",
+      "lote_origen"
+    ],
+    "max_per_stratum": 0,
+    "sort_by": [
+      "dia_creacion_archivo",
+      "detection_percent DESC",
+      "hash_md5"
+    ]
+  },
+  "stratification": {
+    "date_granularity": "month",
+    "detection_bands": [
+      {
+        "name": "20-40",
+        "min": 20,
+        "max": 40
+      },
+      {
+        "name": "40-70",
+        "min": 40,
+        "max": 70
+      },
+      {
+        "name": "70-100",
+        "min": 70,
+        "max": 100.0001
+      }
+    ]
+  }
+}

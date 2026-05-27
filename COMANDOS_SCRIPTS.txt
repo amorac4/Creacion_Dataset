@@ -1,0 +1,328 @@
+COMANDOS DE LOS SCRIPTS
+=======================
+
+Este archivo concentra los comandos principales del proyecto.
+Ejecutalos desde la raiz del repositorio:
+
+C:\Users\ADOLF\Desktop\Repositorios\Creacion_Dataset
+
+
+1. PREPARAR ENTORNO
+-------------------
+
+Crear entorno virtual:
+
+python -m venv .venv
+
+Activar entorno virtual en PowerShell:
+
+.\.venv\Scripts\Activate.ps1
+
+Instalar dependencias:
+
+python -m pip install -r requirements.txt
+
+
+2. DESCARGAR REPORTES DE VIRUSSHARE
+-----------------------------------
+
+Configurar una API key:
+
+$env:VIRUSSHARE_API_KEY = "tu_api_key"
+
+Configurar varias API keys:
+
+$env:VIRUSSHARE_API_KEYS = "key1,key2,key3"
+
+Descargar usando el lote por defecto del script:
+
+python descarga_reportes_virusshare.py
+
+Descargar usando un TXT especifico:
+
+python descarga_reportes_virusshare.py --input hashes\VirusShare_00499.txt
+
+Descarga recomendada indicando entrada, modo, estrategia de keys y salida:
+
+python descarga_reportes_virusshare.py `
+  --input hashes\VirusShare_00499.txt `
+  --mode file `
+  --key-strategy sequential `
+  --output-dir clasificacion
+
+
+3. ANALIZAR REPORTES
+--------------------
+
+Prueba rapida con pocos reportes:
+
+python analisis_de_reportes.py --limit 200 --name Prueba_Analisis_Reportes
+
+Analizar un solo lote:
+
+python analisis_de_reportes.py `
+  --reports-dir clasificacion\VirusShare_00499\reportes\reporte `
+  --output-dir outputs `
+  --name Analisis_de_Reportes_VirusShare_00499
+
+Analizar todos los lotes dentro de clasificacion:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs
+
+Analizar todos los lotes usando paralelismo automatico:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs `
+  --workers 0 `
+  --chunksize 200
+
+Analizar todos los lotes usando un numero fijo de workers:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs `
+  --workers 16 `
+  --chunksize 200
+
+Analizar sin generar Excel, solo SQLite:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs `
+  --no-excel `
+  --workers 0
+
+Analizar sin conservar la SQLite final, solo Excel:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs `
+  --no-db `
+  --workers 0
+
+Analizar incluyendo detalle crudo por motor antivirus:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs `
+  --include-engine-details `
+  --workers 0
+
+Filtrar por rango de fecha de escaneo:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --date-from 2021-11-12 `
+  --date-to 2021-11-15 `
+  --workers 0
+
+Filtrar por familia:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --family cryxos `
+  --workers 0
+
+Filtrar por tipo de malware:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --type phishing `
+  --workers 0
+
+Filtrar por minimo de positivos y ratio:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --min-positives 10 `
+  --min-ratio 0.2 `
+  --workers 0
+
+
+4. EXTRAER DATASET FINAL
+------------------------
+
+Ejecutar extraccion con la configuracion base:
+
+python extraer_dataset_final.py --config config_dataset_final.json
+
+Probar extraccion sin copiar reportes:
+
+python extraer_dataset_final.py --config config_dataset_final.json --dry-run
+
+Agregar muestras de forma acumulativa sin duplicar hashes:
+
+python extraer_dataset_final.py --config config_dataset_final.json --append
+
+Probar extraccion acumulativa sin copiar reportes:
+
+python extraer_dataset_final.py --config config_dataset_final.json --append --dry-run
+
+Ejemplo de extraccion por bloques usando varios JSON:
+
+python extraer_dataset_final.py --config configs_dataset\01_cryxos.json --append
+python extraer_dataset_final.py --config configs_dataset\02_emotet.json --append
+python extraer_dataset_final.py --config configs_dataset\03_agent.json --append
+
+
+5. CONFIGURACION DEL DATASET FINAL
+----------------------------------
+
+Archivo base:
+
+config_dataset_final.json
+
+Campos utiles para cambiar en el JSON:
+
+"db_path": "outputs/Analisis_de_Reportes_Todos.db"
+"output_dir": "outputs/dataset_final"
+"dataset_name": "dataset_final"
+"batch_id": "01_cryxos"
+"copy_reports": true
+"copy_workers": 0
+"overwrite_reports": false
+
+Filtrar una familia especifica:
+
+"filters": {
+  "families": ["cryxos"]
+}
+
+Filtrar varias familias:
+
+"filters": {
+  "families": ["cryxos", "emotet", "agent"]
+}
+
+Filtrar por confianza:
+
+"filters": {
+  "family_confidence": ["alta", "media"]
+}
+
+Filtrar por porcentaje de deteccion:
+
+"filters": {
+  "min_detection_percent": 20,
+  "max_detection_percent": 100
+}
+
+Filtrar por fecha de escaneo:
+
+"filters": {
+  "date_field": "dia_escaneo_vt",
+  "date_from": "2021-11-01",
+  "date_to": "2021-11-30"
+}
+
+Filtrar por fecha de creacion/compilacion del archivo:
+
+"filters": {
+  "date_field": "dia_creacion_archivo",
+  "date_from": "2013-01-01",
+  "date_to": "2013-12-31"
+}
+
+Limitar cantidad por familia:
+
+"selection": {
+  "max_per_family": 200
+}
+
+Limitar cantidad total:
+
+"selection": {
+  "max_total": 1000
+}
+
+Balancear por deteccion, fecha y lote:
+
+"selection": {
+  "balance_by": ["estrato_deteccion", "estrato_fecha", "lote_origen"]
+}
+
+
+6. CONSULTAS RAPIDAS EN DB BROWSER FOR SQLITE
+---------------------------------------------
+
+Ver primeras muestras:
+
+SELECT *
+FROM samples
+LIMIT 20;
+
+Ver familias mas comunes:
+
+SELECT familia_probable, COUNT(*) AS cantidad_muestras
+FROM samples
+GROUP BY familia_probable
+ORDER BY cantidad_muestras DESC;
+
+Ver cantidad por lote:
+
+SELECT lote_origen, muestras
+FROM lote_counts
+ORDER BY lote_origen;
+
+Ver familias por lote:
+
+SELECT lote_origen, familia_probable, COUNT(*) AS muestras
+FROM samples
+GROUP BY lote_origen, familia_probable
+ORDER BY lote_origen, muestras DESC;
+
+Ver muestras por familia y porcentaje minimo:
+
+SELECT hash_md5, lote_origen, familia_probable, tipo_probable, detection_percent, fecha_escaneo_vt
+FROM samples
+WHERE familia_probable = 'cryxos'
+  AND detection_percent >= 70
+ORDER BY fecha_escaneo_vt;
+
+Ver muestras por fecha de creacion/compilacion:
+
+SELECT hash_md5, familia_probable, tipo_probable, detection_percent, fecha_creacion_archivo
+FROM samples
+WHERE dia_creacion_archivo BETWEEN '2013-12-01' AND '2013-12-31'
+ORDER BY fecha_creacion_archivo;
+
+Ver manifest final acumulado:
+
+SELECT *
+FROM manifest
+LIMIT 20;
+
+Ver muestras agregadas por batch:
+
+SELECT batch_id, COUNT(*) AS muestras
+FROM manifest
+GROUP BY batch_id
+ORDER BY batch_id;
+
+
+7. ORDEN RECOMENDADO COMPLETO
+-----------------------------
+
+1) Descargar reportes:
+
+python descarga_reportes_virusshare.py `
+  --input hashes\VirusShare_00499.txt `
+  --mode file `
+  --key-strategy sequential `
+  --output-dir clasificacion
+
+2) Analizar todos los lotes:
+
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs `
+  --workers 0 `
+  --chunksize 200
+
+3) Extraer dataset final:
+
+python extraer_dataset_final.py --config config_dataset_final.json --append
+

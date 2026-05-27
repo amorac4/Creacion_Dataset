@@ -19,9 +19,11 @@ import argparse
 import csv
 import datetime as dt
 import json
+import os
 import re
 import sqlite3
 from collections import Counter, defaultdict
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -32,8 +34,10 @@ from openpyxl.styles import Font, PatternFill
 
 
 DEFAULT_REPORTS_DIR = r"clasificacion\VirusShare_00499\reportes\reporte"
+DEFAULT_REPORTS_ROOT = "clasificacion"
 DEFAULT_OUTPUT_DIR = "outputs"
 DEFAULT_NAME = "Analisis_de_Reportes_VirusShare_00499"
+DEFAULT_ALL_NAME = "Analisis_de_Reportes_Todos"
 EXCEL_MAX_ROWS = 1_048_576
 DETECTIONS_ROWS_PER_SHEET = 1_000_000
 
@@ -221,6 +225,7 @@ NOISE_PREFIXES = (
 
 SAMPLE_FIELDS = [
     "hash_md5",
+    "lote_origen",
     "sha1",
     "sha256",
     "extension",
@@ -254,6 +259,7 @@ SAMPLE_FIELDS = [
 
 DETECTION_FIELDS = [
     "hash_md5",
+    "lote_origen",
     "engine",
     "result",
     "engine_weight",
@@ -269,9 +275,28 @@ def parse_args() -> argparse.Namespace:
         description="Analisis de Reportes: genera Excel y SQLite desde reportes VirusShare."
     )
     parser.add_argument("--reports-dir", default=DEFAULT_REPORTS_DIR, help="Carpeta con JSON de reportes.")
+    parser.add_argument(
+        "--reports-root",
+        help=(
+            "Carpeta raiz con lotes VirusShare_*/reportes/reporte. "
+            "Si se usa, analiza todos los lotes encontrados."
+        ),
+    )
     parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR, help="Carpeta de salida.")
     parser.add_argument("--name", default=DEFAULT_NAME, help="Nombre base para Excel y SQLite.")
     parser.add_argument("--limit", type=int, default=0, help="Procesa solo N reportes para prueba.")
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=0,
+        help="Procesos paralelos para leer/inferir reportes. 0 usa los nucleos disponibles.",
+    )
+    parser.add_argument(
+        "--chunksize",
+        type=int,
+        default=100,
+        help="Cantidad de reportes por bloque enviado a cada proceso paralelo.",
+    )
     parser.add_argument("--min-positives", type=int, default=1, help="Minimo de positivos para incluir muestra.")
     parser.add_argument("--min-ratio", type=float, default=0.0, help="Minimo positivos/total para incluir muestra.")
     parser.add_argument("--date-from", help="Fecha minima de escaneo VT: YYYY-MM-DD.")
@@ -285,7 +310,10 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--no-excel", action="store_true", help="Solo genera SQLite.")
     parser.add_argument("--no-db", action="store_true", help="Solo genera Excel.")
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.reports_root and args.name == DEFAULT_NAME:
+        args.name = DEFAULT_ALL_NAME
+    return args
 
 
 def parse_datetime(value: Any) -> dt.datetime | None:
@@ -363,13 +391,47 @@ def confidence(score: float, strong: float, medium: float) -> str:
     return "sin_inferir"
 
 
-def iter_report_paths(reports_dir: Path, limit: int = 0) -> Iterable[Path]:
+def infer_lote_origen(reports_dir: Path) -> str:
+    for part in [reports_dir, *reports_dir.parents]:
+        if part.name.startswith("VirusShare_"):
+            return part.name
+    return reports_dir.name
+
+
+def discover_report_sources(args: argparse.Namespace) -> list[tuple[Path, str]]:
+    if args.reports_root:
+        reports_root = Path(args.reports_root)
+        if not reports_root.is_dir():
+            raise SystemExit(f"No existe la carpeta raiz de reportes: {reports_root}")
+        sources = [
+            (path, infer_lote_origen(path))
+            for path in sorted(reports_root.glob("VirusShare_*/reportes/reporte"))
+            if path.is_dir()
+        ]
+        if not sources:
+            raise SystemExit(f"No se encontraron lotes en: {reports_root}\\VirusShare_*\\reportes\\reporte")
+        return sources
+
+    reports_dir = Path(args.reports_dir)
+    if not reports_dir.is_dir():
+        raise SystemExit(f"No existe la carpeta de reportes: {reports_dir}")
+    return [(reports_dir, infer_lote_origen(reports_dir))]
+
+
+def iter_report_paths(report_sources: list[tuple[Path, str]], limit: int = 0) -> Iterable[tuple[Path, str]]:
     count = 0
-    for path in sorted(reports_dir.glob("*.json")):
-        yield path
-        count += 1
-        if limit and count >= limit:
-            break
+    for reports_dir, lote_origen in report_sources:
+        for path in sorted(reports_dir.glob("*.json")):
+            yield path, lote_origen
+            count += 1
+            if limit and count >= limit:
+                return
+
+
+def worker_count(requested: int) -> int:
+    if requested and requested > 0:
+        return requested
+    return max(1, (os.cpu_count() or 2) - 1)
 
 
 def extract_detections(report: dict[str, Any]) -> list[dict[str, Any]]:
@@ -451,7 +513,7 @@ def detection_ratio(positives: Any, total: Any) -> float:
     return positives_int / total_int if total_int > 0 else 0.0
 
 
-def row_from_report(path: Path, report: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+def row_from_report(path: Path, report: dict[str, Any], lote_origen: str) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     vt = report.get("virustotal") or {}
     exif = report.get("exif") or {}
     detections = extract_detections(report)
@@ -466,6 +528,7 @@ def row_from_report(path: Path, report: dict[str, Any]) -> tuple[dict[str, Any],
 
     row = {
         "hash_md5": report.get("md5") or report.get("data_structure", {}).get("hash") or path.stem,
+        "lote_origen": lote_origen,
         "sha1": report.get("sha1", ""),
         "sha256": report.get("sha256", ""),
         "extension": report.get("extension", ""),
@@ -517,6 +580,63 @@ def passes_filters(row: dict[str, Any], args: argparse.Namespace, date_from: dt.
     return True
 
 
+def passes_filter_values(
+    row: dict[str, Any],
+    min_positives: int,
+    min_ratio: float,
+    date_from: dt.date | None,
+    date_to: dt.date | None,
+    family_filter: str,
+    malware_type_filter: str,
+) -> bool:
+    if int(row["vt_positives"]) < min_positives:
+        return False
+    if float(row["detection_ratio"]) < min_ratio:
+        return False
+
+    scan_day = dt.date.fromisoformat(row["dia_escaneo_vt"]) if row["dia_escaneo_vt"] else None
+    if date_from and (scan_day is None or scan_day < date_from):
+        return False
+    if date_to and (scan_day is None or scan_day > date_to):
+        return False
+    if family_filter and family_filter.lower() not in str(row["familia_probable"]).lower():
+        return False
+    if malware_type_filter and malware_type_filter.lower() not in str(row["tipo_probable"]).lower():
+        return False
+    return True
+
+
+def process_report_worker(task: tuple[str, str, dict[str, Any]]) -> dict[str, Any]:
+    path_text, lote_origen, options = task
+    path = Path(path_text)
+    try:
+        report = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {"status": "corrupto", "path": path_text, "error": str(exc)}
+
+    if "error_details" in report:
+        return {"status": "error_api", "path": path_text}
+
+    row, detections = row_from_report(path, report, lote_origen)
+    if not passes_filter_values(
+        row,
+        int(options["min_positives"]),
+        float(options["min_ratio"]),
+        options["date_from"],
+        options["date_to"],
+        str(options["family_filter"] or ""),
+        str(options["malware_type_filter"] or ""),
+    ):
+        return {"status": "filtrado", "path": path_text}
+
+    return {
+        "status": "ok",
+        "row": row,
+        "detections": detections if options["include_engine_details"] else [],
+        "detection_count": len(detections),
+    }
+
+
 def create_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(
         """
@@ -526,10 +646,12 @@ def create_schema(conn: sqlite3.Connection) -> None:
         DROP TABLE IF EXISTS type_day_counts;
         DROP TABLE IF EXISTS family_type_counts;
         DROP TABLE IF EXISTS family_type_day_counts;
+        DROP TABLE IF EXISTS lote_counts;
         DROP TABLE IF EXISTS processing_errors;
 
         CREATE TABLE samples (
             hash_md5 TEXT PRIMARY KEY,
+            lote_origen TEXT,
             sha1 TEXT,
             sha256 TEXT,
             extension TEXT,
@@ -564,6 +686,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
         CREATE TABLE detections (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             hash_md5 TEXT,
+            lote_origen TEXT,
             engine TEXT,
             result TEXT,
             engine_weight REAL,
@@ -577,6 +700,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
         CREATE TABLE type_day_counts (dia_escaneo_vt TEXT, tipo_probable TEXT, muestras INTEGER);
         CREATE TABLE family_type_counts (familia_probable TEXT, tipo_probable TEXT, muestras INTEGER);
         CREATE TABLE family_type_day_counts (dia_escaneo_vt TEXT, familia_probable TEXT, tipo_probable TEXT, muestras INTEGER);
+        CREATE TABLE lote_counts (lote_origen TEXT, muestras INTEGER);
         CREATE TABLE processing_errors (reporte_path TEXT, error TEXT);
         """
     )
@@ -601,6 +725,7 @@ def finalize_database(
     type_day: Counter[tuple[str, str]],
     family_type: Counter[tuple[str, str]],
     family_type_day: Counter[tuple[str, str, str]],
+    lote_counts: Counter[str],
 ) -> None:
     conn.executemany(
         "INSERT INTO family_day_counts VALUES (?, ?, ?)",
@@ -618,8 +743,13 @@ def finalize_database(
         "INSERT INTO family_type_day_counts VALUES (?, ?, ?, ?)",
         [(day, family, malware_type, count) for (day, family, malware_type), count in family_type_day.items()],
     )
+    conn.executemany(
+        "INSERT INTO lote_counts VALUES (?, ?)",
+        [(lote_origen, count) for lote_origen, count in lote_counts.items()],
+    )
     conn.executescript(
         """
+        CREATE INDEX IF NOT EXISTS idx_samples_lote ON samples(lote_origen);
         CREATE INDEX IF NOT EXISTS idx_samples_day ON samples(dia_escaneo_vt);
         CREATE INDEX IF NOT EXISTS idx_samples_family ON samples(familia_probable);
         CREATE INDEX IF NOT EXISTS idx_samples_type ON samples(tipo_probable);
@@ -631,9 +761,7 @@ def finalize_database(
 
 
 def process_reports(args: argparse.Namespace, db_path: Path) -> dict[str, int]:
-    reports_dir = Path(args.reports_dir)
-    if not reports_dir.is_dir():
-        raise SystemExit(f"No existe la carpeta de reportes: {reports_dir}")
+    report_sources = discover_report_sources(args)
 
     date_from = parse_date_filter(args.date_from)
     date_to = parse_date_filter(args.date_to)
@@ -651,28 +779,45 @@ def process_reports(args: argparse.Namespace, db_path: Path) -> dict[str, int]:
     type_day: Counter[tuple[str, str]] = Counter()
     family_type: Counter[tuple[str, str]] = Counter()
     family_type_day: Counter[tuple[str, str, str]] = Counter()
+    lote_counts: Counter[str] = Counter()
     metrics = defaultdict(int)
+    metrics["lotes_encontrados"] = len(report_sources)
+    metrics["workers_utilizados"] = worker_count(args.workers)
 
-    for path in iter_report_paths(reports_dir, args.limit):
-        metrics["reportes_leidos"] += 1
-        try:
-            report = json.loads(path.read_text(encoding="utf-8"))
-        except Exception as exc:
-            conn.execute("INSERT INTO processing_errors VALUES (?, ?)", (str(path), str(exc)))
+    worker_options = {
+        "min_positives": args.min_positives,
+        "min_ratio": args.min_ratio,
+        "date_from": date_from,
+        "date_to": date_to,
+        "family_filter": args.family or "",
+        "malware_type_filter": args.malware_type or "",
+        "include_engine_details": bool(args.include_engine_details),
+    }
+    tasks = [
+        (str(path), lote_origen, worker_options)
+        for path, lote_origen in iter_report_paths(report_sources, args.limit)
+    ]
+    metrics["reportes_leidos"] = len(tasks)
+
+    def consume_result(result: dict[str, Any]) -> None:
+        nonlocal sample_batch, detection_batch
+        status = result["status"]
+        if status == "corrupto":
+            conn.execute("INSERT INTO processing_errors VALUES (?, ?)", (result["path"], result["error"]))
             metrics["reportes_corruptos"] += 1
-            continue
-
-        if "error_details" in report:
+            return
+        if status == "error_api":
             metrics["reportes_error_api"] += 1
-            continue
-
-        row, detections = row_from_report(path, report)
-        if not passes_filters(row, args, date_from, date_to):
+            return
+        if status == "filtrado":
             metrics["reportes_filtrados_fuera"] += 1
-            continue
+            return
 
+        row = result["row"]
+        detections = result["detections"]
         sample_batch.append(row)
         metrics["muestras"] += 1
+        lote_counts[row["lote_origen"]] += 1
         day = row["dia_escaneo_vt"] or "sin_fecha"
         family = row["familia_probable"] or "sin_inferir"
         malware_type = row["tipo_probable"] or "sin_inferir"
@@ -681,12 +826,13 @@ def process_reports(args: argparse.Namespace, db_path: Path) -> dict[str, int]:
         family_type[(family, malware_type)] += 1
         family_type_day[(day, family, malware_type)] += 1
 
-        metrics["detecciones_leidas"] += len(detections)
+        metrics["detecciones_leidas"] += int(result["detection_count"])
         if args.include_engine_details:
             for detection in detections:
                 detection_batch.append(
                     {
                         "hash_md5": row["hash_md5"],
+                        "lote_origen": row["lote_origen"],
                         "engine": detection["engine"],
                         "result": detection["result"],
                         "engine_weight": detection["engine_weight"],
@@ -704,8 +850,17 @@ def process_reports(args: argparse.Namespace, db_path: Path) -> dict[str, int]:
             detection_batch.clear()
             conn.commit()
 
+    if tasks:
+        if metrics["workers_utilizados"] == 1:
+            for task in tasks:
+                consume_result(process_report_worker(task))
+        else:
+            with ProcessPoolExecutor(max_workers=metrics["workers_utilizados"]) as executor:
+                for result in executor.map(process_report_worker, tasks, chunksize=max(1, args.chunksize)):
+                    consume_result(result)
+
     insert_batch(conn, sample_batch, detection_batch)
-    finalize_database(conn, family_day, type_day, family_type, family_type_day)
+    finalize_database(conn, family_day, type_day, family_type, family_type_day, lote_counts)
     conn.commit()
     conn.close()
     return dict(metrics)
@@ -772,6 +927,8 @@ def add_summary_sheet(wb: Workbook, metrics: dict[str, int], db_path: Path, exce
         ("Muestras", f"{metrics.get('muestras', 0):,}"),
         ("Detecciones leidas para inferencia", f"{metrics.get('detecciones_leidas', 0):,}"),
         ("Detecciones crudas guardadas", f"{metrics.get('detecciones_guardadas', 0):,}"),
+        ("Lotes encontrados", f"{metrics.get('lotes_encontrados', 0):,}"),
+        ("Workers utilizados", f"{metrics.get('workers_utilizados', 1):,}"),
         ("Reportes leidos", f"{metrics.get('reportes_leidos', 0):,}"),
         ("Reportes corruptos", f"{metrics.get('reportes_corruptos', 0):,}"),
         ("Reportes API error omitidos", f"{metrics.get('reportes_error_api', 0):,}"),
@@ -783,6 +940,7 @@ def add_summary_sheet(wb: Workbook, metrics: dict[str, int], db_path: Path, exce
     ws.append([])
     ws.append(("Consultas utiles", ""))
     ws.append(("Graficas", "Hoja Graficas"))
+    ws.append(("Lotes", "Hoja Lotes"))
     ws.append(("Familias por fecha", "Hoja Familia_por_Dia"))
     ws.append(("Tipos por fecha", "Hoja Tipo_por_Dia"))
     ws.append(("Familia vs tipo", "Hoja Familia_por_Tipo"))
@@ -883,8 +1041,15 @@ def export_excel(db_path: Path, excel_path: Path, metrics: dict[str, int]) -> No
         wb,
         conn,
         "Muestras",
-        "SELECT * FROM samples ORDER BY dia_escaneo_vt, familia_probable, tipo_probable",
-        {"A": 34, "B": 42, "C": 64, "H": 24, "J": 24, "P": 22, "Q": 18, "U": 18, "V": 18, "Y": 70},
+        "SELECT * FROM samples ORDER BY lote_origen, dia_escaneo_vt, familia_probable, tipo_probable",
+        {"A": 34, "B": 18, "C": 42, "D": 64, "I": 24, "K": 24, "T": 22, "U": 18, "Y": 18, "Z": 18, "AC": 70},
+    )
+    append_query_sheet(
+        wb,
+        conn,
+        "Lotes",
+        "SELECT lote_origen, muestras FROM lote_counts ORDER BY lote_origen",
+        {"A": 18, "B": 12},
     )
     append_query_sheet(
         wb,
@@ -933,8 +1098,8 @@ def export_excel(db_path: Path, excel_path: Path, metrics: dict[str, int]) -> No
             wb,
             conn,
             "Detecciones",
-            "SELECT hash_md5, engine, result, engine_weight, familia_probable, tipo_probable, fecha_escaneo_vt, dia_escaneo_vt FROM detections ORDER BY hash_md5",
-            {"A": 34, "B": 22, "C": 52, "D": 14, "E": 22, "F": 18, "G": 24, "H": 16},
+            "SELECT hash_md5, lote_origen, engine, result, engine_weight, familia_probable, tipo_probable, fecha_escaneo_vt, dia_escaneo_vt FROM detections ORDER BY lote_origen, hash_md5",
+            {"A": 34, "B": 18, "C": 22, "D": 52, "E": 14, "F": 22, "G": 18, "H": 24, "I": 16},
             split_large=True,
         )
     conn.close()
@@ -962,6 +1127,7 @@ def main() -> None:
     print(f"Muestras: {metrics.get('muestras', 0):,}")
     print(f"Detecciones leidas para inferencia: {metrics.get('detecciones_leidas', 0):,}")
     print(f"Detecciones crudas guardadas: {metrics.get('detecciones_guardadas', 0):,}")
+    print(f"Workers utilizados: {metrics.get('workers_utilizados', 1):,}")
     if not args.no_excel:
         print(f"Excel: {excel_path.resolve()}")
     if not args.no_db:

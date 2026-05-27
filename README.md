@@ -111,11 +111,58 @@ python analisis_de_reportes.py `
   --name Analisis_de_Reportes_VirusShare_00499
 ```
 
+### Analisis consolidado de todos los lotes
+
+Si existen varios conjuntos dentro de `clasificacion/`, por ejemplo
+`VirusShare_00495`, `VirusShare_00499`, `VirusShare_00500`, etc., puedes
+analizarlos en una sola salida:
+
+```powershell
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs
+```
+
+Para acelerar el procesamiento en equipos con varios nucleos, usa `--workers`.
+El valor `0` usa automaticamente los nucleos disponibles menos uno.
+
+```powershell
+python analisis_de_reportes.py `
+  --reports-root clasificacion `
+  --output-dir outputs `
+  --workers 0 `
+  --chunksize 200
+```
+
+Si el disco se satura, reduce `--workers`; si el CPU aun tiene margen, puedes
+subirlo manualmente, por ejemplo `--workers 16`.
+
+El script busca automaticamente carpetas con este patron:
+
+```text
+clasificacion/
+  VirusShare_*/
+    reportes/
+      reporte/
+        *.json
+```
+
+Cuando usas `--reports-root`, si no especificas `--name`, la salida queda como:
+
+```text
+outputs/Analisis_de_Reportes_Todos.xlsx
+outputs/Analisis_de_Reportes_Todos.db
+```
+
+Cada muestra incluye la columna `lote_origen`, por ejemplo
+`VirusShare_00499`, para saber de que conjunto proviene.
+
 ## Que incluye el Excel
 
 - `Resumen`: conteos generales y rutas de salida.
 - `Graficas`: graficas nativas de Excel con top tipos, top familias, muestras
   por dia y confianza de familia.
+- `Lotes`: conteo de muestras incluidas por conjunto de origen.
 - `Muestras`: detalle por hash.
 - `Familia_por_Dia`: familias observadas por fecha de escaneo.
 - `Tipo_por_Dia`: tipos de malware por fecha de escaneo.
@@ -143,6 +190,8 @@ tabla `detections` en SQLite. Puede aumentar mucho el tamano de salida.
 En `Muestras` se incluyen, entre otros:
 
 - `fecha_escaneo_vt`: fecha de escaneo reportada por VirusTotal.
+- `lote_origen`: lote VirusShare desde donde se obtuvo el reporte, por ejemplo
+  `VirusShare_00499`.
 - `fecha_agregado_virusshare`: fecha en que VirusShare agrego la muestra.
 - `fecha_creacion_archivo`: fecha tomada de `exif.TimeStamp` cuando el reporte la
   incluye. En ejecutables PE suele corresponder al timestamp de compilacion; debe
@@ -173,6 +222,7 @@ La base `outputs/Analisis_de_Reportes_VirusShare_00499.db` contiene:
 - `type_day_counts`
 - `family_type_counts`
 - `family_type_day_counts`
+- `lote_counts`
 
 Ejemplos de consultas:
 
@@ -188,8 +238,19 @@ SELECT dia_escaneo_vt, tipo_probable, muestras
 FROM type_day_counts
 ORDER BY dia_escaneo_vt, muestras DESC;
 
+-- Cantidad de muestras por lote
+SELECT lote_origen, muestras
+FROM lote_counts
+ORDER BY lote_origen;
+
+-- Familias mas comunes por lote
+SELECT lote_origen, familia_probable, COUNT(*) AS muestras
+FROM samples
+GROUP BY lote_origen, familia_probable
+ORDER BY lote_origen, muestras DESC;
+
 -- Muestras de una familia concreta
-SELECT hash_md5, fecha_escaneo_vt, fecha_creacion_archivo, tipo_probable, familia_confianza, vt_positives, vt_total
+SELECT hash_md5, lote_origen, fecha_escaneo_vt, fecha_creacion_archivo, tipo_probable, familia_confianza, vt_positives, vt_total
 FROM samples
 WHERE familia_probable = 'cryxos'
 ORDER BY fecha_escaneo_vt;
@@ -220,6 +281,87 @@ python analisis_de_reportes.py --date-from 2021-11-12 --date-to 2021-11-15
 python analisis_de_reportes.py --family cryxos
 python analisis_de_reportes.py --type phishing
 python analisis_de_reportes.py --min-positives 10 --min-ratio 0.2
+```
+
+## Extraccion del dataset final
+
+Cuando ya definas que familias, fechas y porcentajes de deteccion usaras, no
+conviene mover los reportes originales. Usa `extraer_dataset_final.py` para crear
+una copia curada de los reportes seleccionados y un manifest reproducible.
+
+La configuracion se controla con:
+
+```text
+config_dataset_final.json
+```
+
+Ejecutar con la configuracion por defecto:
+
+```powershell
+python extraer_dataset_final.py --config config_dataset_final.json
+```
+
+Si quieres construir el dataset por bloques, por ejemplo hoy una familia y
+manana otra, usa `--append`:
+
+```powershell
+python extraer_dataset_final.py --config configs_dataset\01_cryxos.json --append
+python extraer_dataset_final.py --config configs_dataset\02_emotet.json --append
+```
+
+En modo acumulativo el script lee el manifest existente, agrega solo hashes
+nuevos y evita duplicados. Cada muestra queda marcada con:
+
+- `batch_id`: identificador del bloque de extraccion;
+- `fecha_extraccion`: momento en que se agrego al manifest;
+- `config_path`: JSON usado para esa extraccion;
+- `config_hash`: huella SHA-256 de la configuracion aplicada.
+
+Puedes fijar el `batch_id` en el JSON:
+
+```json
+{
+  "batch_id": "01_cryxos",
+  "copy_workers": 0,
+  "filters": {
+    "families": ["cryxos"]
+  }
+}
+```
+
+`copy_workers` controla cuantos hilos se usan para copiar reportes. El valor `0`
+elige automaticamente un numero razonable para I/O; puedes fijarlo, por ejemplo
+`8`, `16` o `32`, si quieres controlar la carga del disco.
+
+El JSON indica la base de entrada, la carpeta de salida, filtros y limites de
+seleccion. Ejemplo de criterios incluidos:
+
+- excluir `sin_inferir`;
+- usar solo familias con confianza `alta` o `media`;
+- exigir un porcentaje minimo de deteccion;
+- limitar la cantidad maxima por familia;
+- balancear por rango de deteccion, fecha y lote de origen.
+
+Salidas esperadas:
+
+```text
+outputs/dataset_final/
+  manifest_dataset_final.csv
+  manifest_dataset_final.xlsx
+  seleccion_dataset_final.db
+  config_usada_dataset_final.json
+  reportes/
+    <familia>/
+      <lote_origen>/
+        <hash>.json
+```
+
+El manifest conserva el hash, familia, tipo, porcentaje de deteccion, fechas,
+lote de origen, ruta original del reporte y ruta copiada. Para probar sin copiar
+reportes:
+
+```powershell
+python extraer_dataset_final.py --config config_dataset_final.json --dry-run
 ```
 
 ## Notas de Git
