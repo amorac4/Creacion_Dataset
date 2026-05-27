@@ -1,0 +1,486 @@
+{
+    "trid": {
+        "0": "InstallShield setup (34.8%)",
+        "1": "Win32 Executable MS Visual C++ (generic) (25.2%)",
+        "2": "Microsoft Visual C++ compiled executable (generic) (13.3%)",
+        "3": "Win64 Executable (generic) (8.5%)",
+        "4": "Win32 Dynamic Link Library (generic) (5.3%)"
+    },
+    "md5": "ee928b1bd583874ea1fa4cf77b3c8442",
+    "exif": {
+        "CharacterSet": "Unicode",
+        "CodeSize": 151552,
+        "Comments": "",
+        "CompanyName": "www.mumayi.net",
+        "EntryPoint": "0x210ef3",
+        "FileDescription": "Rootkit detection utility",
+        "FileFlags": "(none)",
+        "FileFlagsMask": "0x003f",
+        "FileOS": "Windows NT 32-bit",
+        "FileSize": "2.2 MB",
+        "FileSubtype": 0,
+        "FileType": "Win32 EXE",
+        "FileTypeExtension": "exe",
+        "FileVersion": 1.7,
+        "FileVersionNumber": "1.70.0.0",
+        "ImageVersion": 0,
+        "InitializedDataSize": 102400,
+        "InternalName": "",
+        "LanguageCode": "English (U.S.)",
+        "LegalCopyright": "Copyright (C) 2005-2006 mumayi",
+        "LegalTrademarks": "",
+        "LinkerVersion": 6,
+        "MIMEType": "application/octet-stream",
+        "MachineType": "Intel 386 or later, and compatibles",
+        "OSVersion": 4,
+        "ObjectFileType": "Executable application",
+        "OriginalFileName": "",
+        "PEType": "PE32",
+        "PrivateBuild": "",
+        "ProductName": "Sysinternals Rootkitrevealer",
+        "ProductVersion": 1.7,
+        "ProductVersionNumber": "1.70.0.0",
+        "SpecialBuild": "",
+        "Subsystem": "Windows GUI",
+        "SubsystemVersion": 4,
+        "TimeStamp": "2006:02:01 18:02:14-05:00",
+        "UninitializedDataSize": 0,
+        "Warning": "Possibly corrupt Version resource"
+    },
+    "sha256": "1110a18084ac183270fac094e58a52642d77002c4523d26af6f80b6d5daebd51",
+    "added_timestamp": "2021-11-09T21:32:59+00:00",
+    "sha384": "603bdf85105585e5ef1aedb6a24c331dc9bbef9fc7d2965d6716552f693ef5a4806ada3b4cc510c183288d365d39b814",
+    "virustotal": {
+        "positives": 29,
+        "total": 68,
+        "scans": {
+            "TrendMicro-HouseCall": {
+                "version": "10.0.0.1040",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "MaxSecure": {
+                "version": "1.0.0.1",
+                "detected": false,
+                "update": 20211103,
+                "result": null
+            },
+            "MAX": {
+                "version": "2019.9.16.1",
+                "detected": true,
+                "update": 20211107,
+                "result": "malware (ai score=82)"
+            },
+            "K7GW": {
+                "version": "11.225.39208",
+                "detected": true,
+                "update": 20211107,
+                "result": "Riskware ( 0040eff71 )"
+            },
+            "Sangfor": {
+                "version": "2.9.0.0",
+                "detected": false,
+                "update": 20211103,
+                "result": null
+            },
+            "ViRobot": {
+                "version": "2014.3.20.0",
+                "detected": false,
+                "update": 20211106,
+                "result": null
+            },
+            "Antiy-AVL": {
+                "version": "3.0.0.1",
+                "detected": true,
+                "update": 20211107,
+                "result": "Trojan/Generic.ASMalwS.2A2376E"
+            },
+            "Cyren": {
+                "version": "6.3.0.2",
+                "detected": true,
+                "update": 20211107,
+                "result": "W32/Zusy.DZ.gen!Eldorado"
+            },
+            "Microsoft": {
+                "version": "1.1.18700.4",
+                "detected": true,
+                "update": 20211107,
+                "result": "Trojan:Win32/Wacatac.B!ml"
+            },
+            "Acronis": {
+                "version": "1.1.1.82",
+                "detected": false,
+                "update": 20210512,
+                "result": null
+            },
+            "Avast": {
+                "version": "21.1.5827.0",
+                "detected": true,
+                "update": 20211107,
+                "result": "FileRepMalware"
+            },
+            "CAT-QuickHeal": {
+                "version": 14,
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "SentinelOne": {
+                "version": "6.3.0.2",
+                "detected": false,
+                "update": 20211028,
+                "result": null
+            },
+            "BitDefender": {
+                "version": 7.2,
+                "detected": true,
+                "update": 20211107,
+                "result": "Gen:Variant.Midie.102380"
+            },
+            "FireEye": {
+                "version": "32.44.1.0",
+                "detected": true,
+                "update": 20211107,
+                "result": "Generic.mg.ee928b1bd583874e"
+            },
+            "Arcabit": {
+                "version": "1.0.0.888",
+                "detected": true,
+                "update": 20211107,
+                "result": "Trojan.Midie.D18FEC"
+            },
+            "CMC": {
+                "version": "2.10.2019.1",
+                "detected": false,
+                "update": 20211026,
+                "result": null
+            },
+            "Alibaba": {
+                "version": "0.3.0.5",
+                "detected": false,
+                "update": 20190527,
+                "result": null
+            },
+            "Ikarus": {
+                "version": "0.1.5.2",
+                "detected": true,
+                "update": 20211107,
+                "result": "Trojan.Win32.Swisyn"
+            },
+            "Sophos": {
+                "version": "1.4.1.0",
+                "detected": true,
+                "update": 20211107,
+                "result": "Generic ML PUA (PUA)"
+            },
+            "K7AntiVirus": {
+                "version": "11.225.39208",
+                "detected": true,
+                "update": 20211107,
+                "result": "Riskware ( 0040eff71 )"
+            },
+            "Kingsoft": {
+                "version": "2017.9.26.565",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Paloalto": {
+                "version": 1,
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Fortinet": {
+                "version": "6.2.142.0",
+                "detected": true,
+                "update": 20211107,
+                "result": "W32/Swisyn.R!tr"
+            },
+            "TrendMicro": {
+                "version": "11.0.0.1006",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Elastic": {
+                "version": "4.0.29",
+                "detected": true,
+                "update": 20211005,
+                "result": "malicious (high confidence)"
+            },
+            "DrWeb": {
+                "version": "7.0.52.8270",
+                "detected": true,
+                "update": 20211107,
+                "result": "Trojan.Siggen4.51147"
+            },
+            "Gridinsoft": {
+                "version": "1.0.61.160",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Cynet": {
+                "version": "4.0.0.27",
+                "detected": true,
+                "update": 20211107,
+                "result": "Malicious (score: 100)"
+            },
+            "ESET-NOD32": {
+                "version": 24251,
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "AVG": {
+                "version": "21.1.5827.0",
+                "detected": true,
+                "update": 20211107,
+                "result": "FileRepMalware"
+            },
+            "AhnLab-V3": {
+                "version": "3.21.1.10219",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Bkav": {
+                "version": "1.3.0.9899",
+                "detected": true,
+                "update": 20211106,
+                "result": "W32.AIDetect.malware2"
+            },
+            "ALYac": {
+                "version": "1.1.3.1",
+                "detected": true,
+                "update": 20211107,
+                "result": "Gen:Variant.Midie.102380"
+            },
+            "Avira": {
+                "version": "8.3.3.12",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Lionic": {
+                "version": 4.2,
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Malwarebytes": {
+                "version": "4.2.2.27",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "ZoneAlarm": {
+                "version": 1,
+                "detected": false,
+                "update": 20211102,
+                "result": null
+            },
+            "Ad-Aware": {
+                "version": "3.0.21.193",
+                "detected": true,
+                "update": 20211107,
+                "result": "Gen:Variant.Midie.102380"
+            },
+            "Cybereason": {
+                "version": "1.2.449",
+                "detected": false,
+                "update": 20210330,
+                "result": null
+            },
+            "MicroWorld-eScan": {
+                "version": "14.0.409.0",
+                "detected": true,
+                "update": 20211107,
+                "result": "Gen:Variant.Midie.102380"
+            },
+            "VIPRE": {
+                "version": 96774,
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "CrowdStrike": {
+                "version": 1,
+                "detected": false,
+                "update": 20210203,
+                "result": null
+            },
+            "NANO-Antivirus": {
+                "version": "1.0.146.25409",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "TACHYON": {
+                "version": "2021-11-07.02",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Kaspersky": {
+                "version": "21.0.1.45",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Panda": {
+                "version": "4.6.4.2",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "VBA32": {
+                "version": "5.0.0",
+                "detected": false,
+                "update": 20211105,
+                "result": null
+            },
+            "F-Secure": {
+                "version": "12.0.86.52",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Symantec": {
+                "version": "1.16.0.0",
+                "detected": true,
+                "update": 20211106,
+                "result": "ML.Attribute.HighConfidence"
+            },
+            "Cylance": {
+                "version": "2.3.1.101",
+                "detected": true,
+                "update": 20211107,
+                "result": "Unsafe"
+            },
+            "APEX": {
+                "version": 6.227,
+                "detected": true,
+                "update": 20211107,
+                "result": "Malicious"
+            },
+            "Yandex": {
+                "version": "5.5.2.24",
+                "detected": true,
+                "update": 20211107,
+                "result": "Trojan.Agent!eakaMP0HswQ"
+            },
+            "Webroot": {
+                "version": "1.0.0.403",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "ClamAV": {
+                "version": "0.104.1.0",
+                "detected": true,
+                "update": 20211107,
+                "result": "Win.Malware.Swisyn-7008265-0"
+            },
+            "Comodo": {
+                "version": 34044,
+                "detected": false,
+                "update": 20211102,
+                "result": null
+            },
+            "BitDefenderTheta": {
+                "version": "7.2.37796.0",
+                "detected": false,
+                "update": 20211104,
+                "result": null
+            },
+            "Jiangmin": {
+                "version": "16.0.100",
+                "detected": false,
+                "update": 20211106,
+                "result": null
+            },
+            "SUPERAntiSpyware": {
+                "version": "5.6.0.1032",
+                "detected": false,
+                "update": 20211106,
+                "result": null
+            },
+            "Zillya": {
+                "version": "2.0.0.4489",
+                "detected": false,
+                "update": 20211105,
+                "result": null
+            },
+            "GData": {
+                "version": "A:25.31271B:27.25064",
+                "detected": true,
+                "update": 20211107,
+                "result": "Win32.Trojan.PSE.1NQVQOX"
+            },
+            "McAfee-GW-Edition": {
+                "version": "v2019.1.2+3728",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Baidu": {
+                "version": "1.0.0.2",
+                "detected": false,
+                "update": 20190318,
+                "result": null
+            },
+            "Tencent": {
+                "version": "1.0.0.1",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            },
+            "Rising": {
+                "version": "25.0.0.26",
+                "detected": true,
+                "update": 20211107,
+                "result": "Malware.Heuristic!ET#99% (RDMK:cmRtazrvYiB+dGD4fXnNgJp4mOse)"
+            },
+            "Zoner": {
+                "version": "0.0.0.0",
+                "detected": false,
+                "update": 20211106,
+                "result": null
+            },
+            "Emsisoft": {
+                "version": "2021.5.0.7597",
+                "detected": true,
+                "update": 20211107,
+                "result": "Gen:Variant.Midie.102380 (B)"
+            },
+            "McAfee": {
+                "version": "6.0.6.653",
+                "detected": false,
+                "update": 20211107,
+                "result": null
+            }
+        },
+        "scan_date": "2021-11-07 11:17:59",
+        "permalink": "https://www.virustotal.com/gui/file/1110a18084ac183270fac094e58a52642d77002c4523d26af6f80b6d5daebd51/detection/f-1110a18084ac183270fac094e58a52642d77002c4523d26af6f80b6d5daebd51-1636283879"
+    },
+    "sha512": "17624d0ac7570a94a591b3d8ce04c0bb6ff033377cfd24c70023d8019fd9b31e37e581c3300bfadc8c770eba2dafae350a07086701a3ccd210d65bb60ffa76df",
+    "ssdeep": "3072:5xwjVQQDFnFrRiX0dVC6FA1DUlfaBZNPBpSB8Or/yIopzqtuRLWJkvgavX:5KPnFIXSLFqDUpWZFrS8zQ05X",
+    "sha1": "9ed55de54cf274d78860e9e04c3328edb6b4a5ca",
+    "mimetype": "application/x-dosexec",
+    "filetype": "PE32 executable (GUI) Intel 80386, for MS Windows",
+    "sha224": "236ca727e02643dcc46c203567e72ef476595511d13862c335e544d7",
+    "size": 2310227,
+    "imphash": "48ea307be18ed25a1d68f296f0591a5c",
+    "extension": "exe",
+    "asha256": "f71d751646bd104deb1a5ab2c81fbedbddacbd5f76ec3537108982e4068cf2c4",
+    "response": 1,
+    "data_structure": {
+        "lote": "VirusShare_00495",
+        "input_txt": "hashes\\VirusShare_00495.txt",
+        "hash": "ee928b1bd583874ea1fa4cf77b3c8442",
+        "mode": "file"
+    }
+}
