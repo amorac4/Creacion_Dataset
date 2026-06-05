@@ -1,0 +1,54 @@
+{
+  "dataset_name": "Dataset_V1",
+  "dataset_csv_dir": "Dataset_V1/csv",
+  "split_workbook": "Dataset_V1/Analisis/propuesta_estructuracion_temporal_tablas.xlsx",
+  "source_images_root": "C:/Users/ADOLF/Desktop/Repositorios/Lab_Creacion_Dataset/data",
+  "source_collections": [
+    "img"
+  ],
+  "output_dir": "outputs/datasets_imagenes",
+  "balances": [
+    "Split_Todo",
+    "Split_1000",
+    "Split_1500",
+    "Split_2000"
+  ],
+  "algorithms": [
+    {
+      "name": "rgb",
+      "source": "bin2rgb"
+    },
+    {
+      "name": "simhash",
+      "source": "simhash"
+    },
+    {
+      "name": "dct",
+      "source": "bigram_dct"
+    },
+    {
+      "name": "markov",
+      "source": "markov"
+    },
+    {
+      "name": "wem",
+      "source": "wem"
+    }
+  ],
+  "valid_year_from": 1992,
+  "valid_year_to": 2026,
+  "split_folder_names": {
+    "train": "train",
+    "validacion": "val",
+    "test": "test"
+  },
+  "folder_template": "{dataset_name}-{balance_index}-{algorithm_index}__{balance_slug}__{algorithm}",
+  "image_extensions": [
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp"
+  ],
+  "copy_workers": 0,
+  "overwrite": false
+}

@@ -5,8 +5,9 @@
 Extraer Dataset Final
 =====================
 
-Selecciona muestras desde la base SQLite generada por analisis_de_reportes.py,
-copia los reportes JSON finales y genera un manifest reproducible.
+Selecciona muestras desde Dataset_V1 o desde la base SQLite generada por
+analisis_de_reportes.py, copia los reportes JSON finales y genera un manifest
+reproducible.
 """
 
 from __future__ import annotations
@@ -30,7 +31,7 @@ from openpyxl.cell import WriteOnlyCell
 from openpyxl.styles import Font, PatternFill
 
 
-DEFAULT_CONFIG_PATH = "config_dataset_final.json"
+DEFAULT_CONFIG_PATH = "configs_dataset/config_dataset_final.json"
 
 HEADER_FILL = PatternFill(fill_type="solid", fgColor="1F4E78")
 HEADER_FONT = Font(color="FFFFFF", bold=True)
@@ -67,10 +68,18 @@ MANIFEST_FIELDS = [
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "db_path": "outputs/Analisis_de_Reportes_Todos.db",
+    "source": "dataset_v1",
+    "dataset_v1": {
+        "csv_dir": "Dataset_V1/csv",
+        "csv_files": [],
+        "reports_root": "clasificacion",
+        "hash_column": "hash_md5",
+        "apply_selection": False,
+    },
     "output_dir": "outputs/dataset_final",
     "dataset_name": "dataset_final",
     "batch_id": "",
-    "copy_reports": True,
+    "copy_reports": False,
     "copy_workers": 0,
     "overwrite_reports": False,
     "organize_reports_by": ["familia_probable", "lote_origen"],
@@ -111,14 +120,28 @@ DEFAULT_CONFIG: dict[str, Any] = {
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Extrae reportes finales y manifest desde la SQLite de Analisis de Reportes."
+        description="Extrae reportes finales y manifest desde Dataset_V1 o la SQLite de Analisis de Reportes."
     )
     parser.add_argument("--config", default=DEFAULT_CONFIG_PATH, help="Ruta al JSON de configuracion.")
+    parser.add_argument(
+        "--source",
+        choices=["sqlite", "dataset_v1"],
+        help="Fuente de muestras: SQLite de analisis o CSV de Dataset_V1.",
+    )
+    parser.add_argument(
+        "--dataset-v1-dir",
+        help="Directorio con CSV de Dataset_V1. Solo aplica con --source dataset_v1.",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Genera manifest sin copiar reportes.")
     parser.add_argument(
         "--append",
         action="store_true",
         help="Agrega hashes nuevos al manifest existente sin duplicar muestras ya seleccionadas.",
+    )
+    parser.add_argument(
+        "--hashes-only",
+        action="store_true",
+        help="Genera solo un TXT con un hash MD5 por linea.",
     )
     return parser.parse_args()
 
@@ -238,6 +261,15 @@ def build_where(config: dict[str, Any]) -> tuple[str, list[Any]]:
 
 
 def load_candidates(config: dict[str, Any]) -> list[dict[str, Any]]:
+    source = str(config.get("source") or "sqlite").lower()
+    if source == "dataset_v1":
+        return load_candidates_from_dataset_v1(config)
+    if source != "sqlite":
+        raise SystemExit(f"source invalido: {source}. Usa 'sqlite' o 'dataset_v1'.")
+    return load_candidates_from_sqlite(config)
+
+
+def load_candidates_from_sqlite(config: dict[str, Any]) -> list[dict[str, Any]]:
     db_path = Path(config["db_path"])
     if not db_path.exists():
         raise SystemExit(f"No existe la base SQLite: {db_path}")
@@ -265,6 +297,152 @@ def load_candidates(config: dict[str, Any]) -> list[dict[str, Any]]:
     """
     rows = [dict(row) for row in conn.execute(query, params)]
     conn.close()
+    return rows
+
+
+def dataset_v1_csv_paths(config: dict[str, Any]) -> list[Path]:
+    dataset_config = dict(config.get("dataset_v1") or {})
+    configured_files = normalize_list(dataset_config.get("csv_files"))
+    if configured_files:
+        paths = [Path(path) for path in configured_files]
+    else:
+        csv_dir = Path(str(dataset_config.get("csv_dir") or "Dataset_V1/csv"))
+        paths = sorted(csv_dir.glob("*.csv"))
+
+    missing = [str(path) for path in paths if not path.exists()]
+    if missing:
+        raise SystemExit("No existen CSV de Dataset_V1: " + ", ".join(missing))
+    if not paths:
+        csv_dir = Path(str(dataset_config.get("csv_dir") or "Dataset_V1/csv"))
+        raise SystemExit(f"No se encontraron CSV de Dataset_V1 en: {csv_dir}")
+    return paths
+
+
+def day_from_value(value: Any) -> str:
+    text = str(value or "").strip()
+    return text[:10] if len(text) >= 10 else text
+
+
+def dataset_report_path(row: dict[str, Any], config: dict[str, Any]) -> str:
+    reports_root = Path(str((config.get("dataset_v1") or {}).get("reports_root") or "clasificacion"))
+    lote = str(row.get("lote_origen") or "").strip()
+    hash_md5 = safe_name(row.get("hash_md5"))
+    if not lote or not hash_md5:
+        return ""
+    return str(reports_root / lote / "reportes" / "reporte" / f"{hash_md5}.json")
+
+
+def normalize_dataset_v1_row(raw_row: dict[str, Any], csv_path: Path, config: dict[str, Any]) -> dict[str, Any]:
+    hash_column = str((config.get("dataset_v1") or {}).get("hash_column") or "hash_md5")
+    hash_md5 = str(raw_row.get(hash_column) or raw_row.get("hash_md5") or "").strip().lower()
+    family = str(raw_row.get("familia_probable") or csv_path.stem).strip().lower()
+    scan_date = str(raw_row.get("fecha_escaneo_vt") or "").strip()
+    creation_day = str(raw_row.get("dia_creacion_archivo") or "").strip()
+    row: dict[str, Any] = {
+        "hash_md5": hash_md5,
+        "sha1": str(raw_row.get("sha1") or "").strip(),
+        "sha256": str(raw_row.get("sha256") or "").strip(),
+        "lote_origen": str(raw_row.get("lote_origen") or "").strip(),
+        "familia_probable": family,
+        "familia_confianza": str(raw_row.get("familia_confianza") or "dataset_v1").strip(),
+        "tipo_probable": str(raw_row.get("tipo_probable") or "").strip().lower(),
+        "tipo_confianza": str(raw_row.get("tipo_confianza") or "dataset_v1").strip(),
+        "detection_percent": str(raw_row.get("detection_percent") or "").strip(),
+        "vt_positives": str(raw_row.get("vt_positives") or "").strip(),
+        "vt_total": str(raw_row.get("vt_total") or "").strip(),
+        "fecha_escaneo_vt": scan_date,
+        "dia_escaneo_vt": str(raw_row.get("dia_escaneo_vt") or day_from_value(scan_date)).strip(),
+        "fecha_creacion_archivo": str(raw_row.get("fecha_creacion_archivo") or creation_day).strip(),
+        "dia_creacion_archivo": creation_day,
+        "fecha_agregado_virusshare": str(raw_row.get("fecha_agregado_virusshare") or "").strip(),
+        "dia_agregado_virusshare": str(raw_row.get("dia_agregado_virusshare") or "").strip(),
+    }
+    row["reporte_path"] = dataset_report_path(row, config)
+    return row
+
+
+def numeric_between(value: Any, minimum: Any, maximum: Any) -> bool:
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return False
+    if minimum is not None and number < float(minimum):
+        return False
+    if maximum is not None and number > float(maximum):
+        return False
+    return True
+
+
+def row_matches_filters(row: dict[str, Any], config: dict[str, Any]) -> bool:
+    filters = config["filters"]
+
+    exclude_families = set(normalize_list(filters.get("exclude_families")))
+    family = str(row.get("familia_probable") or "")
+    if family in exclude_families:
+        return False
+
+    families = set(normalize_list(filters.get("families")))
+    if families and family not in families:
+        return False
+
+    confidences = set(normalize_list(filters.get("family_confidence")))
+    confidence = str(row.get("familia_confianza") or "")
+    if confidences and confidence and confidence != "dataset_v1" and confidence not in confidences:
+        return False
+
+    malware_types = set(normalize_list(filters.get("types")))
+    if malware_types and str(row.get("tipo_probable") or "") not in malware_types:
+        return False
+
+    lotes = set(normalize_list(filters.get("lotes")))
+    if lotes and str(row.get("lote_origen") or "") not in lotes:
+        return False
+
+    if not numeric_between(
+        row.get("detection_percent"),
+        filters.get("min_detection_percent"),
+        filters.get("max_detection_percent"),
+    ):
+        return False
+
+    min_vt_positives = filters.get("min_vt_positives")
+    if min_vt_positives is not None and str(row.get("vt_positives") or ""):
+        try:
+            if int(row.get("vt_positives") or 0) < int(min_vt_positives):
+                return False
+        except (TypeError, ValueError):
+            return False
+
+    date_field = str(filters.get("date_field") or "dia_escaneo_vt")
+    date_value = str(row.get(date_field) or "")
+    if filters.get("date_from") and date_value < str(filters["date_from"]):
+        return False
+    if filters.get("date_to") and date_value > str(filters["date_to"]):
+        return False
+
+    creation_day = str(row.get("dia_creacion_archivo") or "")
+    if filters.get("creation_date_from") and creation_day < str(filters["creation_date_from"]):
+        return False
+    if filters.get("creation_date_to") and creation_day > str(filters["creation_date_to"]):
+        return False
+
+    return True
+
+
+def load_candidates_from_dataset_v1(config: dict[str, Any]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen_hashes: set[str] = set()
+    for csv_path in dataset_v1_csv_paths(config):
+        with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
+            reader = csv.DictReader(handle)
+            for raw_row in reader:
+                row = normalize_dataset_v1_row(raw_row, csv_path, config)
+                hash_md5 = str(row.get("hash_md5") or "")
+                if not hash_md5 or hash_md5 in seen_hashes:
+                    continue
+                seen_hashes.add(hash_md5)
+                if row_matches_filters(row, config):
+                    rows.append(row)
     return rows
 
 
@@ -384,6 +562,26 @@ def select_round_robin(rows: list[dict[str, Any]], config: dict[str, Any]) -> li
     return selected
 
 
+def select_dataset_v1_rows(rows: list[dict[str, Any]], config: dict[str, Any]) -> list[dict[str, Any]]:
+    if bool((config.get("dataset_v1") or {}).get("apply_selection", False)):
+        return select_round_robin(rows, config)
+
+    sort_by = normalize_list(config["selection"].get("sort_by")) or ["hash_md5"]
+    selected = sort_rows(rows, sort_by)
+    for row in selected:
+        row["criterio_seleccion"] = "; ".join(
+            [
+                "fuente=dataset_v1",
+                f"familia={row.get('familia_probable', '')}",
+                f"deteccion={row.get('detection_percent', '')}",
+                f"estrato_deteccion={row.get('estrato_deteccion', '')}",
+                f"estrato_fecha={row.get('estrato_fecha', '')}",
+                f"lote={row.get('lote_origen', '')}",
+            ]
+        )
+    return selected
+
+
 def flatten_with_global_limit(selected_by_family: dict[str, list[dict[str, Any]]], max_total: int) -> list[dict[str, Any]]:
     if not max_total:
         return [row for family in sorted(selected_by_family) for row in selected_by_family[family]]
@@ -428,7 +626,7 @@ def copy_one_report(row: dict[str, Any], config: dict[str, Any], dry_run: bool) 
 
     if dry_run:
         return str(row.get("hash_md5", "")), str(source), str(destination), "dry_run"
-    if not bool(config.get("copy_reports", True)):
+    if not bool(config.get("copy_reports", False)):
         return str(row.get("hash_md5", "")), str(source), str(destination), "no_copiado_por_configuracion"
     if not source.exists():
         return str(row.get("hash_md5", "")), str(source), str(destination), "origen_no_existe"
@@ -464,6 +662,7 @@ def output_paths(config: dict[str, Any]) -> dict[str, Path]:
     dataset_name = safe_name(config.get("dataset_name") or "dataset_final")
     return {
         "csv": output_dir / f"manifest_{dataset_name}.csv",
+        "hashes_txt": output_dir / f"hashes_{dataset_name}.txt",
         "xlsx": output_dir / f"manifest_{dataset_name}.xlsx",
         "db": output_dir / f"seleccion_{dataset_name}.db",
         "config": output_dir / f"config_usada_{dataset_name}.json",
@@ -548,6 +747,15 @@ def write_csv(rows: list[dict[str, Any]], path: Path) -> None:
             writer.writerow(manifest_row(row))
 
 
+def write_hashes_txt(rows: list[dict[str, Any]], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    hashes = [str(row.get("hash_md5") or "").strip().lower() for row in rows]
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        for hash_md5 in hashes:
+            if hash_md5:
+                handle.write(f"{hash_md5}\n")
+
+
 def count_by(rows: list[dict[str, Any]], *fields: str) -> list[tuple[Any, ...]]:
     counter: Counter[tuple[Any, ...]] = Counter(tuple(row.get(field, "") for field in fields) for row in rows)
     return [(*key, count) for key, count in sorted(counter.items(), key=lambda item: item[0])]
@@ -574,9 +782,11 @@ def write_excel(rows: list[dict[str, Any]], path: Path, config: dict[str, Any], 
             ("agregadas_ejecucion", stats.get("agregadas_ejecucion", 0)),
             ("duplicadas_omitidas", stats.get("duplicadas_omitidas", 0)),
             ("total_manifest", len(rows)),
+            ("source", config.get("source", "")),
             ("db_path", config.get("db_path", "")),
+            ("dataset_v1_csv_dir", (config.get("dataset_v1") or {}).get("csv_dir", "")),
             ("output_dir", config.get("output_dir", "")),
-            ("copy_reports", str(config.get("copy_reports", True))),
+            ("copy_reports", str(config.get("copy_reports", False))),
             ("copy_workers", str(copy_worker_count(int(config.get("copy_workers") or 0)))),
         ],
     )
@@ -620,7 +830,9 @@ def write_sqlite(rows: list[dict[str, Any]], path: Path, config: dict[str, Any],
             ("agregadas_ejecucion", str(stats.get("agregadas_ejecucion", 0))),
             ("duplicadas_omitidas", str(stats.get("duplicadas_omitidas", 0))),
             ("total_manifest", str(len(rows))),
+            ("source", str(config.get("source", ""))),
             ("db_path", str(config.get("db_path", ""))),
+            ("dataset_v1_csv_dir", str((config.get("dataset_v1") or {}).get("csv_dir", ""))),
             ("output_dir", str(config.get("output_dir", ""))),
             ("copy_workers", str(copy_worker_count(int(config.get("copy_workers") or 0)))),
         ],
@@ -640,6 +852,7 @@ def write_outputs(rows: list[dict[str, Any]], config: dict[str, Any], stats: dic
     output_dir = Path(config["output_dir"])
     output_dir.mkdir(parents=True, exist_ok=True)
     paths = output_paths(config)
+    write_hashes_txt(rows, paths["hashes_txt"])
     write_csv(rows, paths["csv"])
     write_excel(rows, paths["xlsx"], config, stats)
     write_sqlite(rows, paths["db"], config, stats)
@@ -651,13 +864,30 @@ def main() -> None:
     args = parse_args()
     config_path = Path(args.config)
     config = load_config(config_path)
+    if args.source:
+        config["source"] = args.source
+    if args.dataset_v1_dir:
+        config.setdefault("dataset_v1", {})
+        config["dataset_v1"]["csv_dir"] = args.dataset_v1_dir
+
     candidates = load_candidates(config)
     add_strata(candidates, config)
-    selected_current = select_round_robin(candidates, config)
+    if str(config.get("source") or "sqlite").lower() == "dataset_v1":
+        selected_current = select_dataset_v1_rows(candidates, config)
+    else:
+        selected_current = select_round_robin(candidates, config)
     current_batch_id = batch_id(config)
     annotate_batch(selected_current, config_path, config, current_batch_id)
 
     paths = output_paths(config)
+    if args.hashes_only:
+        write_hashes_txt(selected_current, paths["hashes_txt"])
+        print("Extraccion de hashes terminada")
+        print(f"Fuente: {config.get('source', '')}")
+        print(f"Hashes escritos: {len(selected_current):,}")
+        print(f"TXT hashes: {paths['hashes_txt'].resolve()}")
+        return
+
     existing_rows = load_existing_manifest(paths["csv"]) if args.append else []
     rows_to_write, rows_to_copy, duplicated = (
         merge_append(existing_rows, selected_current) if args.append else (selected_current, selected_current, 0)
@@ -675,6 +905,7 @@ def main() -> None:
 
     print("Extraccion de dataset final terminada")
     print(f"Modo: {stats['modo']}")
+    print(f"Fuente: {config.get('source', '')}")
     print(f"Batch ID: {current_batch_id}")
     print(f"Candidatas en esta ejecucion: {len(candidates):,}")
     print(f"Seleccionadas en esta ejecucion: {len(selected_current):,}")
@@ -683,10 +914,11 @@ def main() -> None:
         print(f"Duplicadas omitidas: {duplicated:,}")
         print(f"Total acumulado en manifest: {len(rows_to_write):,}")
     print(f"Manifest CSV: {paths['csv'].resolve()}")
+    print(f"TXT hashes: {paths['hashes_txt'].resolve()}")
     print(f"Manifest Excel: {paths['xlsx'].resolve()}")
     print(f"SQLite seleccion: {paths['db'].resolve()}")
     print(f"Config usada: {paths['config'].resolve()}")
-    if config.get("copy_reports", True) and not args.dry_run:
+    if config.get("copy_reports", False) and not args.dry_run:
         print(f"Copy workers utilizados: {copy_worker_count(int(config.get('copy_workers') or 0)):,}")
         copied = sum(1 for row in rows_to_copy if row.get("estado_copia_reporte") == "copiado")
         existing = sum(1 for row in rows_to_copy if row.get("estado_copia_reporte") == "ya_existia")
