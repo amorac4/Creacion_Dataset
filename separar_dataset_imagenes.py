@@ -37,11 +37,11 @@ from openpyxl import load_workbook
 DEFAULT_CONFIG_PATH = Path("configs_dataset/config_separador_imagenes.json")
 
 DEFAULT_CONFIG: dict[str, Any] = {
-    "dataset_name": "Dataset_V1",
+    "dataset_name": "MAL-CIC",
     "dataset_csv_dir": "Dataset_V1/csv",
     "split_workbook": "Dataset_V1/Analisis/propuesta_estructuracion_temporal_tablas.xlsx",
-    "source_images_root": "C:/Users/ADOLF/Desktop/Repositorios/Lab_Creacion_Dataset/data",
-    "source_collections": ["img"],
+    "source_images_root": "C:/Users/ADOLF/Desktop/Repositorios/Lab_Creacion_Dataset/data/DatasetV1/DatasetV1",
+    "source_collections": ["."],
     "output_dir": "outputs/datasets_imagenes",
     "balances": ["Split_Todo", "Split_1000", "Split_1500", "Split_2000"],
     "algorithms": [
