@@ -326,3 +326,30 @@ python analisis_de_reportes.py `
 
 python extraer_dataset_final.py --config config_dataset_final.json --append
 
+
+8. INTERFAZ PARA REVISION DE ETIQUETAS
+--------------------------------------
+
+Levantar la interfaz local:
+
+python apps\label_reviewer\server.py
+
+Abrir en el navegador:
+
+http://127.0.0.1:8765/
+
+Levantar la interfaz indicando una DB especifica:
+
+python apps\label_reviewer\server.py --db outputs\Analisis_de_Reportes_Todos.db
+
+Usar otro puerto si el 8765 esta ocupado:
+
+python apps\label_reviewer\server.py --port 8766
+
+En otra PC con el repo, ejecutar desde la raiz del repositorio:
+
+python apps\label_reviewer\server.py
+
+Requiere que exista la DB:
+
+outputs\Analisis_de_Reportes_Todos.db
