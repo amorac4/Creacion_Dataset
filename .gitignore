@@ -16,6 +16,11 @@ outputs/
 docs/
 Dataset_V1/
 
+# Generated experiment artifacts
+experimentos_avclass/data/*.jsonl
+experimentos_avclass/results/**
+!experimentos_avclass/results/.gitkeep
+
 # Local logs and temporary files
 *.log
 *.tmp

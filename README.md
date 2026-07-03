@@ -6,6 +6,11 @@ El flujo actual tiene dos pasos:
 1. Descargar reportes JSON con `descarga_reportes_virusshare.py`.
 2. Analizarlos con `analisis_de_reportes.py`, que genera un Excel y una base SQLite.
 
+La estructura general del repositorio esta documentada en
+`ESTRUCTURA_REPO.md`. Los scripts reales viven en `scripts/`, pero los archivos
+`*.py` de la raiz se conservan como wrappers para que los comandos historicos
+sigan funcionando.
+
 ## Instalacion
 
 ```powershell

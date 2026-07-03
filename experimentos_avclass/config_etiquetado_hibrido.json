@@ -1,0 +1,48 @@
+{
+  "trusted_local_families_when_avclass_sin_inferir": [
+    "eylr",
+    "fragtor",
+    "injector",
+    "razy",
+    "strictor",
+    "vbclone",
+    "zusy"
+  ],
+  "generic_or_low_trust_avclass_families": [
+    "sin_inferir",
+    "bomb",
+    "sabsik",
+    "wacatac"
+  ],
+  "review_conflict_pairs": [
+    {
+      "familia_local": "injector",
+      "familia_avclass": "mbrlock",
+      "motivo": "AVClass propone una familia mas especifica o distinta; requiere validacion manual."
+    },
+    {
+      "familia_local": "eylr",
+      "familia_avclass": "wacatac",
+      "motivo": "Wacatac suele ser etiqueta generica de Microsoft; no reemplazar automaticamente."
+    },
+    {
+      "familia_local": "strictor",
+      "familia_avclass": "vbclone",
+      "motivo": "Posible alias/subfamilia o colision de etiquetas; revisar antes de fusionar."
+    },
+    {
+      "familia_local": "razy",
+      "familia_avclass": "beebone",
+      "motivo": "Conflicto frecuente entre fuentes; revisar evidencia cruda."
+    },
+    {
+      "familia_local": "zusy",
+      "familia_avclass": "salgorea",
+      "motivo": "Conflicto frecuente entre fuentes; revisar evidencia cruda."
+    }
+  ],
+  "manual_pair_overrides": [],
+  "minimum_local_score_for_silver": 0.08,
+  "minimum_avclass_tags_for_silver": 2,
+  "sample_review_rows_per_pair": 50
+}

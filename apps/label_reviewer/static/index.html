@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Label Reviewer</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Label Reviewer</h1>
+        <p id="dbPath">Cargando...</p>
+      </div>
+      <button id="refreshBtn">Actualizar</button>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="dashboard">Dashboard</button>
+      <button class="tab" data-tab="pairs">Pares</button>
+      <button class="tab" data-tab="queue">Cola</button>
+      <button class="tab" data-tab="sample">Hash</button>
+    </nav>
+
+    <main>
+      <section id="dashboard" class="panel active">
+        <div id="cards" class="cards"></div>
+        <div class="grid two">
+          <section>
+            <h2>Confianza</h2>
+            <div id="confidenceList" class="list"></div>
+          </section>
+          <section>
+            <h2>Familias Finales</h2>
+            <div id="finalList" class="list"></div>
+          </section>
+        </div>
+        <section>
+          <div class="sectionTitle">
+            <h2>Conflictos Principales</h2>
+            <button id="exportBtn">Exportar CSV final</button>
+          </div>
+          <div id="topPairs" class="tableWrap"></div>
+        </section>
+      </section>
+
+      <section id="pairs" class="panel">
+        <div class="toolbar">
+          <input id="pairSearch" placeholder="Buscar familia local o AVClass" />
+          <label><input id="onlyReviewPairs" type="checkbox" checked /> Solo revisión</label>
+          <button id="loadPairsBtn">Buscar</button>
+        </div>
+        <div id="pairsTable" class="tableWrap"></div>
+      </section>
+
+      <section id="queue" class="panel">
+        <div class="toolbar">
+          <select id="queueStatus">
+            <option value="pendiente">Pendiente</option>
+            <option value="revisado">Revisado</option>
+            <option value="revisado_por_par">Revisado por par</option>
+            <option value="all">Todo</option>
+          </select>
+          <select id="queuePriority">
+            <option value="">Todas las prioridades</option>
+            <option value="1">Prioridad 1</option>
+            <option value="2">Prioridad 2</option>
+            <option value="3">Prioridad 3</option>
+            <option value="5">Prioridad 5</option>
+          </select>
+          <input id="queueSearch" placeholder="Hash o familia" />
+          <label><input id="queueSingle" type="checkbox" checked /> Una por una</label>
+          <button id="loadQueueBtn">Cargar</button>
+          <button id="queueNextBtn">Siguiente</button>
+        </div>
+        <div id="queueMeta" class="muted"></div>
+        <div id="queueTable" class="tableWrap"></div>
+      </section>
+
+      <section id="sample" class="panel">
+        <div class="toolbar">
+          <input id="hashInput" placeholder="hash md5" />
+          <button id="loadSampleBtn">Abrir hash</button>
+        </div>
+        <div id="sampleDetail"></div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
